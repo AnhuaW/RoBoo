@@ -34,28 +34,28 @@ public class CameraControl : MonoBehaviour
         }
     }
 
-    IEnumerator moveUp()
+    public IEnumerator moveUp()
     {
         Vector3 destination = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
         transform.position = destination;
         yield return null;
     }
 
-    IEnumerator moveDown()
+    public IEnumerator moveDown()
     {
         Vector3 destination = new Vector3(transform.position.x, transform.position.y - 10, transform.position.z);
         transform.position = destination;
         yield return null;
     }
 
-    IEnumerator moveLeft()
+    public IEnumerator moveLeft()
     {
         Vector3 destination = new Vector3(transform.position.x - 11, transform.position.y, transform.position.z);
         transform.position = destination;
         yield return null;
     }
 
-    IEnumerator moveRight()
+    public IEnumerator moveRight()
     {
         Vector3 destination = new Vector3(transform.position.x + 11, transform.position.y, transform.position.z);
         transform.position = destination;

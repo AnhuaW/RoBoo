@@ -56,6 +56,7 @@ public class GravityControl : MonoBehaviour
         rb.gravityScale = current_gravity_scale;
         yield return new WaitForSeconds(1f);
         rb.gravityScale = 10f;
+        rb.SetRotation(0);
         gravity_enabled = true;
     }
 
