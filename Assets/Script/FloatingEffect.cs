@@ -39,7 +39,6 @@ public class FloatingEffect : MonoBehaviour
 
     private void OnDisable()
     {
-        //TODO
         rb.gravityScale = 1f;
     }
 }

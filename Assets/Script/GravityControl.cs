@@ -12,20 +12,23 @@ public class GravityControl : MonoBehaviour
     public float time_interval = 0.5f;
     public float rotation = 10f;
     Rigidbody2D rb;
+    Inventory inventory;
     private float orig_height = 0;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        inventory = GameObject.Find("Player").GetComponent<Inventory>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && inventory.get_energy_level() > 0)
         {
             enable_gravity = !enable_gravity;
             if (enable_gravity)
             {
+                //inventory.decrease_energy(1);
                 orig_height = transform.position.y;
             }
         }
@@ -55,7 +58,7 @@ public class GravityControl : MonoBehaviour
         }
         rb.gravityScale = current_gravity_scale;
         yield return new WaitForSeconds(1f);
-        rb.gravityScale = 10f;
+        rb.gravityScale = 50f;
         rb.SetRotation(0);
         gravity_enabled = true;
     }

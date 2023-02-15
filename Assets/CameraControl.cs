@@ -13,7 +13,7 @@ public class CameraControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        /*if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             StartCoroutine(moveUp());
         }
@@ -31,7 +31,7 @@ public class CameraControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             StartCoroutine(moveDown());
-        }
+        }*/
     }
 
     public IEnumerator moveUp()
