@@ -8,6 +8,7 @@ public class Locked : MonoBehaviour
     GameObject player;
     Inventory inventory;
     public AudioClip door_open;
+    bool played = false;
     void Start()
     {
         player = GameObject.Find("Player");
@@ -25,20 +26,24 @@ public class Locked : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && inventory.get_chip_count() > 0)
         {
             inventory.use_chip(1);
+            AudioSource.PlayClipAtPoint(door_open, Camera.main.transform.position);
             GetComponent<BoxCollider2D>().isTrigger = true;
         }
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        StartCoroutine(Unlock());
+        if (!played)
+        {
+            StartCoroutine(Unlock());
+        }
     }
 
     IEnumerator Unlock()
     {
         //TODO: play audio
-        AudioSource.PlayClipAtPoint(door_open, Camera.main.transform.position);
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
+        played = true;
     }
 }

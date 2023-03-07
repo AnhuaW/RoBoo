@@ -6,14 +6,19 @@ TagManager:
   tags:
   - chip
   - battery
+  - Level
+  - Portal
+  - bar
+  - block
+  - control
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Block
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 

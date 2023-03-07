@@ -35,7 +35,7 @@ public class Breakable : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            if (distance > 3f)
+            if (distance > 2.5f)
             {
                 break_count++;
                 AudioSource.PlayClipAtPoint(tile_break, Camera.main.transform.position);

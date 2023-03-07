@@ -32,13 +32,7 @@ public class PlayerMovementControl : MonoBehaviour
 
         rb.velocity = current_input * movement_speed;
 
-        if (Input.GetKeyDown(KeyCode.Space) && !movement_frozen)
-        {
-            if (GetComponent<GravityControl>().enable_gravity)
-            {
-                Jump();
-            }
-        }
+
 
         if (GetComponent<GravityControl>().enable_gravity)
         {
@@ -47,6 +41,17 @@ public class PlayerMovementControl : MonoBehaviour
         else
         {
             rb.freezeRotation = false;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && !movement_frozen)
+        {
+            if (GetComponent<GravityControl>().enable_gravity)
+            {
+                Jump();
+            }
         }
     }
 

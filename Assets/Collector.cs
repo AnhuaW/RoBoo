@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Collector : MonoBehaviour
 {
@@ -12,10 +13,15 @@ public class Collector : MonoBehaviour
     public Text chip_text;
     public Text energy_text;
     public Text energy_demo;
+    public Text level;
+    public Text gravity;
     public AudioClip recharge;
     public AudioClip chip_sound;
     bool typed = false;
-    string content = "Now you can press [E] to control gravity";
+    bool displayed = false;
+    string content = "Now you can press [E] to turn gravity on and off";
+    string hint = "Rise as high as you can to break through tiles";
+    string endMessage = "Congratulations on reaching the control room!";
     Inventory inventory;
     // Start is called before the first frame update
     void Start()
@@ -26,6 +32,14 @@ public class Collector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GetComponent<GravityControl>().enable_gravity)
+        {
+            gravity.text = "Gravity: ON";
+        }
+        else
+        {
+            gravity.text = "Gravity: OFF";
+        }
         if (battery_collected)
         {
             energy_icon.enabled = true;
@@ -51,7 +65,7 @@ public class Collector : MonoBehaviour
         {
             AudioSource.PlayClipAtPoint(recharge, Camera.main.transform.position);
             battery_collected = true;
-            inventory.increase_energy(2);
+            inventory.increase_energy(3);
             Destroy(other.gameObject);
         }
 
@@ -61,6 +75,14 @@ public class Collector : MonoBehaviour
             chip_collected = true;
             inventory.add_chip(1);
             Destroy(other.gameObject);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("control"))
+        {
+            StartCoroutine(finalMessage());
         }
     }
 
@@ -82,7 +104,39 @@ public class Collector : MonoBehaviour
             energy_demo.text += " " + letters[i];
         }
 
-        yield return new WaitForSeconds(3f);
-        energy_demo.enabled = false;
+        yield return new WaitForSeconds(1.5f);
+        energy_demo.text = "";
+        letters = hint.Split(' ');
+        energy_demo.text = letters[0];
+        for (int i = 1; i < letters.Length; i++)
+        {
+            yield return new WaitForSeconds(0.1f);
+            energy_demo.text += " " + letters[i];
+        }
+
+        yield return new WaitForSeconds(2f);
+        energy_demo.text = "";
+    }
+
+    IEnumerator finalMessage()
+    {
+        displayed = true;
+        string[] letters = endMessage.Split(' ');
+        energy_demo.text = letters[0];
+        for (int i = 1; i < letters.Length; i++)
+        {
+            yield return new WaitForSeconds(0.1f);
+            energy_demo.text += " " + letters[i];
+        }
+        yield return new WaitForSeconds(2f);
+        energy_demo.text = "";
+        endMessage = "Press 1 to restart.";
+        letters = endMessage.Split(' ');
+        energy_demo.text = letters[0];
+        for (int i = 1; i < letters.Length; i++)
+        {
+            yield return new WaitForSeconds(0.1f);
+            energy_demo.text += " " + letters[i];
+        }
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GravityControl : MonoBehaviour
 {
@@ -23,14 +24,24 @@ public class GravityControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && inventory.get_energy_level() > 0)
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            enable_gravity = !enable_gravity;
-            if (enable_gravity)
+            if(!enable_gravity && inventory.get_energy_level() > 0)
+            {
+                orig_height = transform.position.y;
+                enable_gravity = true;
+            }
+
+            else if (enable_gravity)
+            {
+                enable_gravity = false;
+            }
+
+            /*if (enable_gravity)
             {
                 //inventory.decrease_energy(1);
                 orig_height = transform.position.y;
-            }
+            }*/
         }
 
         if(enable_gravity && !gravity_enabled)
@@ -40,7 +51,7 @@ public class GravityControl : MonoBehaviour
 
         if (enable_gravity)
         {
-            rb.gravityScale = 10f;
+            rb.gravityScale = 1f;
         }
 
         if(!enable_gravity && gravity_enabled)
@@ -70,12 +81,8 @@ public class GravityControl : MonoBehaviour
         {
             GetComponent<FloatingEffect>().enabled = true;
         }
-        while (transform.position.y < orig_height)
-        {
-            rb.gravityScale = -force;
-            rb.SetRotation(rotation);
-            yield return null;
-        }
+        rb.gravityScale = -1;
+        yield return new WaitForSeconds(0.5f);
         rb.gravityScale = 0;
         rb.SetRotation(0);
         gravity_enabled = false;
