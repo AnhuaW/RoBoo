@@ -21,7 +21,16 @@ public class Floatable : MonoBehaviour
 
     void Update()
     {
-        
+        // if reaches screen edge, stop moving (mainly prevent object from floating infinitely)
+        if (is_floating)
+        {
+            Vector3 viewportPos = Camera.main.WorldToViewportPoint(transform.position);
+            if (viewportPos.x < 0.1f || viewportPos.x > 0.9f ||
+            viewportPos.y < 0.1f || viewportPos.y > 0.9f)
+            {
+                rb.velocity = Vector2.zero;
+            }
+        }
     }
 
     public void OnGravityChange()
@@ -59,9 +68,15 @@ public class Floatable : MonoBehaviour
             Transform temp_child = transform.GetChild(i);
             temp_child.parent = null;
             Destroy(temp_child.gameObject);
-            Debug.Log("destroyed");
         }
 
+    }
+
+
+    // bubble bursts when touching a collider
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        ApplyGravity();
     }
 
 }
