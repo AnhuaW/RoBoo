@@ -122,8 +122,8 @@ TextureImporter:
         serializedVersion: 2
         x: 3
         y: 48
-        width: 12
-        height: 12
+        width: 9
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,7 +143,7 @@ TextureImporter:
         serializedVersion: 2
         x: 19
         y: 48
-        width: 13
+        width: 9
         height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -163,9 +163,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 35
-        y: 47
-        width: 10
-        height: 8
+        y: 48
+        width: 9
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,7 +185,7 @@ TextureImporter:
         serializedVersion: 2
         x: 51
         y: 48
-        width: 11
+        width: 9
         height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -206,8 +206,8 @@ TextureImporter:
         serializedVersion: 2
         x: 3
         y: 32
-        width: 13
-        height: 14
+        width: 9
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,10 +225,10 @@ TextureImporter:
       name: Astronaut-Sheet_6
       rect:
         serializedVersion: 2
-        x: 34
+        x: 35
         y: 32
-        width: 12
-        height: 11
+        width: 9
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,8 +248,8 @@ TextureImporter:
         serializedVersion: 2
         x: 51
         y: 33
-        width: 13
-        height: 13
+        width: 9
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,9 +268,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 83
-        y: 32
-        width: 11
-        height: 13
+        y: 34
+        width: 9
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -311,8 +311,8 @@ TextureImporter:
         serializedVersion: 2
         x: 3
         y: 0
-        width: 13
-        height: 14
+        width: 9
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -332,8 +332,8 @@ TextureImporter:
         serializedVersion: 2
         x: 3
         y: 16
-        width: 13
-        height: 14
+        width: 9
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -353,7 +353,7 @@ TextureImporter:
         serializedVersion: 2
         x: 19
         y: 32
-        width: 13
+        width: 9
         height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -372,10 +372,10 @@ TextureImporter:
       name: Astronaut-Sheet_13
       rect:
         serializedVersion: 2
-        x: 19
+        x: 35
         y: 16
-        width: 13
-        height: 9
+        width: 9
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -396,7 +396,7 @@ TextureImporter:
         x: 35
         y: 0
         width: 10
-        height: 24
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -417,7 +417,7 @@ TextureImporter:
         x: 51
         y: 0
         width: 10
-        height: 14
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -438,7 +438,7 @@ TextureImporter:
         x: 51
         y: 16
         width: 9
-        height: 12
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -458,7 +458,7 @@ TextureImporter:
         serializedVersion: 2
         x: 65
         y: 17
-        width: 15
+        width: 11
         height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -479,8 +479,8 @@ TextureImporter:
         serializedVersion: 2
         x: 67
         y: 0
-        width: 12
-        height: 16
+        width: 9
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -500,7 +500,7 @@ TextureImporter:
         serializedVersion: 2
         x: 67
         y: 33
-        width: 13
+        width: 9
         height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -521,7 +521,7 @@ TextureImporter:
         serializedVersion: 2
         x: 81
         y: 17
-        width: 15
+        width: 12
         height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -542,8 +542,8 @@ TextureImporter:
         serializedVersion: 2
         x: 97
         y: 17
-        width: 17
-        height: 13
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -563,8 +563,8 @@ TextureImporter:
         serializedVersion: 2
         x: 99
         y: 32
-        width: 13
-        height: 12
+        width: 9
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -584,8 +584,8 @@ TextureImporter:
         serializedVersion: 2
         x: 115
         y: 32
-        width: 11
-        height: 12
+        width: 9
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -604,9 +604,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 115
-        y: 15
+        y: 16
         width: 10
-        height: 9
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -625,9 +625,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 131
-        y: 31
-        width: 12
-        height: 10
+        y: 32
+        width: 9
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -646,9 +646,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 131
-        y: 15
-        width: 11
-        height: 14
+        y: 16
+        width: 9
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -667,9 +667,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 146
-        y: 30
-        width: 12
-        height: 12
+        y: 32
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -732,7 +732,7 @@ TextureImporter:
         x: 209
         y: 33
         width: 12
-        height: 12
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -753,7 +753,7 @@ TextureImporter:
         x: 19
         y: 0
         width: 10
-        height: 12
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -774,7 +774,7 @@ TextureImporter:
         x: 83
         y: 0
         width: 10
-        height: 12
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -795,7 +795,7 @@ TextureImporter:
         x: 99
         y: 0
         width: 10
-        height: 12
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -805,6 +805,27 @@ TextureImporter:
       bones: []
       spriteID: e068acecd5822834a947265740af4ec2
       internalID: 536610037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Astronaut-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 16
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6023d326dcd5dfc49aa5c1e8905570c6
+      internalID: 510632803
       vertices: []
       indices: 
       edges: []
