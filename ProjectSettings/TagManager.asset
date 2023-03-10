@@ -11,6 +11,7 @@ TagManager:
   - bar
   - block
   - control
+  - ground
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
+  - Ground
   - 
   - 
   - 
