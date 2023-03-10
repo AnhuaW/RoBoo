@@ -7,16 +7,17 @@ public class ShootTarget : MonoBehaviour
     public Camera cam;
     public float bubble_movement_speed = 2f; // tunable speed of bubble
 
+    Inventory_tmp inventory;
 
     void Start()
     {
-        
+        inventory = Inventory_tmp.instance;
     }
 
     void Update()
     {
         // left click mouse
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && inventory.GetBubbleAmmo() > 0)
         {
             // get the position of mouse
             Vector3 mouse_position = cam.ScreenToWorldPoint(Input.mousePosition);
