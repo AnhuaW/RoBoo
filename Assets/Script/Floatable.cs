@@ -12,11 +12,13 @@ public class Floatable : MonoBehaviour
     public GameObject bubble_prefab;
 
     Rigidbody2D rb;
+    Inventory_tmp inventory;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        inventory = Inventory_tmp.instance;
     }
 
 
@@ -56,7 +58,8 @@ public class Floatable : MonoBehaviour
         }
         else
         {
-            RemoveGravity();
+            if (inventory.GetBubbleAmmo() > 0)
+                RemoveGravity();
         }
     }
 
@@ -69,6 +72,8 @@ public class Floatable : MonoBehaviour
         // initiate a bubble
         GameObject new_bubble = Instantiate(bubble_prefab, transform.position, Quaternion.identity);
         new_bubble.transform.SetParent(transform);
+        // consume ammo
+        inventory.ChangeBubbleAmmo(-1);
 
     }
 

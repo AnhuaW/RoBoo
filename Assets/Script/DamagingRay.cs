@@ -40,7 +40,8 @@ public class DamagingRay : MonoBehaviour
 
             // TODO: add game over scripts
             Debug.Log("damaged by ray, gameover");
-
+            GameOver game_status = new GameOver();
+            EventBus.Publish<GameOver>(game_status);
         }
     }
 

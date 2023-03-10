@@ -6,7 +6,8 @@ using UnityEngine;
 public class Inventory_tmp : MonoBehaviour
 {
     public static Inventory_tmp instance;
-    public int bubble_ammo_count = 0;
+    public int bubble_ammo_count = 0; // TODO: make it private later
+    public int initial_bubble_ammo_count = 0; // bubble ammo count at the beginning of this level
 
     private void Awake()
     {
@@ -20,6 +21,9 @@ public class Inventory_tmp : MonoBehaviour
             instance = this;
         }
         DontDestroyOnLoad(gameObject);
+
+        RecordInitialState();
+
     }
 
     // Start is called before the first frame update
@@ -43,4 +47,23 @@ public class Inventory_tmp : MonoBehaviour
     {
         return bubble_ammo_count;
     }
+
+    public void RecordInitialState()
+    {
+        initial_bubble_ammo_count = bubble_ammo_count;
+    }
+
+    public void RetrieveInitialState()
+    {
+        bubble_ammo_count = initial_bubble_ammo_count;
+    }
+
+
+
+    private void OnDestroy()
+    {
+        
+    }
+
 }
+
