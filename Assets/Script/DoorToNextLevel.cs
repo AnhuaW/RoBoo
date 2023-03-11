@@ -23,6 +23,12 @@ public class DoorToNextLevel : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             EventBus.Publish<StageStatus>(new StageStatus(current_level_index + 1));
+
+            GameObject completed_levels = GameObject.Find("CompletedLevels");
+            if (completed_levels != null)
+            {
+                completed_levels.GetComponent<CompletedLevels>().level_completed[current_level_index] = true;
+            }
         }
     }
 }
