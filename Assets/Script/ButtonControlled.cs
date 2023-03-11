@@ -5,7 +5,8 @@ using UnityEngine;
 public class ButtonControlled : MonoBehaviour
 {
     public string this_name;
-    public float offset = 0.85f;
+    public Vector3 offset = Vector3.zero;
+    public bool launch_when_button_pressed = false;
 
     Subscription<PushButtonEvent> button_event_subscription;
     Vector3 initial_pos, target_pos;
@@ -15,9 +16,10 @@ public class ButtonControlled : MonoBehaviour
     {
         button_event_subscription = EventBus.Subscribe<PushButtonEvent>(_OnButtonChange);
 
-        float new_y = transform.position.y + offset;
+        //float new_y = transform.position.y + offset;
         initial_pos = transform.position;
-        target_pos = new Vector3(transform.position.x, new_y, transform.position.z);
+        target_pos = transform.position + offset;
+        //target_pos = new Vector3(transform.position.x, new_y, transform.position.z);
     }
 
     // Update is called once per frame
@@ -33,12 +35,12 @@ public class ButtonControlled : MonoBehaviour
             if (e.pressed)
             {
                 transform.position = target_pos;
-                ControlRays(offset > 0);
+                ControlRays(launch_when_button_pressed);
             }
             else
             {
                 transform.position = initial_pos;
-                ControlRays(offset < 0);
+                ControlRays(!launch_when_button_pressed);
             }
         }
     }

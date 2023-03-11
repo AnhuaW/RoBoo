@@ -11,8 +11,8 @@ public class Floatable : MonoBehaviour
     public float upward_speed = 2f;
     public GameObject bubble_prefab;
 
-    Rigidbody2D rb;
-    Inventory_tmp inventory;
+    public Rigidbody2D rb;
+    public Inventory_tmp inventory;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +28,7 @@ public class Floatable : MonoBehaviour
         if (is_floating)
         {
             Vector3 viewportPos = Camera.main.WorldToViewportPoint(transform.position);
-            if (viewportPos.x < 0.1f || viewportPos.x > 0.9f ||
+            if (viewportPos.x < 0f || viewportPos.x > 1f ||
             viewportPos.y < 0.1f || viewportPos.y > 0.9f)
             {
                 rb.velocity = Vector2.zero;
@@ -59,12 +59,14 @@ public class Floatable : MonoBehaviour
         else
         {
             if (inventory.GetBubbleAmmo() > 0)
+            {
                 RemoveGravity();
+            }
         }
     }
 
 
-    void RemoveGravity()
+    public virtual void RemoveGravity()
     {
         is_floating = true;
         rb.gravityScale = 0;
@@ -77,7 +79,7 @@ public class Floatable : MonoBehaviour
 
     }
 
-    void ApplyGravity()
+    public void ApplyGravity()
     {
         is_floating = false;
         is_falling = true;
@@ -96,7 +98,7 @@ public class Floatable : MonoBehaviour
 
 
     // bubble bursts when touching a collider
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         
         if (is_floating && !is_falling)
