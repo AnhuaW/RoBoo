@@ -6,13 +6,13 @@ public class AnimationControl : MonoBehaviour
 {
     // Start is called before the first frame update
     Animator player_anim;
-    PlayerMovementControl player_movement;
+    ArrowKeyMovement player_movement;
     float inputX;
     float inputY;
     void Start()
     {
         player_anim = GetComponent<Animator>();
-        player_movement = GetComponent<PlayerMovementControl>();
+        player_movement = GetComponent<ArrowKeyMovement>();
     }
 
     // Update is called once per frame

@@ -111,7 +111,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.75, y: 0.75}
+    oldSize: {x: 0.5625, y: 0.625}
     newSize: {x: 0.75, y: 0.75}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -157,6 +157,11 @@ MonoBehaviour:
   playerDirection: {x: 0, y: 0}
   movement_frozen: 0
   jumpHeight: 15
+  collisionRadius: 0.2
+  groundCheck: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &8509222546432035042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,7 +191,6 @@ MonoBehaviour:
   enable_gravity: 0
   gravity_enabled: 0
   current_gravity_scale: 50
-  force: 25
   time_interval: 0.5
   rotation: 10
 --- !u!114 &8509222546432035046
