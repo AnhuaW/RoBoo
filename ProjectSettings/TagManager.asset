@@ -12,6 +12,8 @@ TagManager:
   - block
   - control
   - wall
+  - bullet
+  - enemy
   layers:
   - Default
   - TransparentFX

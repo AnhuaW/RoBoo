@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 5517974921808589471}
   - component: {fileID: 5517974921808589470}
   - component: {fileID: 5517974921478761772}
+  - component: {fileID: 274092347327522984}
   m_Layer: 0
   m_Name: player_gold
   m_TagString: Player
@@ -248,3 +249,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectAmmo: {fileID: 8300000, guid: f5b4612e3fa268e4784b5b775e0c169c, type: 3}
+--- !u!114 &274092347327522984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5517974921808589476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021b7f40b8b5243a29d841da611c1190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
