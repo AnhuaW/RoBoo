@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5241096057106925562}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 2tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall
       objectReference: {fileID: 0}
+    - target: {fileID: 3819055859459403000, guid: e7a99f389b7835d43823229b671e2e40, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5012536435676290253, guid: e7a99f389b7835d43823229b671e2e40, type: 3}
       propertyPath: m_Size.x
       value: 1.9979461
@@ -173,6 +177,10 @@ PrefabInstance:
     - target: {fileID: 3819055859459403000, guid: e7a99f389b7835d43823229b671e2e40, type: 3}
       propertyPath: m_Name
       value: wall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819055859459403000, guid: e7a99f389b7835d43823229b671e2e40, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a99f389b7835d43823229b671e2e40, type: 3}

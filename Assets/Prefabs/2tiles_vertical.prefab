@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5241096057106925562}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 2tiles_vertical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
