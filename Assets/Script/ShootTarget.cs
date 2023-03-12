@@ -7,7 +7,6 @@ public class ShootTarget : MonoBehaviour
     public Camera cam;
     public float bubble_movement_speed = 2f; // tunable speed of bubble
 
-
     void Start()
     {
 

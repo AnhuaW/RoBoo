@@ -3085,7 +3085,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   this_name: spike1
-  offset: -0.85
+  offset: {x: 0, y: 0, z: 0}
+  launch_when_button_pressed: 0
 --- !u!4 &400421549
 Transform:
   m_ObjectHideFlags: 0
@@ -4390,7 +4391,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   this_name: spike2
-  offset: -0.85
+  offset: {x: 0, y: 0, z: 0}
+  launch_when_button_pressed: 0
 --- !u!4 &565530348
 Transform:
   m_ObjectHideFlags: 0
@@ -6171,6 +6173,8 @@ MonoBehaviour:
   is_falling: 0
   upward_speed: 2
   bubble_prefab: {fileID: 3406941852388994698, guid: e314fbe9e47850943b51fc8847f25ddf, type: 3}
+  rb: {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!50 &755967446
 Rigidbody2D:
   serializedVersion: 4
@@ -8470,7 +8474,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   this_name: spike2
-  offset: 0.85
+  offset: {x: 0, y: 0, z: 0}
+  launch_when_button_pressed: 0
 --- !u!4 &1033408817
 Transform:
   m_ObjectHideFlags: 0
@@ -10022,7 +10027,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   this_name: spike2
-  offset: -0.85
+  offset: {x: 0, y: 0, z: 0}
+  launch_when_button_pressed: 0
 --- !u!4 &1223697114
 Transform:
   m_ObjectHideFlags: 0
@@ -12667,6 +12673,8 @@ MonoBehaviour:
   is_falling: 0
   upward_speed: 2
   bubble_prefab: {fileID: 3406941852388994698, guid: e314fbe9e47850943b51fc8847f25ddf, type: 3}
+  rb: {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!50 &1552268329
 Rigidbody2D:
   serializedVersion: 4
@@ -13613,7 +13621,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   this_name: spike1
-  offset: 0.85
+  offset: {x: 0, y: 0, z: 0}
+  launch_when_button_pressed: 0
 --- !u!1 &1647771669
 GameObject:
   m_ObjectHideFlags: 0
@@ -13757,7 +13766,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   this_name: spike2
-  offset: 0.85
+  offset: {x: 0, y: 0, z: 0}
+  launch_when_button_pressed: 0
 --- !u!4 &1680161120
 Transform:
   m_ObjectHideFlags: 0
@@ -14148,7 +14158,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.75, y: 0.6875}
+    oldSize: {x: 0.5625, y: 0.625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

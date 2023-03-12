@@ -47,7 +47,7 @@ public class PlayerFloat : Floatable
 
     IEnumerator Float()
     {
-        
+
         GetComponent<ArrowKeyMovement>().player_control = false;
 
         float duration_sec = 1f;

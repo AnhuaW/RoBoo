@@ -5,6 +5,7 @@ using UnityEngine;
 public class BreakableTile : MonoBehaviour
 {
     public float break_speed_lower_bound = 4f;
+    public AudioClip destroy;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +28,17 @@ public class BreakableTile : MonoBehaviour
             Debug.Log("Instant speed: " + instant_speed);
             if(instant_speed> break_speed_lower_bound)
             {
-                Destroy(gameObject);
+                StartCoroutine (breakTiles());
             }
         }
 
+    }
+
+    IEnumerator breakTiles()
+    {
+        AudioSource.PlayClipAtPoint(destroy, Camera.main.transform.position);
+        yield return 0.5f;
+        Destroy(gameObject);
     }
 
 }

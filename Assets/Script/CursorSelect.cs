@@ -21,7 +21,7 @@ public class CursorSelect : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        rend.material.color = Color.green;
+        rend.material.color = Color.cyan;
     }
 
     private void OnMouseExit()

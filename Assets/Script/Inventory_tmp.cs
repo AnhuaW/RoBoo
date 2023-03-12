@@ -8,7 +8,6 @@ public class Inventory_tmp : MonoBehaviour
     public static Inventory_tmp instance;
     public int bubble_ammo_count = 0; // TODO: make it private later
     public int initial_bubble_ammo_count = 0; // bubble ammo count at the beginning of this level
-
     private void Awake()
     {
         if (instance != null && instance != this)
