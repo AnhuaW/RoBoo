@@ -72,12 +72,12 @@ public class PlayerMovementControl : MonoBehaviour
         {
             movement_speed = 2;
         }
-        if (Mathf.Abs(horizontal_input) > 0.0f)
+        if(Mathf.Abs(horizontal_input) > 0.0f)
         {
             vertical_input = 0.0f;
         }
 
-        if (Mathf.Abs(vertical_input) > 0.0f)
+        if(Mathf.Abs(vertical_input) > 0.0f)
         {
             horizontal_input = 0.0f;
         }
@@ -89,7 +89,7 @@ public class PlayerMovementControl : MonoBehaviour
     {
         float jumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y * rb.gravityScale));
         rb.velocity = new Vector2(horizontal_input, jumpForce);
-
+       
         Debug.Log(jumpForce);
         //rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         Debug.Log("jump");
