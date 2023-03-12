@@ -26,10 +26,11 @@ public class ArrowKeyMovement : MonoBehaviour
     void Update()
     {
 
-        Vector2 left_edge = transform.position - new Vector3(0.35f, 0, 0);
-        Vector2 right_edge = transform.position + new Vector3(0.35f, 0, 0);
-        //Debug.DrawRay(left_edge, Vector2.down*0.5f, Color.red);
-        if (Physics2D.Raycast(left_edge, Vector2.down, 0.5f) || Physics2D.Raycast(right_edge, Vector2.down, 0.5f))
+        Vector2 left_edge = transform.position - new Vector3(0.2f, 0.25f, 0);
+        Vector2 right_edge = transform.position + new Vector3(0.2f, -0.25f, 0);
+        Debug.DrawRay(left_edge, Vector2.down*0.1f, Color.red);
+        Debug.DrawRay(right_edge, Vector2.down * 0.1f, Color.red);
+        if (Physics2D.Raycast(left_edge, Vector2.down, 0.1f) || Physics2D.Raycast(right_edge, Vector2.down, 0.1f))
         {
 
             isGrounded = true;
