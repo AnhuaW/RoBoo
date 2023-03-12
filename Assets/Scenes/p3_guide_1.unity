@@ -359,6 +359,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameover: 0
+--- !u!114 &40175288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40175260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ccf04c0112e7bf4a94fee62d3ca2c8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prompt: {fileID: 1210207643}
 --- !u!1001 &45057896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1723,6 +1736,10 @@ PrefabInstance:
     - target: {fileID: 5669959344316783301, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_Name
       value: BubbleAmmo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669959344316783301, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
+      propertyPath: m_TagString
+      value: firstAmmo
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783305, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_RootOrder
@@ -4555,8 +4572,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 57.848328, y: -53.294872}
-  m_SizeDelta: {x: 1272.8616, y: 106.5896}
+  m_AnchoredPosition: {x: 64.778076, y: -42.2075}
+  m_SizeDelta: {x: 1669.2329, y: 128.7643}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1210207643
 MonoBehaviour:
@@ -4565,7 +4582,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210207641}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
@@ -4580,9 +4597,9 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e23f84569593db6489eeca1686d08afd, type: 3}
-    m_FontSize: 35
+    m_FontSize: 53
     m_FontStyle: 0
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 100
     m_Alignment: 0
@@ -4591,8 +4608,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Congratulations on collecting the bubble ammo! \nNow select some items
-    to make them float."
+  m_Text: 
 --- !u!222 &1210207644
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7069,6 +7085,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5517974921478761772, guid: 70d507a00c207b8439e664071f611849, type: 3}
+      propertyPath: recharge
+      value: 
+      objectReference: {fileID: 8300000, guid: f5b4612e3fa268e4784b5b775e0c169c, type: 3}
+    - target: {fileID: 5517974921478761772, guid: 70d507a00c207b8439e664071f611849, type: 3}
+      propertyPath: collectAmmo
+      value: 
+      objectReference: {fileID: 8300000, guid: f6527cde582e7c7408081c245b9fe229, type: 3}
     - target: {fileID: 5517974921808589465, guid: 70d507a00c207b8439e664071f611849, type: 3}
       propertyPath: m_RootOrder
       value: 2

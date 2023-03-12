@@ -12,6 +12,7 @@ TagManager:
   - block
   - control
   - wall
+  - firstAmmo
   layers:
   - Default
   - TransparentFX

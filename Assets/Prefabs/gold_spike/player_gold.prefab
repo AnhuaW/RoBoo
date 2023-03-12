@@ -118,7 +118,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 5517974921808589476}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f2b6af22ebcd1241ae7736c5006cd7b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -151,7 +151,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5f2b6af22ebcd1241ae7736c5006cd7b, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a7ecb5672f9a86469468fe08b96e3d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectAmmo: {fileID: 8300000, guid: f5b4612e3fa268e4784b5b775e0c169c, type: 3}
+  collectAmmo: {fileID: 8300000, guid: f6527cde582e7c7408081c245b9fe229, type: 3}
   portal: {fileID: 8300000, guid: 707b2d52a22da70408a1c08f7f93c794, type: 3}
 --- !u!114 &-4007032245595016244
 MonoBehaviour:
