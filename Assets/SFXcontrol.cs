@@ -6,6 +6,7 @@ public class SFXcontrol : MonoBehaviour
 {
     // Start is called before the first frame update
     public AudioClip collectAmmo;
+    public AudioClip portal;
     void Start()
     {
         
@@ -22,6 +23,11 @@ public class SFXcontrol : MonoBehaviour
         if (other.CompareTag("battery"))
         {
             AudioSource.PlayClipAtPoint(collectAmmo, Camera.main.transform.position);
+        }
+
+        if (other.CompareTag("Portal"))
+        {
+            AudioSource.PlayClipAtPoint(portal, Camera.main.transform.position);
         }
     }
 }

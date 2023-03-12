@@ -250,6 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectAmmo: {fileID: 8300000, guid: f5b4612e3fa268e4784b5b775e0c169c, type: 3}
+  portal: {fileID: 8300000, guid: 707b2d52a22da70408a1c08f7f93c794, type: 3}
 --- !u!114 &-4007032245595016244
 MonoBehaviour:
   m_ObjectHideFlags: 0
