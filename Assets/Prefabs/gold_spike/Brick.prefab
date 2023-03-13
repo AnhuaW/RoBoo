@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6104714014210263791}
   - component: {fileID: 6104714014210263788}
   - component: {fileID: 6104714014210263789}
+  - component: {fileID: -3392689124148069779}
   m_Layer: 0
   m_Name: Brick
   m_TagString: Untagged
@@ -165,3 +166,16 @@ MonoBehaviour:
   bubble_prefab: {fileID: 3406941852388994698, guid: e314fbe9e47850943b51fc8847f25ddf, type: 3}
   rb: {fileID: 0}
   inventory: {fileID: 0}
+--- !u!114 &-3392689124148069779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6104714014210263778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c02f4089ef503744b86c51bc011bb56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detect_range: 0.1

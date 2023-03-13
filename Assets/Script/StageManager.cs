@@ -25,8 +25,16 @@ public class StageManager : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex != e.level_index)
         {
             SceneManager.LoadScene(e.level_index);
-            // record initial state of inventory
-            Inventory_tmp.instance.RecordInitialState();
+            if (e.level_index != 0)
+            {
+                // record initial state of inventory
+                Inventory_tmp.instance.RecordInitialState();
+            }
+            else
+            {
+                // load menu, clear inventory
+                Inventory_tmp.instance.ClearAll();
+            }
         }
     }
 

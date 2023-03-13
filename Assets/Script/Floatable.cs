@@ -34,6 +34,16 @@ public class Floatable : MonoBehaviour
                 rb.velocity = Vector2.zero;
             }
         }
+
+        if (is_falling)
+        {
+            Vector2 center = transform.position + new Vector3(0, -0.35f, 0);
+            RaycastHit2D hit = Physics2D.Raycast(center, new Vector2(0, -1), 0.1f);
+            if (hit.collider != null && hit.collider.gameObject.name != "Player")
+            {
+                is_falling = false;
+            }
+        }
         
     }
 
@@ -83,6 +93,7 @@ public class Floatable : MonoBehaviour
     {
         is_floating = false;
         is_falling = true;
+        Debug.Log("isfalling:" + is_falling);
         //rb.bodyType = RigidbodyType2D.Dynamic;
         rb.gravityScale = 1;
         //rb.velocity = Vector2.zero;
@@ -104,10 +115,6 @@ public class Floatable : MonoBehaviour
         if (is_floating && !is_falling)
         {
             ApplyGravity();
-        }
-        else if (is_falling)
-        {
-            is_falling = false;
         }
     }
 
