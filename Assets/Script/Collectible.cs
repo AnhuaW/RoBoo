@@ -30,10 +30,11 @@ public class Collectible : MonoBehaviour
             {
                 case collectible_types.bubble_ammo:
                     inventory.ChangeBubbleAmmo(1);
+                    Destroy(gameObject);
                     break;
             }
 
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 

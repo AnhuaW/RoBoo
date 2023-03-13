@@ -18,17 +18,7 @@ public class PlayerFloat : Floatable
     void Update()
     {
 
-        Vector3 viewportPos = Camera.main.WorldToViewportPoint(transform.position);
-        if (viewportPos.x < 0f || viewportPos.x > 1f ||
-        viewportPos.y < 0.1f || viewportPos.y > 0.9f)
-        {
-            GetComponent<ArrowKeyMovement>().player_control = false;
-            rb.velocity = Vector3.zero;
-        }
-        else
-        {
-            GetComponent<ArrowKeyMovement>().player_control = true;
-        }
+
 
     }
 

@@ -57,6 +57,11 @@ public class Inventory_tmp : MonoBehaviour
         bubble_ammo_count = initial_bubble_ammo_count;
     }
 
+    public void ClearAll()
+    {
+        bubble_ammo_count = 0;
+    }
+
 
 
     private void OnDestroy()
