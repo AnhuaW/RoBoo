@@ -6,11 +6,12 @@ public class DoorToNextLevel : MonoBehaviour
 {
     public int current_level_index = 0;
     public int total_scenes_count = 6;
+    GameObject load;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        load = GameObject.Find("levelLoader");
     }
 
     // Update is called once per frame
@@ -24,8 +25,8 @@ public class DoorToNextLevel : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-            EventBus.Publish<StageStatus>(new StageStatus((current_level_index + 1) % total_scenes_count));
-
+            //EventBus.Publish<StageStatus>(new StageStatus((current_level_index + 1) % total_scenes_count));
+            StartCoroutine(load.GetComponent<levelLoder>().LoadLevel(current_level_index));
             GameObject completed_levels = GameObject.Find("CompletedLevels");
             if (completed_levels != null)
             {

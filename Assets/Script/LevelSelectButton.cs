@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class LevelSelectButton : MonoBehaviour
 {
-
-    public int level_index; 
+    GameObject load;
+    public int level_index;
     // 1-based level_index should be equal to 0-based build index
+    
 
     CompletedLevels completed_levels_list;
 
@@ -16,6 +17,7 @@ public class LevelSelectButton : MonoBehaviour
     void Start()
     {
         completed_levels_list = GameObject.Find("CompletedLevels").GetComponent<CompletedLevels>();
+        load = GameObject.Find("levelLoader");
     }
 
     // Update is called once per frame
@@ -35,8 +37,10 @@ public class LevelSelectButton : MonoBehaviour
     {
         if (completed_levels_list != null && completed_levels_list.level_completed[level_index - 1] == true)
         {
-            SceneManager.LoadScene(level_index);
+            StartCoroutine(load.GetComponent<levelLoder>().LoadLevel(level_index));
+            //SceneManager.LoadScene(level_index);
         }
     }
 
+    
 }
