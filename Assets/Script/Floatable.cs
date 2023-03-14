@@ -62,9 +62,11 @@ public class Floatable : MonoBehaviour
 
     public void OnGravityChange()
     {
+        Debug.Log("OnGravityChange");
         if (is_floating)
         {
             ApplyGravity();
+            return;
         }
         else
         {
@@ -79,6 +81,7 @@ public class Floatable : MonoBehaviour
     public virtual void RemoveGravity()
     {
         is_floating = true;
+        is_falling = false;
         rb.gravityScale = 0;
         rb.velocity = new Vector2(rb.velocity.x, upward_speed);
         // initiate a bubble
