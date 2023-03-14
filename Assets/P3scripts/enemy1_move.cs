@@ -5,7 +5,6 @@ using UnityEngine;
 public class enemy1_move : MonoBehaviour
 {
     public float movement_speed = 0.5f;
-    public float grid_size = 1f;
     public Vector2 oriPos;
     public Vector2 current_input;
     List<bool> raycast_list = new List<bool>();
@@ -14,6 +13,9 @@ public class enemy1_move : MonoBehaviour
     RaycastHit2D isRightHit;
     RaycastHit2D isLeftHit;
     RaycastHit2D isDownHit;
+    public float durationTime = 10f;
+    public float lastTime = 0;
+    public bool first = true;
     private int layerMask = 1 << 3;
     
     Rigidbody2D rb;

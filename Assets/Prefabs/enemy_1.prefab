@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 9110989728994487455}
   - component: {fileID: 8843615365160022661}
   - component: {fileID: 3518672794049512990}
+  - component: {fileID: 2284688153197361669}
   m_Layer: 7
   m_Name: enemy_1
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,7 +135,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &8843615365160022661
 Animator:
   serializedVersion: 5
@@ -171,4 +172,23 @@ MonoBehaviour:
   grid_size: 1
   oriPos: {x: 0, y: 0}
   current_input: {x: 0, y: 0}
-  stopMoving: 0
+  durationTime: 10
+  lastTime: 0
+  first: 1
+--- !u!114 &2284688153197361669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3416352412365352069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0248ed37641a14e2f9cdc3f81e790153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet_prefab: {fileID: 7609376696476271618, guid: 3788dc02184f549b8b1a08e17288bbab, type: 3}
+  movement_speed: 8
+  durationTime: 5
+  lastTime: 0
+  first: 1
