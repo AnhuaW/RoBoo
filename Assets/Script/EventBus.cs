@@ -18,7 +18,7 @@ using UnityEngine;
 public class EventBus
 {
     /* DEVELOPER : Change this to "true" and all events will be logged to console automatically */
-    public const bool DEBUG_MODE = true;
+    public const bool DEBUG_MODE = false;
 
     static Dictionary<Type, IList> _topics = new Dictionary<Type, IList>();
 

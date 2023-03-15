@@ -6,10 +6,9 @@ using UnityEngine.UI;
 public class GravityControl : MonoBehaviour
 {
     // Start is called before the first frame update
-    public bool enable_gravity = false;
-    public bool gravity_enabled = false;
-    public float current_gravity_scale = 3f;
-    public float force = 3f;
+    public bool enable_gravity = true;
+    public bool gravity_enabled = true;
+    public float current_gravity_scale = 10f;
     public float time_interval = 0.5f;
     public float rotation = 10f;
     Rigidbody2D rb;
@@ -24,6 +23,11 @@ public class GravityControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gravity_enabled)
+        {//ensure the player does not rotate when not floating
+            rb.SetRotation(0);
+        }
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             if(!enable_gravity && inventory.get_energy_level() > 0)
@@ -51,7 +55,7 @@ public class GravityControl : MonoBehaviour
 
         if (enable_gravity)
         {
-            rb.gravityScale = 1f;
+            rb.gravityScale = current_gravity_scale;
         }
 
         if(!enable_gravity && gravity_enabled)
@@ -86,10 +90,5 @@ public class GravityControl : MonoBehaviour
         rb.gravityScale = 0;
         rb.SetRotation(0);
         gravity_enabled = false;
-    }
-
-   void Rotate()
-    {
-        rb.SetRotation(force);
     }
 }

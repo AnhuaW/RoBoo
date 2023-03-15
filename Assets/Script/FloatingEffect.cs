@@ -19,4 +19,9 @@ public class FloatingEffect : MonoBehaviour
     {
         transform.position = new Vector3(transform.position.x, transform.position.y + Mathf.Sin(Time.time) * amplitude * direction,0);
     }
+
+    private void OnDisable()
+    {
+        rb.gravityScale = 1f;
+    }
 }

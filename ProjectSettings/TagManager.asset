@@ -11,6 +11,8 @@ TagManager:
   - bar
   - block
   - control
+  - wall
+  - firstAmmo
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
+  - enemy
   - 
   - 
   - 

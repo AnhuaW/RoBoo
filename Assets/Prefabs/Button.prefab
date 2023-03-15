@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4297677733155944769}
   - component: {fileID: 3634668479217640983}
   - component: {fileID: 608367109736980287}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Button
   m_TagString: chip
   m_Icon: {fileID: 0}
@@ -160,3 +160,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0407274a9ff470a4b9993017e67f4e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  portal: {fileID: 0}
+  collision: {fileID: 0}
