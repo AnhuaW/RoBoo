@@ -39,7 +39,7 @@ public class Floatable : MonoBehaviour
         {
             Vector2 center = transform.position + new Vector3(0, -0.35f, 0);
             RaycastHit2D hit = Physics2D.Raycast(center, new Vector2(0, -1), 0.1f);
-            if (hit.collider != null && hit.collider.gameObject.name != "Player")
+            if (hit.collider != null && hit.collider.gameObject.name != "Player" && !hit.collider.isTrigger)
             {
                 is_falling = false;
             }
