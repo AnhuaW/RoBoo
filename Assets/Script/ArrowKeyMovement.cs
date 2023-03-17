@@ -50,23 +50,25 @@ public class ArrowKeyMovement : MonoBehaviour
             rb.freezeRotation = false;
         }
 
-        //JumpScale();
-    }
-
-    private void FixedUpdate()
-    {
+        //Jump with W and uparrow when not floating
         if (player_control)
         {
             Vector3 current_input = GetInput();
             float speed = (GetComponent<PlayerFloat>().is_floating ? float_movement_speed : ground_movement_speed);
             transform.position += current_input * speed * Time.fixedDeltaTime;
-            if (Input.GetKeyDown(KeyCode.Space) && !GetComponent<PlayerFloat>().is_floating && isGrounded)
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) && !GetComponent<PlayerFloat>().is_floating && isGrounded)
             {
                 Jump();
             }
         }
 
     }
+
+    private void FixedUpdate()
+    {
+       
+    }
+
     Vector3 GetInput()
     {
         float horizontal_input = Input.GetAxisRaw("Horizontal");
@@ -99,6 +101,5 @@ public class ArrowKeyMovement : MonoBehaviour
         rb.AddForce(new Vector2(0, jump_force), ForceMode2D.Impulse);
         Debug.Log("jump");
     }
-
 
 }
