@@ -25,7 +25,7 @@ public class DoorToNextLevel : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-            //EventBus.Publish<StageStatus>(new StageStatus((current_level_index + 1) % total_scenes_count));
+            EventBus.Publish<StageStatus>(new StageStatus((current_level_index + 1) % total_scenes_count));
             StartCoroutine(load.GetComponent<levelLoder>().LoadLevel(current_level_index));
             GameObject completed_levels = GameObject.Find("CompletedLevels");
             if (completed_levels != null)

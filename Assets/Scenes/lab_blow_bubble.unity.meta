@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/lab_blow_bubble.unity.meta
 guid: aae1786f84049114a86d0fa2183449f6
+========
+guid: a7263154242898948b9469dd1aaa9cb9
+>>>>>>>> f9543b665c37de7bfb8de2b2c4460e1133bf5fca:Assets/Scenes/p3_guide_3.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
