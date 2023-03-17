@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1011,7 +1011,6 @@ TextureImporter:
     nameFileIdTable:
       Ologram_Sprite_20: -1171083648
       Ologram_Sprite_37: -1410698189
-      Ologram_Sprite_30: -1763639465
       Ologram_Sprite_32: -994885955
       Ologram_Sprite_38: -460468255
       Ologram_Sprite_10: 1538146233
@@ -1028,6 +1027,7 @@ TextureImporter:
       Ologram_Sprite_15: 1259809864
       Ologram_Sprite_27: 1437088028
       Ologram_Sprite_35: -1040860427
+      Ologram_Sprite_30: -1763639465
       Ologram_Sprite_14: -1872115724
       Ologram_Sprite_1: -1411981087
       Ologram_Sprite_7: -1212594910

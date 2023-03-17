@@ -7,13 +7,17 @@ public class PlayerMovementControl : MonoBehaviour
     public float movement_speed = 4;
     public Vector2 playerDirection;
     public bool movement_frozen = false;
-    public float jumpHeight = 1f;
+    public float jumpHeight = 2.5f;
+    [Space]
+    public float collisionRadius = 0.2f;
+    public Transform groundCheck;
+    public LayerMask groundLayer;
 
     Rigidbody2D rb;
-
     private Vector2 current_input;
     private float horizontal_input;
     private float vertical_input;
+    private bool isGrounded;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,15 +28,12 @@ public class PlayerMovementControl : MonoBehaviour
     void Update()
     {
         current_input = Vector2.zero;
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, collisionRadius, groundLayer);
 
         if (!movement_frozen)
         {
             current_input = GetInput();
         }
-
-        rb.velocity = current_input * movement_speed;
-
-
 
         if (GetComponent<GravityControl>().enable_gravity)
         {
@@ -42,11 +43,14 @@ public class PlayerMovementControl : MonoBehaviour
         {
             rb.freezeRotation = false;
         }
+
+        //JumpScale();
     }
 
     private void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !movement_frozen)
+        rb.velocity = current_input * movement_speed;
+        if (Input.GetKeyDown(KeyCode.Space) && !movement_frozen && isGrounded)
         {
             if (GetComponent<GravityControl>().enable_gravity)
             {
@@ -62,7 +66,6 @@ public class PlayerMovementControl : MonoBehaviour
         if (GetComponent<GravityControl>().enable_gravity)
         {
             vertical_input = 0;
-            movement_speed = 4;
         }
 
         else if (!GetComponent<GravityControl>().enable_gravity)
@@ -85,7 +88,22 @@ public class PlayerMovementControl : MonoBehaviour
     void Jump()
     {
         float jumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y * rb.gravityScale));
-        rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+        rb.velocity = new Vector2(horizontal_input, jumpForce);
+       
+        Debug.Log(jumpForce);
+        //rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         Debug.Log("jump");
+    }
+
+    void JumpScale()
+    {
+        if (rb.velocity.y < 0 && !isGrounded)
+        {
+            rb.gravityScale = 20f;
+        }
+        else
+        {
+            rb.gravityScale = 10f;
+        }
     }
 }

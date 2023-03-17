@@ -11,6 +11,11 @@ TagManager:
   - bar
   - block
   - control
+  - wall
+  - firstAmmo
+  - bullet
+  - ground
+  - enemy
   layers:
   - Default
   - TransparentFX
@@ -19,7 +24,7 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
+  - enemy
   - 
   - 
   - 
@@ -45,6 +50,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: background
+    uniqueID: 2906333161
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 2085382901
     locked: 0
