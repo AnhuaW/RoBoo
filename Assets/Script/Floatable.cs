@@ -31,12 +31,14 @@ public class Floatable : MonoBehaviour
             if (viewportPos.x < 0f || viewportPos.x > 1f ||
             viewportPos.y < 0.1f || viewportPos.y > 0.9f)
             {
-                rb.velocity = Vector2.zero;
+                rb.velocity = new Vector2(rb.velocity.x, 0);
             }
         }
 
         if (is_falling)
         {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+
             Vector2 center = transform.position + new Vector3(0, -0.35f, 0);
             RaycastHit2D hit = Physics2D.Raycast(center, new Vector2(0, -1), 0.1f);
             if (hit.collider != null && hit.collider.gameObject.name != "Player" && !hit.collider.isTrigger)

@@ -21,9 +21,11 @@ public class WaterFlow : MonoBehaviour
 
 
     // detect all floating objects in the range
+    
+    /*
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<Floatable>() != null)
+        if (collision.gameObject.GetComponent<Floatable>() != null && collision.gameObject.GetComponent<Floatable>().is_floating)
         {
             Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
             if (rb != null)
@@ -33,6 +35,7 @@ public class WaterFlow : MonoBehaviour
             }
         }
     }
+    */
 
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -47,5 +50,16 @@ public class WaterFlow : MonoBehaviour
         }
     }
 
-
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<Floatable>() != null && collision.gameObject.GetComponent<Floatable>().is_floating)
+        {
+            Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
+            if (rb != null && rb.velocity.x == 0)
+            {
+                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                rb.velocity = new Vector2(added_horizontal_speed, rb.velocity.y);
+            }
+        }
+    }
 }
