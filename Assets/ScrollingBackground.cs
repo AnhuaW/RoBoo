@@ -5,14 +5,16 @@ using UnityEngine;
 public class ScrollingBackground : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject leftEdge;
-    public GameObject rightEdge;
+    public float scrollSpeed = 0.5f;
     GameObject player;
+    Rigidbody2D rb;
     [SerializeField]
-    float moveX;
+    private float moveX;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -20,15 +22,11 @@ public class ScrollingBackground : MonoBehaviour
     {
         moveX = player.GetComponent<ArrowKeyMovement>().playerDirection.x;
         Debug.Log(player.GetComponent<ArrowKeyMovement>().playerDirection.x);
+        StartScroll(-moveX * scrollSpeed);
     }
 
-    void StartScroll()
+    void StartScroll(float speed)
     {
-        return;
-    }
-
-    bool ReachEnd()
-    {
-        return false;
+        rb.velocity = new Vector2(speed, 0);
     }
 }
