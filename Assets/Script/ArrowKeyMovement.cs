@@ -28,7 +28,7 @@ public class ArrowKeyMovement : MonoBehaviour
 
         Vector2 left_edge = transform.position - new Vector3(0.2f, 0.25f, 0);
         Vector2 right_edge = transform.position + new Vector3(0.2f, -0.25f, 0);
-        Debug.DrawRay(left_edge, Vector2.down*0.1f, Color.red);
+        Debug.DrawRay(left_edge, Vector2.down * 0.1f, Color.red);
         Debug.DrawRay(right_edge, Vector2.down * 0.1f, Color.red);
         if (Physics2D.Raycast(left_edge, Vector2.down, 0.1f) || Physics2D.Raycast(right_edge, Vector2.down, 0.1f))
         {
@@ -41,16 +41,7 @@ public class ArrowKeyMovement : MonoBehaviour
         }
 
 
-        if (!GetComponent<PlayerFloat>().is_floating)
-        {
-            rb.freezeRotation = true;
-        }
-        else
-        {
-            rb.freezeRotation = false;
-        }
 
-        //Jump with W and uparrow when not floating
         if (player_control)
         {
             Vector3 current_input = GetInput();
@@ -64,11 +55,6 @@ public class ArrowKeyMovement : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
-    {
-       
-    }
-
     Vector3 GetInput()
     {
         float horizontal_input = Input.GetAxisRaw("Horizontal");
@@ -79,8 +65,10 @@ public class ArrowKeyMovement : MonoBehaviour
         {
             vertical_input = 0;
         }
+        //enable diagonal movement
         else
         {
+            /*
             // can't move in diagonal direction
             if (horizontal_input != 0)
             {
@@ -90,6 +78,7 @@ public class ArrowKeyMovement : MonoBehaviour
             {
                 horizontal_input = 0.0f;
             }
+            */
         }
 
         playerDirection = new Vector2(horizontal_input, vertical_input);
@@ -101,5 +90,6 @@ public class ArrowKeyMovement : MonoBehaviour
         rb.AddForce(new Vector2(0, jump_force), ForceMode2D.Impulse);
         Debug.Log("jump");
     }
+
 
 }
