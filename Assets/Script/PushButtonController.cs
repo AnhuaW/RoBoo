@@ -17,6 +17,8 @@ public class PushButtonController : MonoBehaviour
     {
         sprite_renderer = GetComponent<SpriteRenderer>();
         this_collider = GetComponent<BoxCollider2D>();
+
+        EventBus.Publish<PushButtonEvent>(new PushButtonEvent(pressed, controlled_obj_name));
     }
 
     // Update is called once per frame

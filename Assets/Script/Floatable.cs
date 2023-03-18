@@ -31,15 +31,17 @@ public class Floatable : MonoBehaviour
             if (viewportPos.x < 0f || viewportPos.x > 1f ||
             viewportPos.y < 0.1f || viewportPos.y > 0.9f)
             {
-                rb.velocity = Vector2.zero;
+                rb.velocity = new Vector2(rb.velocity.x, 0);
             }
         }
 
         if (is_falling)
         {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+
             Vector2 center = transform.position + new Vector3(0, -0.35f, 0);
             RaycastHit2D hit = Physics2D.Raycast(center, new Vector2(0, -1), 0.1f);
-            if (hit.collider != null && hit.collider.gameObject.name != "Player")
+            if (hit.collider != null && hit.collider.gameObject.name != "Player" && !hit.collider.isTrigger)
             {
                 is_falling = false;
             }
@@ -62,9 +64,11 @@ public class Floatable : MonoBehaviour
 
     public void OnGravityChange()
     {
+        Debug.Log("OnGravityChange");
         if (is_floating)
         {
             ApplyGravity();
+            return;
         }
         else
         {
@@ -79,6 +83,7 @@ public class Floatable : MonoBehaviour
     public virtual void RemoveGravity()
     {
         is_floating = true;
+        is_falling = false;
         rb.gravityScale = 0;
         rb.velocity = new Vector2(rb.velocity.x, upward_speed);
         // initiate a bubble
