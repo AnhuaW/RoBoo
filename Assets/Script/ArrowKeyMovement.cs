@@ -30,7 +30,9 @@ public class ArrowKeyMovement : MonoBehaviour
         Vector2 right_edge = transform.position + new Vector3(0.2f, -0.25f, 0);
         Debug.DrawRay(left_edge, Vector2.down * 0.1f, Color.red);
         Debug.DrawRay(right_edge, Vector2.down * 0.1f, Color.red);
-        if (Physics2D.Raycast(left_edge, Vector2.down, 0.1f) || Physics2D.Raycast(right_edge, Vector2.down, 0.1f))
+        RaycastHit2D hit_left = Physics2D.Raycast(left_edge, Vector2.down, 0.1f);
+        RaycastHit2D hit_right = Physics2D.Raycast(right_edge, Vector2.down, 0.1f);
+        if ((hit_left && !hit_left.collider.isTrigger) || (hit_right && !hit_right.collider.isTrigger))
         {
 
             isGrounded = true;
@@ -47,7 +49,7 @@ public class ArrowKeyMovement : MonoBehaviour
             Vector3 current_input = GetInput();
             float speed = (GetComponent<PlayerFloat>().is_floating ? float_movement_speed : ground_movement_speed);
             transform.position += current_input * speed * Time.fixedDeltaTime;
-            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) && !GetComponent<PlayerFloat>().is_floating && isGrounded)
+            if (Input.GetKeyDown(KeyCode.Space) && !GetComponent<PlayerFloat>().is_floating && isGrounded)
             {
                 Jump();
             }
@@ -65,7 +67,6 @@ public class ArrowKeyMovement : MonoBehaviour
         {
             vertical_input = 0;
         }
-        //enable diagonal movement
         else
         {
             /*
