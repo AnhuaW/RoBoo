@@ -21,7 +21,6 @@ public class ScrollingBackground : MonoBehaviour
     void Update()
     {
         moveX = player.GetComponent<ArrowKeyMovement>().playerDirection.x;
-        Debug.Log(player.GetComponent<ArrowKeyMovement>().playerDirection.x);
         StartScroll(-moveX * scrollSpeed);
     }
 
