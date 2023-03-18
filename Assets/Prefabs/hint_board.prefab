@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8693071112302744748}
   - component: {fileID: 4578951476013508890}
   - component: {fileID: 918023470295378676}
+  - component: {fileID: -399155257090441081}
   m_Layer: 0
   m_Name: hint_board
   m_TagString: Untagged
@@ -111,3 +112,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-399155257090441081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3102868018526891068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef652213f7744008a3d889bbba0fb04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
