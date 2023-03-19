@@ -25,7 +25,7 @@ public class GameStatus : MonoBehaviour
             // reload scene
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             // retrieve initial inventory state
-            Inventory_tmp.instance.RetrieveInitialState();
+            //Inventory_tmp.instance.RetrieveInitialState();
         }
     }
 

@@ -14,9 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/p3_guide_2.unity
     guid: b7037299b6a17554f93bb16f0837a5cd
-  - enabled: 1
-    path: Assets/Scenes/p3_guide_3.unity
-    guid: a7263154242898948b9469dd1aaa9cb9
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/p3_level_1 1.unity
     guid: ca1bcd1788876be4b81a41f37fd67355
