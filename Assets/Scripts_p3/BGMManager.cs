@@ -43,6 +43,8 @@ public class BGMManager : MonoBehaviour
         if (instance.GetComponent<AudioSource>().clip != e.BGM_clip)
         {
             instance.GetComponent<AudioSource>().clip = e.BGM_clip;
+            instance.GetComponent<AudioSource>().loop = true;
+            instance.GetComponent<AudioSource>().volume = 0.2f;
             instance.GetComponent<AudioSource>().Play();
         }
     }
