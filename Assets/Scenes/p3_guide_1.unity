@@ -744,6 +744,10 @@ PrefabInstance:
       value: hint_board
       objectReference: {fileID: 0}
     - target: {fileID: 1168638225496751924, guid: e3accd255b2e8401198a081723f3a7b2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1168638225496751924, guid: e3accd255b2e8401198a081723f3a7b2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0f5d016ee85dd4a3781f8f6ee85c9c53, type: 2}
