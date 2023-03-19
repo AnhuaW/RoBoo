@@ -47,9 +47,13 @@ public class statue_attack : MonoBehaviour
 
     void updateDir()
     {
-        if(player.transform.position.x > transform.position.x)
+        if (player.transform.position.x > transform.position.x)
         {
-            sp.flipX = !sp.flipX;
+            sp.flipX = false;
+        }
+        else if (player.transform.position.x < transform.position.x)
+        {
+            sp.flipX = true;
         }
     }
     
