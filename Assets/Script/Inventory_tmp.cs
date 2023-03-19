@@ -19,9 +19,9 @@ public class Inventory_tmp : MonoBehaviour
         {
             instance = this;
         }
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
-        RecordInitialState();
+        //RecordInitialState();
 
     }
 

@@ -24,6 +24,12 @@ public class Floatable : MonoBehaviour
 
     void Update()
     {
+        //extra condition for falling block damage
+        if(rb.gravityScale == 1 && rb.velocity.y < 0)
+        {
+            is_falling = true;
+        }
+
         // if reaches screen edge, stop moving (mainly prevent object from floating infinitely)
         if (is_floating)
         {
