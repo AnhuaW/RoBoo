@@ -590,6 +590,7 @@ GameObject:
   - component: {fileID: 571126246}
   - component: {fileID: 571126245}
   - component: {fileID: 571126244}
+  - component: {fileID: 571126247}
   m_Layer: 0
   m_Name: BGM
   m_TagString: Untagged
@@ -621,9 +622,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 96f9bcf064d5241babadd02d1260197a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.282
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -720,6 +721,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &571126247
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571126243}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a168b187f3cc348dd8348f759e8893cc, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &605222454 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5229165463042721258, guid: 43baf10838937fc4dba4f903f61c3df0, type: 3}
@@ -1167,7 +1264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6104714014210263784, guid: fa295b0cab380f544bee976657bf966e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6104714014210263784, guid: fa295b0cab380f544bee976657bf966e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1396,7 +1493,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2085382901
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -2074,6 +2171,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -1388634135
       objectReference: {fileID: 0}
+    - target: {fileID: 7884127066588797032, guid: 1b771af803bc04ec793f51dc4c37f005, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884127066588797032, guid: 1b771af803bc04ec793f51dc4c37f005, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7884127066705145964, guid: 1b771af803bc04ec793f51dc4c37f005, type: 3}
       propertyPath: m_SortingLayer
       value: -1
@@ -2118,6 +2223,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -1388634135
       objectReference: {fileID: 0}
+    - target: {fileID: 7884127067565223920, guid: 1b771af803bc04ec793f51dc4c37f005, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884127067565223920, guid: 1b771af803bc04ec793f51dc4c37f005, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7884127067590391069, guid: 1b771af803bc04ec793f51dc4c37f005, type: 3}
       propertyPath: m_SortingLayer
       value: -1
@@ -2125,6 +2238,14 @@ PrefabInstance:
     - target: {fileID: 7884127067590391069, guid: 1b771af803bc04ec793f51dc4c37f005, type: 3}
       propertyPath: m_SortingLayerID
       value: -1388634135
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884127067669025466, guid: 1b771af803bc04ec793f51dc4c37f005, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884127067669025466, guid: 1b771af803bc04ec793f51dc4c37f005, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7884127067794758870, guid: 1b771af803bc04ec793f51dc4c37f005, type: 3}
       propertyPath: m_SortingLayer
@@ -3425,6 +3546,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3902282958088793123, guid: 58dc16837344d914a92ba238812347f6, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902282958088793123, guid: 58dc16837344d914a92ba238812347f6, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2085382901
+      objectReference: {fileID: 0}
     - target: {fileID: 3902282958088793132, guid: 58dc16837344d914a92ba238812347f6, type: 3}
       propertyPath: m_Name
       value: Door
@@ -3610,11 +3739,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783305, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: 1.47
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783305, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.66
+      value: -2.6
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783305, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_LocalPosition.z

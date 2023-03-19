@@ -22,7 +22,7 @@ public class Smash : MonoBehaviour
     void Update()
     {
         Vector2 left_edge = transform.position - new Vector3(0.3f, 0.35f, 0);
-        RaycastHit2D hit = Physics2D.Raycast(left_edge, new Vector2(0, -1), detect_range, player_layer);
+        RaycastHit2D hit = Physics2D.Raycast(left_edge, new Vector2(0, -1.2f), detect_range, player_layer);
         if (hit.collider != null && hit.collider.gameObject.name == "Player")
         {
             if (floatable.is_falling)
