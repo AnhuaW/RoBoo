@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3902282958088793123}
   - component: {fileID: 3902282958088793122}
   - component: {fileID: 3902282958088793133}
+  - component: {fileID: 5968852066551229924}
   m_Layer: 0
   m_Name: Door_p3
   m_TagString: Portal
@@ -27,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3902282958088793132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.344, y: -1.75, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalPosition: {x: 5.392, y: -1.6098, z: 0}
+  m_LocalScale: {x: 1.2, y: 1.5, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1973152199, guid: 905eb965b266b384788202438ae58799, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7875649, g: 1, b: 0.5613208, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -125,3 +126,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   current_level_index: 0
+  total_scenes_count: 6
+--- !u!114 &5968852066551229924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3902282958088793132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d7939f6d6a461458650ecff37fd2c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interval: 0.8
