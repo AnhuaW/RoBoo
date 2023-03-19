@@ -11,8 +11,7 @@ public class ButtonControlled : MonoBehaviour
     Subscription<PushButtonEvent> button_event_subscription;
     Vector3 initial_pos, target_pos;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         button_event_subscription = EventBus.Subscribe<PushButtonEvent>(_OnButtonChange);
 
@@ -30,6 +29,7 @@ public class ButtonControlled : MonoBehaviour
 
     void _OnButtonChange(PushButtonEvent e)
     {
+        Debug.Log("buttonchange");
         if (e.name == this_name)
         {
             if (e.pressed)
@@ -52,6 +52,7 @@ public class ButtonControlled : MonoBehaviour
 
     void ControlRays(bool turn_on)
     {
+        Debug.Log(gameObject.name + turn_on);
         foreach (Transform child in transform)
         {
             DamagingRay child_ray = child.gameObject.GetComponent<DamagingRay>();
