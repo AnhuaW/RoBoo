@@ -35,32 +35,23 @@ public class Floatable : MonoBehaviour
             }
         }
 
+        // detect ground underneath
         if (is_falling)
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
 
-            Vector2 center = transform.position + new Vector3(0, -0.35f, 0);
+            Vector2 center = transform.position + new Vector3(0, -0.6f, 0);
             RaycastHit2D hit = Physics2D.Raycast(center, new Vector2(0, -1), 0.1f);
+
             if (hit.collider != null && hit.collider.gameObject.name != "Player" && !hit.collider.isTrigger)
             {
                 is_falling = false;
             }
+            
         }
         
     }
 
-    /*
-    private void FixedUpdate()
-    {
-        // simulate gravity
-        if (is_falling)
-        {
-            Vector2 delta_pos = Physics2D.gravity * Time.fixedDeltaTime;
-            Vector3 new_pos = transform.position + new Vector3(delta_pos.x, delta_pos.y, 0);
-            transform.position = new_pos;
-        }
-    }
-    */
 
     public void OnGravityChange()
     {
