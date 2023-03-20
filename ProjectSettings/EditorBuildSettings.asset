@@ -9,17 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: fd9beadc60da4914497aebbd1123247a
   - enabled: 1
-    path: Assets/Scenes/Background_story.unity
-    guid: ea647618d8727f54db94d8c33efb69b2
-  - enabled: 1
     path: Assets/Scenes/p3_guide_1.unity
     guid: 9dcb45e439f45744ead57496dcfd5307
   - enabled: 1
     path: Assets/Scenes/p3_guide_2.unity
     guid: b7037299b6a17554f93bb16f0837a5cd
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/p3_guide_3.unity
     guid: 6a5ca92553f4a9c42abbb080e7702eb9
@@ -41,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/p3_level_5_temp.unity
     guid: 5643679c1c936384e9f7b5c649e77fef
+  - enabled: 1
+    path: Assets/Scenes/Background_story.unity
+    guid: ea647618d8727f54db94d8c33efb69b2
   m_configObjects: {}

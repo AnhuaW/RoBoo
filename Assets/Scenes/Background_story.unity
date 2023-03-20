@@ -526,6 +526,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 627697069340410410, guid: 36bc861309a224fbfb10fca2ea521d54, type: 3}
+      propertyPath: total_scenes_count
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 627697069340410411, guid: 36bc861309a224fbfb10fca2ea521d54, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5649,6 +5653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 083eff33dd3bfac4fa44aa899d82570b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interval: 0.5
 --- !u!114 &519212275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5888,6 +5893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 083eff33dd3bfac4fa44aa899d82570b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interval: 0.5
 --- !u!114 &905293041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6228,7 +6234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e9fedb0a395945923ddc2d39dab78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  total_level_count: 6
+  total_level_count: 9
   level_completed: 
 --- !u!4 &1445878101
 Transform:

@@ -13,7 +13,7 @@ public class DisplayPrompt : MonoBehaviour
     string waterguide = "watch out currents! ↓";
     string ammoPrompt = "Dear Diary," +
         "\n\n" +"  It has been two days since I lost contact with my teammates. Last time, the signal they sent said they"
-        +" COULD NOT swim in that Lost Sea Ruins." +"\n" +"  Their oxygen is about to running out. I have to go find them" +"\n"
+        +" COULD NOT swim in that Lost Sea Ruins." +"\n" +"  Their oxygen is about to running out. I have to go find them." +"\n"
         +"  Wish me good look!";
     void Start()
     {

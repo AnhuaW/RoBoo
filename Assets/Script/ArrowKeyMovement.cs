@@ -32,6 +32,7 @@ public class ArrowKeyMovement : MonoBehaviour
         Debug.DrawRay(right_edge, Vector2.down * 0.1f, Color.red);
         RaycastHit2D hit_left = Physics2D.Raycast(left_edge, Vector2.down, 0.1f);
         RaycastHit2D hit_right = Physics2D.Raycast(right_edge, Vector2.down, 0.1f);
+        /*
         if (hit_left)
         {
             Debug.Log("player left ray: " + hit_left.collider.gameObject.name);
@@ -41,6 +42,7 @@ public class ArrowKeyMovement : MonoBehaviour
             Debug.Log("player right ray: " + hit_right.collider.gameObject.name);
 
         }
+        */
 
         if ((hit_left && !hit_left.collider.isTrigger) || (hit_right && !hit_right.collider.isTrigger))
         {
@@ -67,6 +69,14 @@ public class ArrowKeyMovement : MonoBehaviour
             {
                 Jump();
             }
+        }
+
+        // if gets out of screen, dies
+        Vector3 viewportPos = Camera.main.WorldToViewportPoint(transform.position);
+        if (viewportPos.x < 0f || viewportPos.x > 1f ||
+        viewportPos.y < 0f || viewportPos.y > 1f)
+        {
+            EventBus.Publish<GameOver>(new GameOver());
         }
 
     }
