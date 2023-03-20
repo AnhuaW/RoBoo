@@ -17,6 +17,7 @@ TagManager:
   - ground
   - enemy
   - ball
+  - torch
   layers:
   - Default
   - TransparentFX
