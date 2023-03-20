@@ -54,6 +54,10 @@ public class ArrowKeyMovement : MonoBehaviour
                 Jump();
             }
         }
+        if(transform.position.y < -6.5f)
+        {
+            EventBus.Publish<GameOver>(new GameOver());
+        }
 
     }
 

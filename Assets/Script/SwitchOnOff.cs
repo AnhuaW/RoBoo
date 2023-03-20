@@ -31,6 +31,7 @@ public class SwitchOnOff : MonoBehaviour
         {
             if (e.pressed)
             {
+                Debug.Log("pressed");
                 transform.GetChild(0).gameObject.SetActive(launch_if_button_pressed);
             }
             else

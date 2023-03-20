@@ -16,6 +16,7 @@ TagManager:
   - bullet
   - ground
   - enemy
+  - ball
   layers:
   - Default
   - TransparentFX
