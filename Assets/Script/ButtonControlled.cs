@@ -64,7 +64,7 @@ public class ButtonControlled : MonoBehaviour
             if (child_line != null)
             {
                 child_line.enabled = turn_on;
-                child_line.sortingLayerName = "Foreground";
+                //child_line.sortingLayerName = "Foreground";
             }
         }
     }
