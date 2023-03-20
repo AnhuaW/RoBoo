@@ -23,7 +23,7 @@ public class detect_player : MonoBehaviour
         if (Mathf.Abs(player.transform.position.x-transform.position.x) < 0.5f
             && transform.position == oriPos)
         {
-            rb.gravityScale = 1;
+            rb.gravityScale = 2;
         }
     }
 

@@ -36,7 +36,7 @@ public class BreakableTile : MonoBehaviour
         }
         else
         {
-            if (rb != null)
+            if (rb != null && !collision.gameObject.CompareTag("ball"))
             {
                 float instant_speed = collision.relativeVelocity.magnitude;
                 Debug.Log("Instant speed: " + instant_speed);
