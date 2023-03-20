@@ -19,14 +19,6 @@ public class DisplayPrompt : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("firstAmmo"))
-        {
-            Debug.Log("displaying prompt");
-            StartCoroutine(typeWritter(ammoPrompt));
-        }
-    }
 
     IEnumerator typeWritter(string input)
     {
