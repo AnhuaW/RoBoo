@@ -81,8 +81,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2085382901
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -1374921716, guid: e0cb7323ba8673b449be30eb2c244b32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -167,7 +167,7 @@ MonoBehaviour:
   bubble_prefab: {fileID: 3406941852388994698, guid: e314fbe9e47850943b51fc8847f25ddf, type: 3}
   rb: {fileID: 0}
   inventory: {fileID: 0}
-  bubble_duration_sec: 4
+  bubble_duration_sec: 2.5
 --- !u!114 &5517974921808589468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,6 +227,7 @@ MonoBehaviour:
   collectAmmo: {fileID: 8300000, guid: f6527cde582e7c7408081c245b9fe229, type: 3}
   portal: {fileID: 8300000, guid: 707b2d52a22da70408a1c08f7f93c794, type: 3}
   recharge: {fileID: 0}
+  clipVolume: 0.3
 --- !u!114 &-4007032245595016244
 MonoBehaviour:
   m_ObjectHideFlags: 0
