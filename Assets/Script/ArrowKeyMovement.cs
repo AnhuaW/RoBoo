@@ -26,12 +26,22 @@ public class ArrowKeyMovement : MonoBehaviour
     void Update()
     {
 
-        Vector2 left_edge = transform.position - new Vector3(0.2f, 0.25f, 0);
-        Vector2 right_edge = transform.position + new Vector3(0.2f, -0.25f, 0);
+        Vector2 left_edge = transform.position - new Vector3(0.3f, 0.35f, 0);
+        Vector2 right_edge = transform.position + new Vector3(0.3f, -0.35f, 0);
         Debug.DrawRay(left_edge, Vector2.down * 0.1f, Color.red);
         Debug.DrawRay(right_edge, Vector2.down * 0.1f, Color.red);
         RaycastHit2D hit_left = Physics2D.Raycast(left_edge, Vector2.down, 0.1f);
         RaycastHit2D hit_right = Physics2D.Raycast(right_edge, Vector2.down, 0.1f);
+        if (hit_left)
+        {
+            Debug.Log("player left ray: " + hit_left.collider.gameObject.name);
+        }
+        if (hit_right)
+        {
+            Debug.Log("player right ray: " + hit_right.collider.gameObject.name);
+
+        }
+
         if ((hit_left && !hit_left.collider.isTrigger) || (hit_right && !hit_right.collider.isTrigger))
         {
 
@@ -48,8 +58,12 @@ public class ArrowKeyMovement : MonoBehaviour
         {
             Vector3 current_input = GetInput();
             float speed = (GetComponent<PlayerFloat>().is_floating ? float_movement_speed : ground_movement_speed);
+            /*if(rb.velocity != Vector2.zero)
+            {
+                rb.velocity = Vector2.zero;
+            }*/
             transform.position += current_input * speed * Time.fixedDeltaTime;
-            if (Input.GetKeyDown(KeyCode.Space) && !GetComponent<PlayerFloat>().is_floating && isGrounded)
+            if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !GetComponent<PlayerFloat>().is_floating && isGrounded)
             {
                 Jump();
             }

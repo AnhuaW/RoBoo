@@ -18,11 +18,12 @@ public class Smash : MonoBehaviour
         player_layer = 1 << LayerMask.NameToLayer("Player");
     }
 
-    // Update is called once per frame
+    // detect if this brick hits the player when falling
     void Update()
     {
-        Vector2 left_edge = transform.position - new Vector3(0.3f, 0.35f, 0);
+        Vector2 left_edge = transform.position - new Vector3(0.48f, 0.5f, 0);
         RaycastHit2D hit = Physics2D.Raycast(left_edge, new Vector2(0, -1), detect_range, player_layer);
+
         if (hit.collider != null && hit.collider.gameObject.name == "Player")
         {
             if (floatable.is_falling)
@@ -32,8 +33,9 @@ public class Smash : MonoBehaviour
             }
         }
 
-        Vector2 right_edge = transform.position + new Vector3(0.3f, -0.35f, 0);
+        Vector2 right_edge = transform.position + new Vector3(0.48f, -0.5f, 0);
         hit = Physics2D.Raycast(right_edge, new Vector2(0, -1), detect_range, player_layer);
+
         if (hit.collider != null && hit.collider.gameObject.name == "Player")
         {
             if (floatable.is_falling)
@@ -43,7 +45,7 @@ public class Smash : MonoBehaviour
             }
         }
 
-        Vector2 center = transform.position + new Vector3(0, -0.35f, 0);
+        Vector2 center = transform.position + new Vector3(0, -0.5f, 0);
         hit = Physics2D.Raycast(center, new Vector2(0, -1), detect_range, player_layer);
         if (hit.collider != null && hit.collider.gameObject.name == "Player")
         {
