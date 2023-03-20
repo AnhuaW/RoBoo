@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DamagingRay : MonoBehaviour
-{
+{ //add a laser to another direction
     public float rayLength = 0;
     public bool vertical_ray = true;
+    public bool right_vertical_ray = false;
 
     [SerializeField] LineRenderer line;
 
@@ -25,6 +26,8 @@ public class DamagingRay : MonoBehaviour
         if (vertical_ray)
         {
             CastVerticalRay();
+        }else if(right_vertical_ray){
+            CastRightHorizontallRay();
         }
         else
         {
@@ -56,10 +59,25 @@ public class DamagingRay : MonoBehaviour
     void CastHorizontallRay()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(1, 0), rayLength, player_layer);
-        // draw ray
         line.SetPosition(0, transform.position);
         Vector3 end_point = new Vector3(transform.position.x + rayLength, transform.position.y, transform.position.z);
         line.SetPosition(1, end_point);
+        
+        if (hit.collider != null)
+        {
+            Debug.Log("damaged by ray, gameover");
+            GameOver game_status = new GameOver();
+            EventBus.Publish<GameOver>(game_status);
+        }
+    }
+
+    void CastRightHorizontallRay()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(-1, 0), rayLength, player_layer);
+        line.SetPosition(0, transform.position);
+        Vector3 end_point = new Vector3(transform.position.x - rayLength, transform.position.y, transform.position.z);
+        line.SetPosition(1, end_point);
+        
         if (hit.collider != null)
         {
             Debug.Log("damaged by ray, gameover");
