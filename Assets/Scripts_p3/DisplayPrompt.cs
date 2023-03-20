@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +10,7 @@ public class DisplayPrompt : MonoBehaviour
     public Text prompt;
     string sceneName;
     GameObject load;
+    string waterguide = "watch out currents! ↓";
     string ammoPrompt = "Dear Diary," +
         "\n\n" +"  It has been two days since I lost contact with my teammates. Last time, the signal they sent said they"
         +" COULD NOT swim in that Lost Sea Ruins." +"\n" +"  Their oxygen is about to running out. I have to go find them" +"\n"
@@ -19,7 +20,13 @@ public class DisplayPrompt : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
         load = GameObject.Find("levelLoader");
-        StartCoroutine(typeWritter(ammoPrompt,sceneName));
+        if (sceneName == "Background_story")
+        {
+            StartCoroutine(typeWritter(ammoPrompt, sceneName));
+        }else if(sceneName == "p3_guide_waterflow")
+        {
+            StartCoroutine(typeWritter(waterguide, sceneName));
+        }
     }
 
     // Update is called once per frame
@@ -37,13 +44,18 @@ public class DisplayPrompt : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             prompt.text += " " + letters[i];
         }
-        yield return new WaitForSeconds(10f);
-        prompt.text = "";
         if(sceneName == "Background_story")
         {
+            yield return new WaitForSeconds(9f);
+            prompt.text = "";
             Debug.Log(prompt);
             SceneManager.LoadScene("p3_guide_1");
             //StartCoroutine(load.GetComponent<levelLoder>().LoadLevel(1));
+        }
+        else
+        {
+            yield return new WaitForSeconds(4f);
+            prompt.text = "";
         }
     }
 }
