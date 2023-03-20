@@ -33,7 +33,7 @@ public class WaterFlow : MonoBehaviour
             if (floatable != null && floatable.is_floating)
             {
                 Rigidbody2D floatable_rb = collider.gameObject.GetComponent<Rigidbody2D>();
-                if (floatable_rb != null && floatable_rb.velocity.x == 0)
+                if (floatable_rb != null && floatable_rb.velocity.x != added_speed)
                 {
                     Debug.Log("overlap rb: " + floatable.gameObject.name);
                     StartCoroutine(AddHorizontalVelocity(floatable_rb));
