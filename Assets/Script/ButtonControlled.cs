@@ -5,26 +5,19 @@ using UnityEngine;
 public class ButtonControlled : MonoBehaviour
 {
     public string this_name;
-    public Vector3 offset = Vector3.zero;
     public bool launch_when_button_pressed = false;
 
     Subscription<PushButtonEvent> button_event_subscription;
-    Vector3 initial_pos, target_pos;
 
     void Awake()
     {
         button_event_subscription = EventBus.Subscribe<PushButtonEvent>(_OnButtonChange);
-
-        //float new_y = transform.position.y + offset;
-        initial_pos = transform.position;
-        target_pos = transform.position + offset;
-        //target_pos = new Vector3(transform.position.x, new_y, transform.position.z);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void _OnButtonChange(PushButtonEvent e)
@@ -34,12 +27,10 @@ public class ButtonControlled : MonoBehaviour
         {
             if (e.pressed)
             {
-                transform.position = target_pos;
                 ControlRays(launch_when_button_pressed);
             }
             else
             {
-                transform.position = initial_pos;
                 ControlRays(!launch_when_button_pressed);
             }
         }
@@ -52,9 +43,16 @@ public class ButtonControlled : MonoBehaviour
 
     void ControlRays(bool turn_on)
     {
-        Debug.Log(gameObject.name + turn_on);
+
+        //Debug.Log(gameObject.name + turn_on);
         foreach (Transform child in transform)
         {
+            // enable/disable sprite renderer and collider
+            //child.gameObject.GetComponent<SpriteRenderer>().enabled = turn_on;
+            child.gameObject.SetActive(turn_on);
+
+
+            // turn on/off ray
             DamagingRay child_ray = child.gameObject.GetComponent<DamagingRay>();
             if (child_ray != null)
             {
