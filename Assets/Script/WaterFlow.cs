@@ -22,7 +22,7 @@ public class WaterFlow : MonoBehaviour
 
     // detect all floating objects in the range
     
-    /*
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<Floatable>() != null && collision.gameObject.GetComponent<Floatable>().is_floating)
@@ -30,12 +30,20 @@ public class WaterFlow : MonoBehaviour
             Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-                rb.velocity = new Vector2(added_horizontal_speed, rb.velocity.y);
+                if (collision.gameObject.name == "ball")
+                {
+                    rb.velocity = new Vector2(added_horizontal_speed, rb.velocity.y);
+                }
+                else
+                {
+                    rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                    rb.velocity = new Vector2(added_horizontal_speed, rb.velocity.y);
+                }
+                
             }
         }
     }
-    */
+    
 
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -44,8 +52,16 @@ public class WaterFlow : MonoBehaviour
             Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-                rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
-                rb.velocity = new Vector2(0, rb.velocity.y);
+                if(collision.gameObject.name == "ball")
+                {
+                    rb.velocity = new Vector2(0, rb.velocity.y);
+                }
+                else
+                {
+                    rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
+                    rb.velocity = new Vector2(0, rb.velocity.y);
+                }
+                
             }
         }
     }
@@ -57,8 +73,15 @@ public class WaterFlow : MonoBehaviour
             Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
             if (rb != null && rb.velocity.x == 0)
             {
-                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-                rb.velocity = new Vector2(added_horizontal_speed, rb.velocity.y);
+                if (collision.gameObject.name == "ball")
+                {
+                    rb.velocity = new Vector2(added_horizontal_speed, rb.velocity.y);
+                }
+                else
+                {
+                    rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                    rb.velocity = new Vector2(added_horizontal_speed, rb.velocity.y);
+                }
             }
         }
     }

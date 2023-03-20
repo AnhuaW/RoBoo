@@ -97,7 +97,15 @@ public class Floatable : MonoBehaviour
         is_falling = true;
         Debug.Log("isfalling:" + is_falling);
         //rb.bodyType = RigidbodyType2D.Dynamic;
-        rb.gravityScale = 1;
+        if(this.gameObject.name == "ball")
+        {
+            rb.gravityScale = 2;
+        }
+        else
+        {
+            rb.gravityScale = 1;
+        }
+        
         //rb.velocity = Vector2.zero;
         // remove bubble
         for (int i = 0; i < transform.childCount; i++)
