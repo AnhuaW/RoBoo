@@ -167,7 +167,7 @@ MonoBehaviour:
   bubble_prefab: {fileID: 3406941852388994698, guid: e314fbe9e47850943b51fc8847f25ddf, type: 3}
   rb: {fileID: 0}
   inventory: {fileID: 0}
-  bubble_duration_sec: 4
+  bubble_duration_sec: 2.5
 --- !u!114 &5517974921808589468
 MonoBehaviour:
   m_ObjectHideFlags: 0
