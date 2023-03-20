@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2097610859314516771}
   - component: {fileID: 2097610859314516768}
   - component: {fileID: 2097610859314516769}
-  - component: {fileID: 2097610859314516772}
   - component: {fileID: 2097610859314516765}
   m_Layer: 5
   m_Name: UI
@@ -103,18 +102,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2097610859314516772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2097610859314516773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f94b62f99ce2d38408c0047c9c5ef77a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &2097610859314516765
 AudioSource:
   m_ObjectHideFlags: 0
