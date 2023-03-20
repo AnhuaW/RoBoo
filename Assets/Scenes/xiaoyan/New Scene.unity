@@ -768,8 +768,8 @@ Transform:
   - {fileID: 1802316672}
   - {fileID: 506458404}
   - {fileID: 1622585648}
-  - {fileID: 873145918}
   - {fileID: 732123076}
+  - {fileID: 873145918}
   - {fileID: 178879704}
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -4339,7 +4339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6104714014210263784, guid: fa295b0cab380f544bee976657bf966e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.5
+      value: -1.47
       objectReference: {fileID: 0}
     - target: {fileID: 6104714014210263784, guid: fa295b0cab380f544bee976657bf966e, type: 3}
       propertyPath: m_LocalPosition.y
