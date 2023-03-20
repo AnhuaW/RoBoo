@@ -48,6 +48,10 @@ public class ArrowKeyMovement : MonoBehaviour
         {
             Vector3 current_input = GetInput();
             float speed = (GetComponent<PlayerFloat>().is_floating ? float_movement_speed : ground_movement_speed);
+            /*if(rb.velocity != Vector2.zero)
+            {
+                rb.velocity = Vector2.zero;
+            }*/
             transform.position += current_input * speed * Time.fixedDeltaTime;
             if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !GetComponent<PlayerFloat>().is_floating && isGrounded)
             {
