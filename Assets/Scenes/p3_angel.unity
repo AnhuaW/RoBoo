@@ -155,8 +155,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bubble_ammo_count: 100
   initial_bubble_ammo_count: 0
-  key_count: 0
-  initial_key_count: 0
 --- !u!4 &45634398
 Transform:
   m_ObjectHideFlags: 0
@@ -4557,7 +4555,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1508958695914124147, guid: 5c49d85ee89b54ebaa930cc020b8e590, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5c49d85ee89b54ebaa930cc020b8e590, type: 3}
 --- !u!1001 &3902282957708280554
 PrefabInstance:
