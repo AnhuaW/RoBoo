@@ -231,6 +231,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bubble_ammo_count: 0
   initial_bubble_ammo_count: 0
+  key_count: 0
+  initial_key_count: 0
 --- !u!4 &45634398
 Transform:
   m_ObjectHideFlags: 0
@@ -268,7 +270,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2097610859314516765, guid: 1c4ec734fdbc041bb9e8508d85143728, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2097610859314516770, guid: 1c4ec734fdbc041bb9e8508d85143728, type: 3}
       propertyPath: m_Pivot.x
