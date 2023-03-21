@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public enum collectible_types { bubble_ammo};
+public enum collectible_types { bubble_ammo, key};
 public class Collectible : MonoBehaviour
 {
 
@@ -30,6 +30,11 @@ public class Collectible : MonoBehaviour
             {
                 case collectible_types.bubble_ammo:
                     inventory.ChangeBubbleAmmo(1);
+                    Destroy(gameObject);
+                    break;
+
+                case collectible_types.key:
+                    inventory.ChangeKey(1);
                     Destroy(gameObject);
                     break;
             }
