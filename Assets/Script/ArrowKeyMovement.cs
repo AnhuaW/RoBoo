@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class ArrowKeyMovement : MonoBehaviour
 {
     public float ground_movement_speed = 3f;
@@ -14,12 +14,19 @@ public class ArrowKeyMovement : MonoBehaviour
     Rigidbody2D rb;
 
     public bool isGrounded = false;
+    string sceneName;
+    [SerializeField] GameObject Prompt;
+
+    bool displayed = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        Scene currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
+        Debug.Log("SceneName: this is specific to scene name! for p3_guide_merge");
     }
 
     // Update is called once per frame
@@ -115,7 +122,17 @@ public class ArrowKeyMovement : MonoBehaviour
     {
         rb.AddForce(new Vector2(0, jump_force), ForceMode2D.Impulse);
         Debug.Log("jump");
+        if(sceneName =="p3_guide_merge" && !displayed){
+            Debug.Log("jump for merge");
+            StartCoroutine(PrompeDisplay());
+        }
     }
 
+    IEnumerator PrompeDisplay(){ //TODO: change to typing?
+        Prompt.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        Prompt.SetActive(false);
+        displayed = true;
+    }
 
 }
