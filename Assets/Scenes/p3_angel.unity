@@ -155,6 +155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bubble_ammo_count: 100
   initial_bubble_ammo_count: 0
+  key_count: 0
+  initial_key_count: 0
 --- !u!4 &45634398
 Transform:
   m_ObjectHideFlags: 0
@@ -1417,6 +1419,10 @@ PrefabInstance:
       value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 5599505781723597591, guid: 440148c6e1530de488cd205b297fa770, type: 3}
+      propertyPath: added_speed
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599505781723597591, guid: 440148c6e1530de488cd205b297fa770, type: 3}
       propertyPath: added_horizontal_speed
       value: -4
       objectReference: {fileID: 0}
@@ -1943,11 +1949,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3794255780006062298, guid: 04cfbc0b128ecb74d895552b3c498fe7, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3794255780006062298, guid: 04cfbc0b128ecb74d895552b3c498fe7, type: 3}
       propertyPath: m_Color.g
-      value: 0.7254902
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3794255780006062298, guid: 04cfbc0b128ecb74d895552b3c498fe7, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8941553186368729422, guid: 04cfbc0b128ecb74d895552b3c498fe7, type: 3}
       propertyPath: break_speed_lower_bound
@@ -2171,11 +2181,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3794255780006062298, guid: 04cfbc0b128ecb74d895552b3c498fe7, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3794255780006062298, guid: 04cfbc0b128ecb74d895552b3c498fe7, type: 3}
       propertyPath: m_Color.g
-      value: 0.7254902
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3794255780006062298, guid: 04cfbc0b128ecb74d895552b3c498fe7, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04cfbc0b128ecb74d895552b3c498fe7, type: 3}
@@ -3827,6 +3841,10 @@ PrefabInstance:
       value: 5.02
       objectReference: {fileID: 0}
     - target: {fileID: 5599505781723597591, guid: 440148c6e1530de488cd205b297fa770, type: 3}
+      propertyPath: added_speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599505781723597591, guid: 440148c6e1530de488cd205b297fa770, type: 3}
       propertyPath: added_horizontal_speed
       value: 1.5
       objectReference: {fileID: 0}
@@ -4340,7 +4358,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1300055839481942051, guid: fb48ffd9fcc7f4ec3ab7ad1ef43286ab, type: 3}
       propertyPath: moving_speed
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2596121842207662540, guid: fb48ffd9fcc7f4ec3ab7ad1ef43286ab, type: 3}
       propertyPath: m_Name
@@ -4783,11 +4801,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3794255780006062298, guid: 04cfbc0b128ecb74d895552b3c498fe7, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3794255780006062298, guid: 04cfbc0b128ecb74d895552b3c498fe7, type: 3}
       propertyPath: m_Color.g
-      value: 0.7254902
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3794255780006062298, guid: 04cfbc0b128ecb74d895552b3c498fe7, type: 3}
       propertyPath: m_Color.r

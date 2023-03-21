@@ -36,18 +36,20 @@ public class WaterFlow : MonoBehaviour
                 if (floatable_rb != null && floatable_rb.velocity.x != added_speed)
                 {
                     Debug.Log("overlap rb: " + floatable.gameObject.name);
-                    StartCoroutine(AddHorizontalVelocity(floatable_rb));
+                    StartCoroutine(AddHorizontalVelocity(floatable_rb, floatable.gameObject.name));
                 }
             }
         }
     }
     // add horizontal speed for 1 sec, then reset velocity.x
-    IEnumerator AddHorizontalVelocity(Rigidbody2D floatable_rb)
+    IEnumerator AddHorizontalVelocity(Rigidbody2D floatable_rb, string name)
     {
-        floatable_rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        if (name != "ball")
+            floatable_rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         floatable_rb.velocity = new Vector2(added_speed, floatable_rb.velocity.y);
         yield return new WaitForSeconds(1);
-        floatable_rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
+        if(name != "ball")
+            floatable_rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
         floatable_rb.velocity = new Vector2(0, floatable_rb.velocity.y);
     }
 
