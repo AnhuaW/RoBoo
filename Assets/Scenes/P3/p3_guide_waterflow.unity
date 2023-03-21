@@ -6484,7 +6484,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   this_name: spike1
-  offset: {x: 0, y: 0.8, z: 0}
   launch_when_button_pressed: 1
 --- !u!4 &1257853565
 Transform:
@@ -6933,6 +6932,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bubble_ammo_count: 100
   initial_bubble_ammo_count: 0
+  key_count: 0
+  initial_key_count: 0
 --- !u!4 &1400173887
 Transform:
   m_ObjectHideFlags: 0
@@ -8603,7 +8604,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   this_name: spike1
-  offset: {x: -0.8, y: 0, z: 0}
   launch_when_button_pressed: 0
 --- !u!4 &1718214697
 Transform:
@@ -9438,7 +9438,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   this_name: spike1
-  offset: {x: 0.8, y: 0, z: 0}
   launch_when_button_pressed: 0
 --- !u!1 &2052368952
 GameObject:
@@ -9547,7 +9546,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   this_name: spike1
-  offset: {x: 0, y: -0.8, z: 0}
   launch_when_button_pressed: 1
 --- !u!4 &2074851185
 Transform:
