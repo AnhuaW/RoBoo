@@ -144,11 +144,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ground_movement_speed: 3
   float_movement_speed: 2
-  jump_force: 4
+  jump_force: 5
   collisionRadius: 0.2
   playerDirection: {x: 0, y: 0}
   player_control: 1
   isGrounded: 0
+  Prompt: {fileID: 0}
 --- !u!114 &5517974921808589469
 MonoBehaviour:
   m_ObjectHideFlags: 0
