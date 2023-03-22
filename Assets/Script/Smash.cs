@@ -19,6 +19,7 @@ public class Smash : MonoBehaviour
     }
 
     // detect if this brick hits the player when falling
+    // game over if player is grounded
     void Update()
     {
         Vector2 left_edge = transform.position - new Vector3(0.48f, 0.5f, 0);
@@ -26,7 +27,7 @@ public class Smash : MonoBehaviour
 
         if (hit.collider != null && hit.collider.gameObject.name == "Player")
         {
-            if (floatable.is_falling)
+            if (floatable.is_falling && hit.collider.gameObject.GetComponent<ArrowKeyMovement>().isGrounded)
             {
                 Debug.Log("smash");
                 EventBus.Publish<GameOver>(new GameOver());
@@ -38,7 +39,7 @@ public class Smash : MonoBehaviour
 
         if (hit.collider != null && hit.collider.gameObject.name == "Player")
         {
-            if (floatable.is_falling)
+            if (floatable.is_falling && hit.collider.gameObject.GetComponent<ArrowKeyMovement>().isGrounded)
             {
                 Debug.Log("smash");
                 EventBus.Publish<GameOver>(new GameOver());
@@ -49,7 +50,7 @@ public class Smash : MonoBehaviour
         hit = Physics2D.Raycast(center, new Vector2(0, -1), detect_range, player_layer);
         if (hit.collider != null && hit.collider.gameObject.name == "Player")
         {
-            if (floatable.is_falling)
+            if (floatable.is_falling && hit.collider.gameObject.GetComponent<ArrowKeyMovement>().isGrounded)
             {
                 Debug.Log("smash");
                 EventBus.Publish<GameOver>(new GameOver());

@@ -122,17 +122,5 @@ public class ArrowKeyMovement : MonoBehaviour
     {
         rb.AddForce(new Vector2(0, jump_force), ForceMode2D.Impulse);
         Debug.Log("jump");
-        if(sceneName =="p3_guide_merge" && !displayed){
-            Debug.Log("jump for merge");
-            StartCoroutine(PrompeDisplay());
-        }
     }
-
-    IEnumerator PrompeDisplay(){ //TODO: change to typing?
-        Prompt.SetActive(true);
-        yield return new WaitForSeconds(3f);
-        Prompt.SetActive(false);
-        displayed = true;
-    }
-
 }
