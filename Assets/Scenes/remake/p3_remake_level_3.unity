@@ -231,6 +231,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bubble_ammo_count: 0
   initial_bubble_ammo_count: 0
+  key_count: 0
+  initial_key_count: 0
 --- !u!4 &45634398
 Transform:
   m_ObjectHideFlags: 0
