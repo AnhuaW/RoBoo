@@ -874,7 +874,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41182402}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05, y: 1.08, z: 0}
+  m_LocalPosition: {x: -0.05, y: 1.08, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7087,7 +7087,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   this_name: spike1
-  offset: {x: 0, y: 0.85, z: 0}
   launch_when_button_pressed: 1
 --- !u!4 &605794326
 Transform:
@@ -7834,7 +7833,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   this_name: spike1
-  offset: {x: 0, y: 0.85, z: 0}
   launch_when_button_pressed: 1
 --- !u!4 &669322558
 Transform:
@@ -8536,7 +8534,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   this_name: spike2
-  offset: {x: 0, y: 0.85, z: 0}
   launch_when_button_pressed: 1
 --- !u!4 &745480934
 Transform:
@@ -11644,7 +11641,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   this_name: spike2
-  offset: {x: 0, y: -0.85, z: 0}
   launch_when_button_pressed: 1
 --- !u!4 &1010118854
 Transform:
@@ -12552,7 +12548,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   this_name: spike1
-  offset: {x: 0, y: -0.85, z: 0}
   launch_when_button_pressed: 1
 --- !u!4 &1098015997
 Transform:
@@ -14074,7 +14069,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   this_name: spike2
-  offset: {x: 0, y: -0.85, z: 0}
   launch_when_button_pressed: 0
 --- !u!4 &1223697114
 Transform:
@@ -15926,6 +15920,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bubble_ammo_count: 0
   initial_bubble_ammo_count: 0
+  key_count: 0
+  initial_key_count: 0
 --- !u!4 &1400173887
 Transform:
   m_ObjectHideFlags: 0
@@ -18134,7 +18130,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   this_name: spike2
-  offset: {x: 0, y: 0.85, z: 0}
   launch_when_button_pressed: 0
 --- !u!4 &1680161120
 Transform:
@@ -19728,7 +19723,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   this_name: spike1
-  offset: {x: 0, y: -0.85, z: 0}
   launch_when_button_pressed: 1
 --- !u!4 &1926671914
 Transform:
