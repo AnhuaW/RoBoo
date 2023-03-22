@@ -48,7 +48,7 @@ public class WaterFlow : MonoBehaviour
             floatable_rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         floatable_rb.velocity = new Vector2(added_speed, floatable_rb.velocity.y);
         yield return new WaitForSeconds(1);
-        if (name != "ball" || name != "Player")
+        if (name != "ball" && name != "Player")
         {
             floatable_rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
         }
