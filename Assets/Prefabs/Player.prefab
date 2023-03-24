@@ -144,11 +144,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ground_movement_speed: 3
   float_movement_speed: 2
-  jump_force: 4
+  jump_force: 5
   collisionRadius: 0.2
   playerDirection: {x: 0, y: 0}
   player_control: 1
   isGrounded: 0
+  Prompt: {fileID: 0}
 --- !u!114 &5517974921808589469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,9 +225,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a7ecb5672f9a86469468fe08b96e3d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectAmmo: {fileID: 8300000, guid: f6527cde582e7c7408081c245b9fe229, type: 3}
+  collectAmmo: {fileID: 8300000, guid: 724b10c0e0bb44c8a85df826badd5e39, type: 3}
   portal: {fileID: 8300000, guid: 707b2d52a22da70408a1c08f7f93c794, type: 3}
-  recharge: {fileID: 0}
+  recharge: {fileID: 8300000, guid: b2bc4e03ebe144f5da40034f75615259, type: 3}
   clipVolume: 0.3
 --- !u!114 &-4007032245595016244
 MonoBehaviour:

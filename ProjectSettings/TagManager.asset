@@ -16,6 +16,8 @@ TagManager:
   - bullet
   - ground
   - enemy
+  - ball
+  - key
   layers:
   - Default
   - TransparentFX
@@ -26,7 +28,7 @@ TagManager:
   - Player
   - enemy
   - backgrounD
-  - 
+  - Shield
   - 
   - 
   - 

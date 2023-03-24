@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class ArrowKeyMovement : MonoBehaviour
 {
     public float ground_movement_speed = 3f;
@@ -14,12 +14,19 @@ public class ArrowKeyMovement : MonoBehaviour
     Rigidbody2D rb;
 
     public bool isGrounded = false;
+    string sceneName;
+    [SerializeField] GameObject Prompt;
+
+    bool displayed = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        Scene currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
+        Debug.Log("SceneName: this is specific to scene name! for p3_guide_merge");
     }
 
     // Update is called once per frame
@@ -28,10 +35,13 @@ public class ArrowKeyMovement : MonoBehaviour
 
         Vector2 left_edge = transform.position - new Vector3(0.3f, 0.35f, 0);
         Vector2 right_edge = transform.position + new Vector3(0.3f, -0.35f, 0);
+        Vector2 center = transform.position + new Vector3(0, -0.45f, 0);
         Debug.DrawRay(left_edge, Vector2.down * 0.1f, Color.red);
         Debug.DrawRay(right_edge, Vector2.down * 0.1f, Color.red);
+        Debug.DrawRay(center, Vector2.down * 0.1f, Color.red);
         RaycastHit2D hit_left = Physics2D.Raycast(left_edge, Vector2.down, 0.1f);
         RaycastHit2D hit_right = Physics2D.Raycast(right_edge, Vector2.down, 0.1f);
+        RaycastHit2D hit_center = Physics2D.Raycast(center, Vector2.down, 0.1f);
         /*
         if (hit_left)
         {
@@ -44,7 +54,9 @@ public class ArrowKeyMovement : MonoBehaviour
         }
         */
 
-        if ((hit_left && !hit_left.collider.isTrigger) || (hit_right && !hit_right.collider.isTrigger))
+        if ((hit_left && !hit_left.collider.isTrigger) ||
+            (hit_right && !hit_right.collider.isTrigger) ||
+            (hit_center && !hit_center.collider.isTrigger && hit_center.collider != gameObject.GetComponent<Collider2D>()))
         {
 
             isGrounded = true;
@@ -70,11 +82,7 @@ public class ArrowKeyMovement : MonoBehaviour
                 Jump();
             }
         }
-
-        // if gets out of screen, dies
-        Vector3 viewportPos = Camera.main.WorldToViewportPoint(transform.position);
-        if (viewportPos.x < 0f || viewportPos.x > 1f ||
-        viewportPos.y < 0f || viewportPos.y > 1f)
+        if(transform.position.y < -6.5f)
         {
             EventBus.Publish<GameOver>(new GameOver());
         }
@@ -115,6 +123,4 @@ public class ArrowKeyMovement : MonoBehaviour
         rb.AddForce(new Vector2(0, jump_force), ForceMode2D.Impulse);
         Debug.Log("jump");
     }
-
-
 }

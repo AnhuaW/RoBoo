@@ -103,7 +103,10 @@ public class PlayerFloat : Floatable
         {
             bubble.GetComponent<SpriteRenderer>().enabled = false;
             yield return new WaitForSeconds(0.2f);
-            bubble.GetComponent<SpriteRenderer>().enabled = true;
+            if (bubble != null)
+            {
+                bubble.GetComponent<SpriteRenderer>().enabled = true;
+            }
             yield return new WaitForSeconds(0.2f);
         }
         if (is_floating)

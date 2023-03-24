@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 627697069776324358}
   transitionTime: 1
-  total_scenes_count: 10
+  total_scenes_count: 12
 --- !u!1 &627697069614853316
 GameObject:
   m_ObjectHideFlags: 0
