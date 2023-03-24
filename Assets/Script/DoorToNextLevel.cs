@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorToNextLevel : MonoBehaviour
 {
     public int current_level_index = 0;
-    public int total_scenes_count = 6;
+    [SerializeField] int total_scenes_count = 0;
     GameObject load;
     public bool has_key_constraints = false;
     public int required_key = 3;
@@ -16,6 +18,8 @@ public class DoorToNextLevel : MonoBehaviour
     {
         load = GameObject.Find("levelLoader");
         inventory = Inventory_tmp.instance;
+        //total_scenes_count = SceneManager.sceneCountInBuildSettings;
+        CountTotalScenes();
     }
 
     // Update is called once per frame
@@ -37,6 +41,19 @@ public class DoorToNextLevel : MonoBehaviour
             if (completed_levels != null)
             {
                 completed_levels.GetComponent<CompletedLevels>().level_completed[current_level_index] = true;
+            }
+        }
+    }
+
+    void CountTotalScenes()
+    {
+        total_scenes_count = 0;
+        EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
+        foreach(EditorBuildSettingsScene scene in scenes)
+        {
+            if(scene.enabled)
+            {
+                total_scenes_count++;
             }
         }
     }
