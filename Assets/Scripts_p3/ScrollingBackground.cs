@@ -11,28 +11,28 @@ public class ScrollingBackground : MonoBehaviour
     [SerializeField]
     private float moveX;
     [SerializeField]
-    private float CamLastPos;
+    private float plyaerLastPos;
     private float direction;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
-        CamLastPos = Camera.main.transform.position.x;
+        plyaerLastPos = player.transform.position.x;
     }
 
     // Update is called once per frame
     void Update()
     {
         //moveX = player.GetComponent<ArrowKeyMovement>().playerDirection.x;
-        moveX = Camera.main.transform.position.x - CamLastPos;
+        moveX = player.transform.position.x - plyaerLastPos;
 
-        if(moveX >= 0.05)
+        if(moveX >= 0.055)
         {
             direction = 1;
         }
 
-        else if (moveX <= -0.05)
+        else if (moveX <= -0.055)
         {
             direction = -1;
         }
@@ -41,8 +41,8 @@ public class ScrollingBackground : MonoBehaviour
             direction = 0;
         }
         
-        StartScroll(direction * scrollSpeed);
-        CamLastPos = Camera.main.transform.position.x;
+        StartScroll(-direction * scrollSpeed);
+        plyaerLastPos = player.transform.position.x;
     }
 
     void StartScroll(float speed)
