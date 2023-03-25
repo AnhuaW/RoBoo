@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1168638225496751927}
   - component: {fileID: 1168638225496751926}
   - component: {fileID: 1168638225496751946}
+  - component: {fileID: 7084458033429966812}
   m_Layer: 0
   m_Name: hint_board
   m_TagString: Untagged
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 2085382901
   m_SortingLayer: 1
   m_SortingOrder: -1
-  m_Sprite: {fileID: -1112270433, guid: 08c315be94b2943f1a81c115742bc260, type: 3}
+  m_Sprite: {fileID: -1112270433, guid: 43a0eb3a3b2ca4267b3b99a42fb98644, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -148,3 +149,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &7084458033429966812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168638225496751921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3838e786e4b8c384daa139e1d2f4513d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -1112270433, guid: 43a0eb3a3b2ca4267b3b99a42fb98644, type: 3}
+  - {fileID: 763644225, guid: 3bd9a4969755d3b46919ed00218cb6ee, type: 3}
+  interval: 0.4
