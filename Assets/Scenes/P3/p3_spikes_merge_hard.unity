@@ -247,6 +247,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameover: 0
+  has_checked: 0
+  ammo_prefab: {fileID: 0}
 --- !u!114 &40175288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1169,8 +1171,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8511691368737884361, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1317267120, guid: 8930b165ef06923429d4cccd08951e63, type: 3}
+    - target: {fileID: 8511691368737884361, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8511691368737884361, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: m_Color.g
@@ -1178,12 +1184,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8511691368737884361, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: m_Color.r
-      value: 0.107794166
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8511691368737884363, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: m_Name
       value: PushButton (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8511691368737884367, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
+      propertyPath: eased_sprite
+      value: 
+      objectReference: {fileID: 1317267120, guid: 8930b165ef06923429d4cccd08951e63, type: 3}
+    - target: {fileID: 8511691368737884367, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
+      propertyPath: pressed_sprite
+      value: 
+      objectReference: {fileID: -1152252415, guid: 8930b165ef06923429d4cccd08951e63, type: 3}
     - target: {fileID: 8511691368737884367, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: controlled_obj_name
       value: green
@@ -1304,12 +1318,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8511691368737884361, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1886556252, guid: ace8e5694a184e2489a76bbb5532b575, type: 3}
+    - target: {fileID: 8511691368737884361, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8511691368737884361, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: m_Color.g
-      value: 0.46519178
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8511691368737884361, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: m_Color.r
@@ -1319,6 +1337,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PushButton
       objectReference: {fileID: 0}
+    - target: {fileID: 8511691368737884367, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
+      propertyPath: eased_sprite
+      value: 
+      objectReference: {fileID: -1886556252, guid: ace8e5694a184e2489a76bbb5532b575, type: 3}
+    - target: {fileID: 8511691368737884367, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
+      propertyPath: pressed_sprite
+      value: 
+      objectReference: {fileID: 303319957, guid: ace8e5694a184e2489a76bbb5532b575, type: 3}
     - target: {fileID: 8511691368737884367, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: controlled_obj_name
       value: orange
@@ -4939,12 +4965,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8511691368737884361, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1101916116, guid: 86087d7ed42382e41af9ed1f9268b71f, type: 3}
+    - target: {fileID: 8511691368737884361, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: m_Color.b
-      value: 0.8217411
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8511691368737884361, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8511691368737884361, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: m_Color.r
@@ -4954,6 +4984,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PushButton
       objectReference: {fileID: 0}
+    - target: {fileID: 8511691368737884367, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
+      propertyPath: eased_sprite
+      value: 
+      objectReference: {fileID: 1101916116, guid: 86087d7ed42382e41af9ed1f9268b71f, type: 3}
+    - target: {fileID: 8511691368737884367, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
+      propertyPath: pressed_sprite
+      value: 
+      objectReference: {fileID: 1124592324, guid: 86087d7ed42382e41af9ed1f9268b71f, type: 3}
     - target: {fileID: 8511691368737884367, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: controlled_obj_name
       value: purple
@@ -5225,11 +5263,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8511691368737884361, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8511691368737884361, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8511691368737884361, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: m_Color.r
@@ -10206,8 +10244,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8511691368737884361, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1317267120, guid: 8930b165ef06923429d4cccd08951e63, type: 3}
+    - target: {fileID: 8511691368737884361, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8511691368737884361, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: m_Color.g
@@ -10215,12 +10257,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8511691368737884361, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: m_Color.r
-      value: 0.107794166
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8511691368737884363, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: m_Name
       value: PushButton
       objectReference: {fileID: 0}
+    - target: {fileID: 8511691368737884367, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
+      propertyPath: eased_sprite
+      value: 
+      objectReference: {fileID: 1317267120, guid: 8930b165ef06923429d4cccd08951e63, type: 3}
+    - target: {fileID: 8511691368737884367, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
+      propertyPath: pressed_sprite
+      value: 
+      objectReference: {fileID: -1152252415, guid: 8930b165ef06923429d4cccd08951e63, type: 3}
     - target: {fileID: 8511691368737884367, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: controlled_obj_name
       value: green1
