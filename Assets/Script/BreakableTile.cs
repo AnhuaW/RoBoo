@@ -21,33 +21,20 @@ public class BreakableTile : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
-        if (GetComponent<SpriteRenderer>().color != Color.white)
+        if (collision.gameObject.CompareTag("statue"))
         {
-            if (rb != null && collision.gameObject.CompareTag("ball"))
+            StartCoroutine(breakTiles());
+        }
+        else if (rb != null)
+        {
+            float instant_speed = collision.relativeVelocity.magnitude;
+            Debug.Log("Instant speed: " + instant_speed);
+            if (instant_speed > break_speed_lower_bound)
             {
-                float instant_speed = collision.relativeVelocity.magnitude;
-                Debug.Log("Instant speed: " + instant_speed);
-                if (instant_speed > break_speed_lower_bound)
-                {
-                    Debug.Log("break");
-                    StartCoroutine(breakTiles());
-                }
+            Debug.Log("break");
+            StartCoroutine(breakTiles());
             }
         }
-        else
-        {
-            if (rb != null && !collision.gameObject.CompareTag("ball"))
-            {
-                float instant_speed = collision.relativeVelocity.magnitude;
-                Debug.Log("Instant speed: " + instant_speed);
-                if (instant_speed > break_speed_lower_bound)
-                {
-                    Debug.Log("break");
-                    StartCoroutine(breakTiles());
-                }
-            }
-        }
-        
 
     }
 

@@ -9,7 +9,7 @@ public class ShootTarget : MonoBehaviour
 
     void Start()
     {
-
+        cam = Camera.main;
     }
 
     void Update()

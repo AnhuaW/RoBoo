@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 5890834686385795010}
   - component: {fileID: 2972658553911312632}
   - component: {fileID: 1300055839481942051}
+  - component: {fileID: 80772686}
   m_Layer: 0
   m_Name: weeping_statue
-  m_TagString: Untagged
+  m_TagString: statue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +98,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0048638135, y: 0.0079743415}
@@ -146,6 +147,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f674fcbb1b0440c856c7966e0131a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stop_angle: {fileID: 1460935523, guid: 5bebd7a72e8e746b2bec9e5f82d0011a, type: 3}
+  stop_angle: {fileID: 21300000, guid: 6e34cfe97fc9f4cdd97574b47092b63d, type: 3}
   moving_angle: {fileID: -834645918, guid: 63242495bbe2a47b6abecef9958275d1, type: 3}
   moving_speed: 0.5
+  isGrounded: 0
+--- !u!95 &80772686
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2596121842207662540}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3e48c4603f7784cfdb7775e233037e0f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
