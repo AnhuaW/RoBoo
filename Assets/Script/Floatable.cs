@@ -111,8 +111,11 @@ public class Floatable : MonoBehaviour
         for (int i = 0; i < transform.childCount; i++)
         {
             Transform temp_child = transform.GetChild(i);
-            temp_child.parent = null;
-            Destroy(temp_child.gameObject);
+            if (temp_child.gameObject.name.Contains("Bubble"))
+            {
+                temp_child.parent = null;
+                Destroy(temp_child.gameObject);
+            }
         }
 
     }

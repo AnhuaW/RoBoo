@@ -25,8 +25,6 @@ public class ArrowKeyMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         Scene currentScene = SceneManager.GetActiveScene();
-        sceneName = currentScene.name;
-        Debug.Log("SceneName: this is specific to scene name! for p3_guide_merge");
     }
 
     // Update is called once per frame
