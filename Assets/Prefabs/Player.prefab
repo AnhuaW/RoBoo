@@ -228,6 +228,7 @@ MonoBehaviour:
   collectAmmo: {fileID: 8300000, guid: 724b10c0e0bb44c8a85df826badd5e39, type: 3}
   portal: {fileID: 8300000, guid: 707b2d52a22da70408a1c08f7f93c794, type: 3}
   recharge: {fileID: 8300000, guid: b2bc4e03ebe144f5da40034f75615259, type: 3}
+  key: {fileID: 0}
   clipVolume: 0.3
 --- !u!114 &-4007032245595016244
 MonoBehaviour:
@@ -254,6 +255,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameover: 0
+  has_checked: 0
+  ammo_prefab: {fileID: 5669959344316783301, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
 --- !u!70 &290851339
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
