@@ -9,11 +9,12 @@ public class Moving : MonoBehaviour
     public float vertical_direction = 0;
     public float move_speed = 4f;
     public float move_range = 5f;
-    public bool is_moving;
-    float orig_posX;
-    float orig_posY;
-    float target_posX;
-    float target_posY;
+    //public bool is_moving;
+    public float orig_posX;
+    public float orig_posY;
+    public float target_posX;
+    public float target_posY;
+    int dir = 1;
     Rigidbody2D rb;
     void Start()
     {
@@ -25,47 +26,68 @@ public class Moving : MonoBehaviour
         target_posX = orig_posX;
         target_posY = orig_posY;
         //calculate target based on desired moving direction
-        CalcTarget();
-        Debug.Log(target_posX);    
+        CalcTarget(dir);
+        SetVelocity(dir);
+        Debug.Log(rb.velocity);    
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (horizontal_direction != 0)
+        //Debug.Log(transform.position.y == target_posY);
+
+        if(transform.position.x >= target_posX && transform.position.y >= target_posY )
         {
-            //Move the platform horizontally
-            if(Mathf.Abs(target_posX - transform.position.x) <= move_range)
+            if(dirBetween() == 1)
             {
-                Debug.Log(transform.position.x);
-                rb.velocity = new Vector2(horizontal_direction * move_speed, 0);
+                Debug.Log("change");
+                dir = dir * (-1);
+                CalcTarget(dir);
+                SetVelocity(dir);
+                orig_posY = target_posY;
+                orig_posX = target_posX;
+            }
+            
+        }
+        else if(transform.position.x <= target_posX && transform.position.y <= target_posY)
+        {
+            if(dirBetween() == -1)
+            {
+                Debug.Log("change");
+                dir = dir * (-1);
+                CalcTarget(dir);
+                SetVelocity(dir);
+                orig_posY = target_posY;
+                orig_posX = target_posX;
             }
 
+            
+            
         }
 
-        if (vertical_direction != 0)
-        {
-            //Move the platform vertically
-            if(Mathf.Abs(target_posY - transform.position.y) <= move_range)
-            {
-                rb.velocity = new Vector2(0, vertical_direction * move_speed);
-            }
-        }
     }
 
-    void CalcTarget()
+    void CalcTarget(int dir)
     {
-        if (horizontal_direction != 0)
-        {
-            target_posX = orig_posX + horizontal_direction * move_range;
-            target_posY = transform.position.y;
-        }
+        target_posX += dir * horizontal_direction * move_range;
+        target_posY += dir * vertical_direction * move_range;
 
-        if (vertical_direction != 0)
-        {
-            target_posY = orig_posY + vertical_direction * move_range;
-            target_posX = transform.position.x;
-        }
     }
 
+    void SetVelocity(int dir)
+    {
+        rb.velocity = new Vector2(dir * horizontal_direction * move_speed, dir * vertical_direction * move_speed);
+    }
+
+    int dirBetween()
+    {
+        if (orig_posX > target_posX || orig_posY > target_posY)
+        {
+            return -1;
+        }
+        else
+        {
+            return 1;
+        }
+    }
 }
