@@ -99,9 +99,9 @@ public class Floatable : MonoBehaviour
         is_falling = true;
         Debug.Log("isfalling:" + is_falling);
         //rb.bodyType = RigidbodyType2D.Dynamic;
-        if(this.gameObject.name == "ball")
+        if(this.gameObject.CompareTag("ball"))
         {
-            rb.gravityScale = 2;
+            rb.gravityScale = 1.8f;
         }
         else
         {

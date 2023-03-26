@@ -21,7 +21,11 @@ public class BreakableTile : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
-        if (rb != null)
+        if (collision.gameObject.CompareTag("statue"))
+        {
+            StartCoroutine(breakTiles());
+        }
+        else if (rb != null)
         {
             float instant_speed = collision.relativeVelocity.magnitude;
             Debug.Log("Instant speed: " + instant_speed);

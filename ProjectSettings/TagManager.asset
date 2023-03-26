@@ -19,6 +19,7 @@ TagManager:
   - ball
   - key
   - brick
+  - statue
   layers:
   - Default
   - TransparentFX
