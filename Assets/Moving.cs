@@ -4,68 +4,70 @@ using UnityEngine;
 
 public class Moving : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public float horizontal_direction = 1;
-    public float vertical_direction = 0;
-    public float move_speed = 4f;
-    public float move_range = 5f;
-    public bool is_moving;
-    float orig_posX;
-    float orig_posY;
-    float target_posX;
-    float target_posY;
-    Rigidbody2D rb;
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        //get initial pos
-        orig_posX = transform.position.x;
-        orig_posY = transform.position.y;
-        //set target to orig
-        target_posX = orig_posX;
-        target_posY = orig_posY;
-        //calculate target based on desired moving direction
-        CalcTarget();
-        Debug.Log(target_posX);    
-    }
+    public float speed = 3f; // The speed at which the platform moves
+    public float distance = 5f; // The distance the platform moves horizontally and vertically
+    public float waitTime = 2f; // The amount of time the platform waits at the end of each movement
 
-    // Update is called once per frame
-    void Update()
+    private Vector3 startPosition; 
+    private Vector3 targetPosition; 
+    private bool movingToTarget = true; // if the platform is moving to target
+
+    public bool horizotal_move = true;
+    public bool vertical_move = false;
+
+    private float horizontal_range = 0;
+    private float vertical_range = 0;
+
+    private void Start()
     {
-        if (horizontal_direction != 0)
+        startPosition = transform.position;
+        //check the desired moving direction
+        if (horizotal_move)
         {
-            //Move the platform horizontally
-            if(Mathf.Abs(target_posX - transform.position.x) <= move_range)
-            {
-                Debug.Log(transform.position.x);
-                rb.velocity = new Vector2(horizontal_direction * move_speed, 0);
-            }
-
+            horizontal_range = distance;
         }
 
-        if (vertical_direction != 0)
+        if (vertical_move)
         {
-            //Move the platform vertically
-            if(Mathf.Abs(target_posY - transform.position.y) <= move_range)
+            vertical_range = distance;
+        }
+        //if both horizontal & vertical the platform can move in diagonal
+        targetPosition = startPosition + new Vector3(horizontal_range, vertical_range, 0f);
+    }
+
+    private void Update()
+    {
+        if (movingToTarget)
+        {
+            // move to target
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+
+            // back to original pos
+            if (transform.position == targetPosition)
             {
-                rb.velocity = new Vector2(0, vertical_direction * move_speed);
+                movingToTarget = false;
+                Invoke("MoveToStart", waitTime);
             }
         }
+        else
+        {
+            transform.position = Vector3.MoveTowards(transform.position, startPosition, speed * Time.deltaTime);
+
+            if (transform.position == startPosition)
+            {
+                movingToTarget = true;
+                Invoke("MoveToTarget", waitTime);
+            }
+        }
     }
 
-    void CalcTarget()
+    private void MoveToStart()
     {
-        if (horizontal_direction != 0)
-        {
-            target_posX = orig_posX + horizontal_direction * move_range;
-            target_posY = transform.position.y;
-        }
-
-        if (vertical_direction != 0)
-        {
-            target_posY = orig_posY + vertical_direction * move_range;
-            target_posX = transform.position.x;
-        }
+        targetPosition = startPosition;
     }
 
+    private void MoveToTarget()
+    {
+        targetPosition = startPosition + new Vector3(horizontal_range, vertical_range, 0f);
+    }
 }

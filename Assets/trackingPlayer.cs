@@ -7,7 +7,7 @@ public class trackingPlayer : MonoBehaviour
     // Start is called before the first frame update
     GameObject player;
     //public float posX = 0f;
-    //public float posY = 3f;
+    public float offsetY = 3f;
     public float cameraSpeed = 5.0f;
     //Camera x, y boundaries
     public float minX = 0.0f;
@@ -29,7 +29,7 @@ public class trackingPlayer : MonoBehaviour
     void Update()
     {
         // Move the camera to track player currX and currY
-        camera_target_pos = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
+        camera_target_pos = new Vector3(player.transform.position.x, player.transform.position.y + offsetY, transform.position.z);
         transform.position = Vector3.Lerp(transform.position, camera_target_pos  , cameraSpeed * Time.deltaTime);
 
         // Clamp the camera's position within the scene boundaries

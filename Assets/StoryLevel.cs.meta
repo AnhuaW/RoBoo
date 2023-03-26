@@ -1,14 +1,10 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/StoryLevel.cs.meta
-guid: 037f806375d4f964593ae9fa5fc20ff0
-========
-guid: 034b0151662da41c7bb79d439256d2e2
->>>>>>>> 20fdd7603fa935cd905e914f521bb829f8aacd00:Assets/Scripts_p3/detect_player.cs.meta
+guid: 3a374f1d7daa08c46ba7d2d8710e511b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences: []
-  executionOrder: 57
+  executionOrder: 65
   icon: {instanceID: 0}
   userData: 
   assetBundleName: 
