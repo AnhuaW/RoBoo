@@ -21,9 +21,15 @@ public class BackToMenu : MonoBehaviour
             // clear inventory
             Inventory_tmp.instance.ClearAll();
         }
-        // press R to restart current level
+        // press R to load latest checkpoint
         if(Input.GetKeyDown(KeyCode.R))
         {
+            EventBus.Publish<GameOver>(new GameOver());
+        }
+        // press T to restart current level
+        if(Input.GetKeyDown(KeyCode.T))
+        {
+            GetComponent<GameStatus>().has_checked = false;
             EventBus.Publish<GameOver>(new GameOver());
         }
     }

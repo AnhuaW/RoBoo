@@ -18,6 +18,7 @@ TagManager:
   - enemy
   - ball
   - key
+  - brick
   layers:
   - Default
   - TransparentFX
