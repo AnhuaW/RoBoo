@@ -31,22 +31,22 @@ public class SwitchOnOff : MonoBehaviour
         {
             if (e.pressed)
             {
-                if(e.name == "pipes"){
-                    transform.GetChild(0).gameObject.SetActive(launch_if_button_pressed);
-                    transform.GetChild(1).gameObject.SetActive(launch_if_button_pressed);
-                }else{
+                //if(e.name == "pipes"){
+                 //   transform.GetChild(0).gameObject.SetActive(launch_if_button_pressed);
+                  //  transform.GetChild(1).gameObject.SetActive(launch_if_button_pressed);
+                //}else{
                     Debug.Log("pressed");
                     transform.GetChild(0).gameObject.SetActive(launch_if_button_pressed);
-                }
+               // }
             }
             else
             {
-                if(e.name == "pipes"){
+                //if(e.name == "pipes"){
+                 //   transform.GetChild(0).gameObject.SetActive(!launch_if_button_pressed);
+                  //  transform.GetChild(1).gameObject.SetActive(!launch_if_button_pressed);
+                //}else{
                     transform.GetChild(0).gameObject.SetActive(!launch_if_button_pressed);
-                    transform.GetChild(1).gameObject.SetActive(!launch_if_button_pressed);
-                }else{
-                    transform.GetChild(0).gameObject.SetActive(!launch_if_button_pressed);
-                }
+                //}
             }
 
         }

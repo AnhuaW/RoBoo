@@ -2521,6 +2521,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 23977562019797590, guid: 06f23f5ceaf61412296a63ddaa1352d4, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 23977562019797590, guid: 06f23f5ceaf61412296a63ddaa1352d4, type: 3}
       propertyPath: ShapeModule.radius.value
       value: 84.48
       objectReference: {fileID: 0}
@@ -2538,7 +2542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 23977562019797590, guid: 06f23f5ceaf61412296a63ddaa1352d4, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 4.62
+      value: 1.98
       objectReference: {fileID: 0}
     - target: {fileID: 23977562019797590, guid: 06f23f5ceaf61412296a63ddaa1352d4, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
@@ -2550,15 +2554,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 23977562019797590, guid: 06f23f5ceaf61412296a63ddaa1352d4, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.8867924
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23977562019797590, guid: 06f23f5ceaf61412296a63ddaa1352d4, type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23977562019797590, guid: 06f23f5ceaf61412296a63ddaa1352d4, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.1523054
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23977562019797590, guid: 06f23f5ceaf61412296a63ddaa1352d4, type: 3}
       propertyPath: InitialModule.gravityModifier.scalar
