@@ -173,21 +173,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5517974921808589476, guid: 70d507a00c207b8439e664071f611849, type: 3}
   m_PrefabInstance: {fileID: 5517974922281006585}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &40175273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 40175260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83ddfe57f4b973043a57a55ae40f176f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameover: 0
-  has_checked: 0
-  ammo_prefab: {fileID: 0}
 --- !u!114 &40175288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,7 +476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783301, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_TagString
-      value: firstAmmo
+      value: battery
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783304, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_SortingLayer
@@ -682,7 +667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783301, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_TagString
-      value: firstAmmo
+      value: battery
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783304, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_SortingLayer
@@ -1266,7 +1251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783301, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_TagString
-      value: firstAmmo
+      value: battery
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783304, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_SortingLayer
@@ -2027,7 +2012,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783301, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_TagString
-      value: firstAmmo
+      value: battery
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783304, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_SortingLayer
@@ -2424,6 +2409,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250eec4073fb54a4aae16a0b49b0bd10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offsetX: 0
+  offsetY: 3
   cameraSpeed: 5
   minX: 0
   maxX: 19
@@ -2728,7 +2715,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783301, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_TagString
-      value: firstAmmo
+      value: battery
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783304, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_SortingLayer
@@ -3391,7 +3378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783301, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_TagString
-      value: firstAmmo
+      value: battery
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783304, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_SortingLayer
@@ -3941,7 +3928,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783301, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_TagString
-      value: firstAmmo
+      value: battery
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783304, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_SortingLayer
@@ -4023,7 +4010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783301, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_TagString
-      value: firstAmmo
+      value: battery
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783304, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_SortingLayer
@@ -7736,7 +7723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3902282958088793133, guid: 58dc16837344d914a92ba238812347f6, type: 3}
       propertyPath: current_level_index
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3902282958088793133, guid: 58dc16837344d914a92ba238812347f6, type: 3}
       propertyPath: has_key_constraints
@@ -8534,8 +8521,7 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 996693017}
-    m_RemovedComponents:
-    - {fileID: -1102121440641552092, guid: 70d507a00c207b8439e664071f611849, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70d507a00c207b8439e664071f611849, type: 3}
 --- !u!1001 &7243891753024103308
 PrefabInstance:

@@ -64,6 +64,11 @@ public class GameStatus : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
             }
+            GameObject[] angel = GameObject.FindGameObjectsWithTag("statue");
+            foreach (GameObject ang in angel)
+            {
+                Destroy(ang);
+            }
             gameover = false;
         }
     }
