@@ -52,7 +52,7 @@ public class WaterFlow : MonoBehaviour
         {
             floatable_rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
         }
-        else
+        else if(name != "ball")
         {
             floatable_rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class trackingPlayer : MonoBehaviour
 {
     // Start is called before the first frame update
-    GameObject player;
+    public GameObject player;
     public float posX = 0f;
     public float posY = 3f;
     public float cameraSpeed = 5.0f;
@@ -17,7 +17,10 @@ public class trackingPlayer : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.Find("Player");
+        //player = GameObject.Find("Player");
+        float clampedX = Mathf.Clamp(player.transform.position.x, minX, maxX);
+        float clampedY = Mathf.Clamp(player.transform.position.y, minY, maxY);
+        transform.position = new Vector3(clampedX, clampedY, transform.position.z);
     }
 
     // Update is called once per frame
