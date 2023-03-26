@@ -2257,6 +2257,7 @@ GameObject:
   - component: {fileID: 820268897}
   - component: {fileID: 820268896}
   - component: {fileID: 820268895}
+  - component: {fileID: 820268899}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2356,6 +2357,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &820268899
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820268894}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e0959bae35b1f4155a5614f309108a75, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1001 &838145902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2546,7 +2567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 23977562019797590, guid: 06f23f5ceaf61412296a63ddaa1352d4, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
-      value: 5.41
+      value: 4.43
       objectReference: {fileID: 0}
     - target: {fileID: 23977562019797590, guid: 06f23f5ceaf61412296a63ddaa1352d4, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
