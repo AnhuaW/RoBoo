@@ -1487,6 +1487,10 @@ PrefabInstance:
       value: 5.02
       objectReference: {fileID: 0}
     - target: {fileID: 5599505781723597591, guid: 440148c6e1530de488cd205b297fa770, type: 3}
+      propertyPath: added_speed
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599505781723597591, guid: 440148c6e1530de488cd205b297fa770, type: 3}
       propertyPath: added_horizontal_speed
       value: -2
       objectReference: {fileID: 0}
