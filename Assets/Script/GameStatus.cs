@@ -18,6 +18,8 @@ public class GameStatus : MonoBehaviour
     List<Vector3> bricks_pos_record= new List<Vector3>();
     Vector3 checkpoint_pos_record = Vector3.zero;
     List<Vector3> ammos_pos_record = new List<Vector3>();
+    List<GameObject> balls = new List<GameObject>();
+    List<Vector3> balls_pos_record = new List<Vector3>();
 
     Subscription<GameOver> gameover_subscription;
     Subscription<Checked> checkpoint_subscription;
@@ -55,9 +57,18 @@ public class GameStatus : MonoBehaviour
                 {
                     Instantiate(ammo_prefab, ammo_pos, Quaternion.identity);
                 }
+
+                // angels
                 foreach (GameObject ang in angel)
                 {
                     GameObject.Instantiate(angle_prefab, new Vector3(25.5f, 9.247638f, 0f), Quaternion.identity);
+                }
+
+                // balls states
+                for (int i = 0; i < balls.Count; ++i)
+                {
+                    balls[i].transform.position = balls_pos_record[i];
+                    balls[i].GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 }
 
                 // retrieve inventory
@@ -92,6 +103,8 @@ public class GameStatus : MonoBehaviour
         bricks_pos_record = c.bricks_pos;
         checkpoint_pos_record = c.checkpoint_pos;
         ammos_pos_record = c.ammos_pos;
+        balls = c.balls;
+        balls_pos_record = c.balls_pos;
     }
 
     private void OnDestroy()
@@ -114,13 +127,18 @@ public class Checked
     public List<Vector3> bricks_pos = new List<Vector3>();
     public Vector3 checkpoint_pos = new Vector3();
     public List<Vector3> ammos_pos = new List<Vector3>();
+    public List<GameObject> balls = new List<GameObject>();
+    public List<Vector3> balls_pos = new List<Vector3>();
 
     public Checked(List<GameObject> _bricks, List<Vector3> _bricks_pos,
-        Vector3 _checkpoint_pos, List<Vector3> _ammos_pos)
+        Vector3 _checkpoint_pos, List<Vector3> _ammos_pos,
+        List<GameObject> _balls, List<Vector3> _balls_pos)
     {
         bricks = _bricks;
         bricks_pos = _bricks_pos;
         checkpoint_pos = _checkpoint_pos;
         ammos_pos = _ammos_pos;
+        balls = _balls;
+        balls_pos = _balls_pos;
     }
 }

@@ -31,11 +31,15 @@ public class Checkpoint : MonoBehaviour
         GameObject[] ammos = GameObject.FindGameObjectsWithTag("battery");
         List<Vector3> ammos_pos = RecordPositions(ammos);
 
+        // record ball positions
+        GameObject[] balls = GameObject.FindGameObjectsWithTag("ball");
+        List<Vector3> balls_pos = RecordPositions(balls);
+
         // record inventory
         Inventory_tmp.instance.RecordInitialState();
 
         // inform GameStatus
-        EventBus.Publish<Checked>(new Checked(bricks.ToList(), bricks_pos, player_pos, ammos_pos));
+        EventBus.Publish<Checked>(new Checked(bricks.ToList(), bricks_pos, player_pos, ammos_pos, balls.ToList(), balls_pos));
     }
 
     
