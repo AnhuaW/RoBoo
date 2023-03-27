@@ -24,13 +24,13 @@ public class DoorToNextLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((!has_key_constraints|| inventory.GetKey() == required_key)
+        if ((!has_key_constraints || inventory.GetKey() == required_key)
             && collision.gameObject.name == "Player")
         {
             Debug.Log("pass");
@@ -43,5 +43,4 @@ public class DoorToNextLevel : MonoBehaviour
             }
         }
     }
-
 }

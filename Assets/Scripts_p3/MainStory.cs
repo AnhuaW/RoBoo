@@ -20,6 +20,7 @@ public class MainStory : MonoBehaviour
 
     public void LoadSceneOnClick()
     {
+        Debug.Log("click");
         StartCoroutine(load.GetComponent<levelLoder>().LoadLevel(index));
     }
 }
