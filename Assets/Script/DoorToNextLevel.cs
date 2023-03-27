@@ -18,20 +18,19 @@ public class DoorToNextLevel : MonoBehaviour
     {
         load = GameObject.Find("levelLoader");
         inventory = Inventory_tmp.instance;
-        //total_scenes_count = SceneManager.sceneCountInBuildSettings;
-        CountTotalScenes();
+        total_scenes_count = SceneManager.sceneCountInBuildSettings;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((!has_key_constraints|| inventory.GetKey() == required_key)
+        if ((!has_key_constraints || inventory.GetKey() == required_key)
             && collision.gameObject.name == "Player")
         {
             Debug.Log("pass");
@@ -43,21 +42,5 @@ public class DoorToNextLevel : MonoBehaviour
                 completed_levels.GetComponent<CompletedLevels>().level_completed[current_level_index] = true;
             }
         }
-    }
-
-    void CountTotalScenes()
-    {
-        total_scenes_count = 8;
-        /*
-        if (EditorBuildSettings.scenes != null){
-        EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
-        foreach(EditorBuildSettingsScene scene in scenes)
-        {
-            if(scene.enabled)
-            {
-                total_scenes_count++;
-            }
-        }
-        }*/
     }
 }

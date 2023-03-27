@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,12 +11,17 @@ public class levelLoder : MonoBehaviour
     public float transitionTime = 1f;
 
     public int total_scenes_count = 6;
+
+    private void Awake()
+    {
+        total_scenes_count = SceneManager.sceneCountInBuildSettings;
+    }
     public IEnumerator LoadLevel(int levelIndex)
     {
         transition.SetTrigger("Start");
-        Debug.Log("start");
+
         yield return new WaitForSeconds(transitionTime);
-        if(SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().name == "MainStory")
+        if (SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().name == "MainStory")
         {
             SceneManager.LoadScene(levelIndex);
         }
