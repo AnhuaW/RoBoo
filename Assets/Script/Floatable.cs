@@ -24,6 +24,16 @@ public class Floatable : MonoBehaviour
 
     void Update()
     {
+        /*
+        if (gameObject.name.Contains("Brick"))
+        {
+            if (rb.velocity.x == 0)
+            {
+                rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
+            }
+        }*/
+
+
         //extra condition for falling block damage
         if(rb.gravityScale == 1 && rb.velocity.y < 0)
         {
