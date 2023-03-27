@@ -13,9 +13,9 @@ public class levelLoder : MonoBehaviour
     public IEnumerator LoadLevel(int levelIndex)
     {
         transition.SetTrigger("Start");
-
+        Debug.Log("start");
         yield return new WaitForSeconds(transitionTime);
-        if(SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex == 11)
+        if(SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().name == "MainStory")
         {
             SceneManager.LoadScene(levelIndex);
         }
