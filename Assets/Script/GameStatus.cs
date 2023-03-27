@@ -12,6 +12,7 @@ public class GameStatus : MonoBehaviour
     public bool has_checked = false;
 
     public GameObject ammo_prefab = null;
+    public GameObject angle_prefab = null;
 
     List<GameObject> bricks = new List<GameObject>();
     List<Vector3> bricks_pos_record= new List<Vector3>();
@@ -32,6 +33,7 @@ public class GameStatus : MonoBehaviour
     void Update()
     {
         // restart the level
+        GameObject[] angel = GameObject.FindGameObjectsWithTag("statue");
         if (gameover)
         {
             if (has_checked)
@@ -53,8 +55,11 @@ public class GameStatus : MonoBehaviour
                 {
                     Instantiate(ammo_prefab, ammo_pos, Quaternion.identity);
                 }
+                foreach (GameObject ang in angel)
+                {
+                    GameObject.Instantiate(angle_prefab, new Vector3(25.5f, 9.247638f, 0f), Quaternion.identity);
+                }
 
-                
                 // retrieve inventory
                 Inventory_tmp.instance.RetrieveInitialState();
             }
@@ -64,11 +69,13 @@ public class GameStatus : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
             }
-            GameObject[] angel = GameObject.FindGameObjectsWithTag("statue");
+            //destory angle if restart or start at check point
+            
             foreach (GameObject ang in angel)
             {
                 Destroy(ang);
             }
+
             gameover = false;
         }
     }

@@ -257,6 +257,7 @@ MonoBehaviour:
   gameover: 0
   has_checked: 0
   ammo_prefab: {fileID: 5669959344316783301, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
+  angle_prefab: {fileID: 2596121842207662540, guid: fb48ffd9fcc7f4ec3ab7ad1ef43286ab, type: 3}
 --- !u!70 &290851339
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
