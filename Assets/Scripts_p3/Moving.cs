@@ -18,6 +18,8 @@ public class Moving : MonoBehaviour
     private float horizontal_range = 0;
     private float vertical_range = 0;
 
+    private bool stop = false;
+
     private void Start()
     {
         startPosition = transform.position;
@@ -37,7 +39,7 @@ public class Moving : MonoBehaviour
 
     private void Update()
     {
-        if (movingToTarget)
+        if (movingToTarget && !stop)
         {
             // move to target
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
@@ -46,28 +48,54 @@ public class Moving : MonoBehaviour
             if (transform.position == targetPosition)
             {
                 movingToTarget = false;
-                Invoke("MoveToStart", waitTime);
+                Debug.Log("notToTarget");
+                StartCoroutine(MoveToStart(waitTime));
             }
         }
-        else
+        else if(!movingToTarget && !stop)
         {
             transform.position = Vector3.MoveTowards(transform.position, startPosition, speed * Time.deltaTime);
 
             if (transform.position == startPosition)
             {
+                Debug.Log("ToTarget");
                 movingToTarget = true;
-                Invoke("MoveToTarget", waitTime);
+                StartCoroutine(MoveToTarget(waitTime));
             }
         }
     }
 
-    private void MoveToStart()
+    IEnumerator MoveToStart(float waitTime)
     {
+        Debug.Log("wait");
+        stop = true;
+        yield return new WaitForSeconds(waitTime);
         targetPosition = startPosition;
+        stop = false;
     }
 
-    private void MoveToTarget()
+    IEnumerator MoveToTarget(float waitTime)
     {
+        Debug.Log("wait");
+        stop = true;
+        yield return new WaitForSeconds(waitTime);
         targetPosition = startPosition + new Vector3(horizontal_range, vertical_range, 0f);
+        stop = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.collider.transform.SetParent(transform);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.collider.transform.SetParent(null);
+        }
     }
 }
