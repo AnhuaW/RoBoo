@@ -44,25 +44,12 @@ public class ButtonControlled : MonoBehaviour
     void ControlRays(bool turn_on)
     {
 
-        //Debug.Log(gameObject.name + turn_on);
         foreach (Transform child in transform)
         {
-            // enable/disable sprite renderer and collider
-            //child.gameObject.GetComponent<SpriteRenderer>().enabled = turn_on;
-            child.gameObject.SetActive(turn_on);
-
-
-            // turn on/off ray
-            DamagingRay child_ray = child.gameObject.GetComponent<DamagingRay>();
-            if (child_ray != null)
+            // turn off line and ray
+            if (child.gameObject.name == "Line")
             {
-                child_ray.enabled = turn_on;
-            }
-            LineRenderer child_line = child.gameObject.GetComponent<LineRenderer>();
-            if (child_line != null)
-            {
-                child_line.enabled = turn_on;
-                child_line.sortingLayerName = "Foreground";
+                child.gameObject.SetActive(turn_on);
             }
         }
     }

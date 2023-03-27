@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 2085382901
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1023271010, guid: 32be4c85322e9c14fa8f81bad488e8fb, type: 3}
+  m_Sprite: {fileID: 1443413064, guid: 9539c768f3afe264da765e17ccb6c929, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 585ce9e3611b5a24f83405d4e668ebae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressed_sprite: {fileID: -1252379104, guid: 32be4c85322e9c14fa8f81bad488e8fb, type: 3}
-  eased_sprite: {fileID: 1023271010, guid: 32be4c85322e9c14fa8f81bad488e8fb, type: 3}
+  pressed_sprite: {fileID: -425236612, guid: 9539c768f3afe264da765e17ccb6c929, type: 3}
+  eased_sprite: {fileID: 1443413064, guid: 9539c768f3afe264da765e17ccb6c929, type: 3}
   pressed: 0
   controlled_obj_name: spike1
 --- !u!61 &8511691368737884366
@@ -119,7 +119,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.12, y: 0.07}
+    oldSize: {x: 0.12, y: 0.06}
     newSize: {x: 0.12, y: 0.07}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

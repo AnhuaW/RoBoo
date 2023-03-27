@@ -12,6 +12,8 @@ public class statue_attack : MonoBehaviour
     SpriteRenderer sp;
     SpriteRenderer player_sp;
     public float moving_speed = 0.5f;
+    public bool isGrounded = true;
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +21,7 @@ public class statue_attack : MonoBehaviour
         player_rigid = player.GetComponent<Rigidbody2D>();
         rb = GetComponent<Rigidbody2D>();
         sp = GetComponent<SpriteRenderer>();
-        
+        animator = GetComponent<Animator>();
         player_sp = player.GetComponent<SpriteRenderer>();
         Debug.Log(player_sp.flipX);
     }
@@ -30,7 +32,12 @@ public class statue_attack : MonoBehaviour
         
         if(player_sp.flipX == sp.flipX)
         {
+
+            GetComponent<BoxCollider2D>().isTrigger = true;
+            rb.gravityScale = 0;
             sp.sprite = moving_angle;
+            rb.constraints = RigidbodyConstraints2D.None;
+            
             Vector3 dir =  player.transform.position - transform.position;
             //Debug.Log(Mathf.Atan2(dir.y, dir.x));
             rb.velocity = new Vector2(Mathf.Sin(Mathf.Atan2(dir.x, dir.y)) * moving_speed,
@@ -38,9 +45,14 @@ public class statue_attack : MonoBehaviour
         }
         else
         {
+                
             //Debug.Log("stop");
+            GetComponent<BoxCollider2D>().isTrigger = false;
             sp.sprite = stop_angle;
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             rb.velocity = Vector2.zero;
+            rb.gravityScale = 10;
         }
         updateDir();
     }
@@ -64,4 +76,6 @@ public class statue_attack : MonoBehaviour
             EventBus.Publish<GameOver>(new GameOver());
         }
     }
+
+
 }

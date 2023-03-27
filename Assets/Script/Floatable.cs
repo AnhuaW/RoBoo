@@ -30,7 +30,8 @@ public class Floatable : MonoBehaviour
             is_falling = true;
         }
 
-        // if reaches screen edge, stop moving (mainly prevent object from floating infinitely)
+        // (disabled) if reaches screen edge, stop moving (mainly prevent object from floating infinitely)
+        /*
         if (is_floating)
         {
             Vector3 viewportPos = Camera.main.WorldToViewportPoint(transform.position);
@@ -40,6 +41,7 @@ public class Floatable : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, 0);
             }
         }
+        */
 
         // detect ground underneath
         if (is_falling)
@@ -97,9 +99,9 @@ public class Floatable : MonoBehaviour
         is_falling = true;
         Debug.Log("isfalling:" + is_falling);
         //rb.bodyType = RigidbodyType2D.Dynamic;
-        if(this.gameObject.name == "ball")
+        if(this.gameObject.CompareTag("ball"))
         {
-            rb.gravityScale = 2;
+            rb.gravityScale = 1.8f;
         }
         else
         {
@@ -111,8 +113,11 @@ public class Floatable : MonoBehaviour
         for (int i = 0; i < transform.childCount; i++)
         {
             Transform temp_child = transform.GetChild(i);
-            temp_child.parent = null;
-            Destroy(temp_child.gameObject);
+            if (temp_child.gameObject.name.Contains("Bubble"))
+            {
+                temp_child.parent = null;
+                Destroy(temp_child.gameObject);
+            }
         }
 
     }

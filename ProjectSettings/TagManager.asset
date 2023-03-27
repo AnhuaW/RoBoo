@@ -18,6 +18,8 @@ TagManager:
   - enemy
   - ball
   - key
+  - brick
+  - statue
   layers:
   - Default
   - TransparentFX
@@ -28,7 +30,7 @@ TagManager:
   - Player
   - enemy
   - backgrounD
-  - 
+  - Shield
   - 
   - 
   - 
