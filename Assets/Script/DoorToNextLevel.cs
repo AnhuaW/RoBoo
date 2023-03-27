@@ -47,7 +47,9 @@ public class DoorToNextLevel : MonoBehaviour
 
     void CountTotalScenes()
     {
-        total_scenes_count = 0;
+        total_scenes_count = 8;
+        /*
+        if (EditorBuildSettings.scenes != null){
         EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
         foreach(EditorBuildSettingsScene scene in scenes)
         {
@@ -56,5 +58,6 @@ public class DoorToNextLevel : MonoBehaviour
                 total_scenes_count++;
             }
         }
+        }*/
     }
 }
