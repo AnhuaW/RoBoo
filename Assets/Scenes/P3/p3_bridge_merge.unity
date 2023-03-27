@@ -3795,6 +3795,10 @@ PrefabInstance:
       value: BubbleAmmo (6)
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783301, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669959344316783301, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_TagString
       value: battery
       objectReference: {fileID: 0}

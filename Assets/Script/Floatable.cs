@@ -24,14 +24,15 @@ public class Floatable : MonoBehaviour
 
     void Update()
     {
-        /*
+
+        // prevent pushable brick after floating
         if (gameObject.name.Contains("Brick"))
         {
             if (rb.velocity.x == 0)
             {
                 rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
             }
-        }*/
+        }
 
 
         //extra condition for falling block damage
