@@ -20,6 +20,7 @@ TagManager:
   - key
   - brick
   - statue
+  - button
   layers:
   - Default
   - TransparentFX
