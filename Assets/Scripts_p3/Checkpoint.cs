@@ -35,11 +35,16 @@ public class Checkpoint : MonoBehaviour
         GameObject[] balls = GameObject.FindGameObjectsWithTag("ball");
         List<Vector3> balls_pos = RecordPositions(balls);
 
+        // record breakable tiles status
+        // require ammos to have tag "bar"
+        GameObject[] breakables = GameObject.FindGameObjectsWithTag("bar");
+        List<Vector3> breakables_pos = RecordPositions(breakables);
+
         // record inventory
         Inventory_tmp.instance.RecordInitialState();
 
         // inform GameStatus
-        EventBus.Publish<Checked>(new Checked(bricks.ToList(), bricks_pos, player_pos, ammos_pos, balls.ToList(), balls_pos));
+        EventBus.Publish<Checked>(new Checked(bricks.ToList(), bricks_pos, player_pos, ammos_pos, balls.ToList(), balls_pos, breakables_pos));
     }
 
     
