@@ -71,6 +71,7 @@ public class GameStatus : MonoBehaviour
                 {
                     balls[i].transform.position = balls_pos_record[i];
                     balls[i].GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                    balls[i].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
                 }
 
                 // replace all breakables
@@ -93,7 +94,7 @@ public class GameStatus : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
             }
-            //destory angle if restart or start at check point
+            //destory angel if restart or start at check point
             
             foreach (GameObject ang in angel)
             {
