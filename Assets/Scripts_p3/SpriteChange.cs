@@ -8,6 +8,7 @@ public class SpriteChange : MonoBehaviour
     public List<Sprite> sprites;
     //changing interval
     public float interval = 0.2f;
+    public bool loop = true;
     bool changing;
    
     // Start is called before the first frame update
@@ -34,7 +35,10 @@ public class SpriteChange : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite =  sprite;
             yield return new WaitForSeconds(interval);
         }
-        changing = false;
+        if (loop)
+        {
+            changing = false;
+        }
         //yield return null;
     }
 }
