@@ -677,10 +677,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8511691368737884361, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 117318047, guid: c2d4161e35c224a4182d8864b2434540, type: 3}
     - target: {fileID: 8511691368737884363, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: m_Name
       value: PushButton (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8511691368737884367, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
+      propertyPath: eased_sprite
+      value: 
+      objectReference: {fileID: 117318047, guid: c2d4161e35c224a4182d8864b2434540, type: 3}
+    - target: {fileID: 8511691368737884367, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
+      propertyPath: pressed_sprite
+      value: 
+      objectReference: {fileID: 1093726907, guid: c2d4161e35c224a4182d8864b2434540, type: 3}
     - target: {fileID: 8511691368737884367, guid: 4e5fe6e3bf7944af9a14c1c5e5c0660c, type: 3}
       propertyPath: controlled_obj_name
       value: pipes
