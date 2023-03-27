@@ -10,10 +10,10 @@ public class trackingPlayer : MonoBehaviour
     public float offsetY = 3f;
     public float cameraSpeed = 5.0f;
     //Camera x, y boundaries
-    public float minX = 0.0f;
+    public float minX = 0f;
     public float maxX = 19f;
-    public float minY = -1.0f;
-    public float maxY = 9.0f;
+    public float minY = -1f;
+    public float maxY = 9f;
     [SerializeField]
     Vector3 camera_target_pos;
 
