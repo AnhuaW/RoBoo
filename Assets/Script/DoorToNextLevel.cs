@@ -18,8 +18,7 @@ public class DoorToNextLevel : MonoBehaviour
     {
         load = GameObject.Find("levelLoader");
         inventory = Inventory_tmp.instance;
-        //total_scenes_count = SceneManager.sceneCountInBuildSettings;
-        CountTotalScenes();
+        total_scenes_count = SceneManager.sceneCountInBuildSettings;
     }
 
     // Update is called once per frame
@@ -45,16 +44,4 @@ public class DoorToNextLevel : MonoBehaviour
         }
     }
 
-    void CountTotalScenes()
-    {
-        total_scenes_count = 0;
-        EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
-        foreach(EditorBuildSettingsScene scene in scenes)
-        {
-            if(scene.enabled)
-            {
-                total_scenes_count++;
-            }
-        }
-    }
 }
