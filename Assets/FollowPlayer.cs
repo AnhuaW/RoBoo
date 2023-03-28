@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    public Transform player;
+    private Transform player;
     public float moveSpeed = 5.0f;
     public float stopDistance = 2.0f;
+
+    void Start()
+    {
+        player = GameObject.Find("Player").transform;
+    }
 
     void FixedUpdate()
     {
