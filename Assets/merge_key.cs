@@ -7,6 +7,7 @@ public class merge_key : MonoBehaviour
     // Start is called before the first frame update
     public GameObject prefab;
     private GameObject door;
+    private GameObject ui_control;
     private int required_key_num;
     GameObject door_key;
     public int current_key_num; // TODO: change to private later
@@ -15,6 +16,7 @@ public class merge_key : MonoBehaviour
     void Start()
     {
         door = GameObject.Find("Door");
+        ui_control = GameObject.Find("key_uiControl");
         required_key_num = door.GetComponent<DoorToNextLevel>().required_key;
         current_key_num = 0;
     }
@@ -35,6 +37,7 @@ public class merge_key : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("key"))
         {
+            ui_control.GetComponent<keyui_control>().activate_key(current_key_num);
             current_key_num += 1;
             if(current_key_num == required_key_num)
             {
