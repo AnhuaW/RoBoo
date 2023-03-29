@@ -94,8 +94,7 @@ public class GameStatus : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
             }
-            //destory angel if restart or start at check point
-            
+            // destory angel if restart or start at check point 
             foreach (GameObject ang in angel)
             {
                 Destroy(ang);

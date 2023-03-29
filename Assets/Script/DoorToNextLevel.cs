@@ -33,8 +33,8 @@ public class DoorToNextLevel : MonoBehaviour
         if ((!has_key_constraints || inventory.GetKey() == required_key)
             && collision.gameObject.name == "Player")
         {
-            Debug.Log("pass");
-            EventBus.Publish<StageStatus>(new StageStatus((current_level_index + 1) % total_scenes_count));
+            //Debug.Log("pass");
+            //EventBus.Publish<StageStatus>(new StageStatus((current_level_index + 1) % total_scenes_count));
             StartCoroutine(load.GetComponent<levelLoder>().LoadLevel(current_level_index));
             GameObject completed_levels = GameObject.Find("CompletedLevels");
             if (completed_levels != null)
