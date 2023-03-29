@@ -22,6 +22,8 @@ public class GameStatus : MonoBehaviour
     List<GameObject> balls = new List<GameObject>();
     List<Vector3> balls_pos_record = new List<Vector3>();
     List<Vector3> breakables_pos_record = new List<Vector3>();
+    List<Vector3> breakables_scale_record = new List<Vector3>();
+    List<Quaternion> breakables_rotation_record = new List<Quaternion>();
 
     Subscription<GameOver> gameover_subscription;
     Subscription<Checked> checkpoint_subscription;
@@ -80,9 +82,13 @@ public class GameStatus : MonoBehaviour
                 {
                     Destroy(old_tile);
                 }
-                foreach (Vector3 tile_pos in breakables_pos_record)
+                for (int i =0;i<breakables_pos_record.Count; ++i)
                 {
-                    Instantiate(breakable_tile_prefab, tile_pos, Quaternion.identity);
+                    Vector3 tile_pos = breakables_pos_record[i];
+                    Vector3 tile_scale = breakables_scale_record[i];
+                    Quaternion tile_rot = breakables_rotation_record[i];
+                    GameObject new_tile = Instantiate(breakable_tile_prefab, tile_pos, tile_rot);
+                    new_tile.transform.localScale = tile_scale;
                 }
 
                 // retrieve inventory
@@ -119,6 +125,8 @@ public class GameStatus : MonoBehaviour
         balls = c.balls;
         balls_pos_record = c.balls_pos;
         breakables_pos_record = c.breakables_pos;
+        breakables_scale_record = c.breakables_scale;
+        breakables_rotation_record = c.breakables_rotation;
     }
 
     private void OnDestroy()
@@ -144,11 +152,14 @@ public class Checked
     public List<GameObject> balls = new List<GameObject>();
     public List<Vector3> balls_pos = new List<Vector3>();
     public List<Vector3> breakables_pos = new List<Vector3>();
+    public List<Vector3> breakables_scale = new List<Vector3>();
+    public List<Quaternion> breakables_rotation = new List<Quaternion>();
 
     public Checked(List<GameObject> _bricks, List<Vector3> _bricks_pos,
         Vector3 _checkpoint_pos, List<Vector3> _ammos_pos,
         List<GameObject> _balls, List<Vector3> _balls_pos, 
-        List<Vector3> _breakables_pos)
+        List<Vector3> _breakables_pos, List<Vector3> _breakables_scale, 
+        List<Quaternion> _breakables_rotation)
     {
         bricks = _bricks;
         bricks_pos = _bricks_pos;
@@ -157,5 +168,7 @@ public class Checked
         balls = _balls;
         balls_pos = _balls_pos;
         breakables_pos = _breakables_pos;
+        breakables_scale = _breakables_scale;
+        breakables_rotation = _breakables_rotation;
     }
 }

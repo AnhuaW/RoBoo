@@ -39,12 +39,16 @@ public class Checkpoint : MonoBehaviour
         // require ammos to have tag "bar"
         GameObject[] breakables = GameObject.FindGameObjectsWithTag("bar");
         List<Vector3> breakables_pos = RecordPositions(breakables);
+        List<Vector3> breakables_scale = RecordScale(breakables);
+        List<Quaternion> breakbles_rotation = RecordRotation(breakables);
 
         // record inventory
         Inventory_tmp.instance.RecordInitialState();
 
         // inform GameStatus
-        EventBus.Publish<Checked>(new Checked(bricks.ToList(), bricks_pos, player_pos, ammos_pos, balls.ToList(), balls_pos, breakables_pos));
+        EventBus.Publish<Checked>(new Checked(bricks.ToList(), bricks_pos, 
+            player_pos, ammos_pos, balls.ToList(), balls_pos, 
+            breakables_pos, breakables_scale, breakbles_rotation));
     }
 
     
@@ -57,5 +61,27 @@ public class Checkpoint : MonoBehaviour
             obj_pos.Add(obj.transform.position);
         }
         return obj_pos;
+    }
+
+    // record scales of given gameobjects
+    List<Vector3> RecordScale(GameObject[] objects)
+    {
+        List<Vector3> obj_scale = new List<Vector3>();
+        foreach (GameObject obj in objects)
+        {
+            obj_scale.Add(obj.transform.localScale);
+        }
+        return obj_scale;
+    }
+
+    // record rotations of given gameobjects
+    List<Quaternion> RecordRotation(GameObject[] objects)
+    {
+        List<Quaternion> obj_rot = new List<Quaternion>();
+        foreach (GameObject obj in objects)
+        {
+            obj_rot.Add(obj.transform.localRotation);
+        }
+        return obj_rot;
     }
 }
