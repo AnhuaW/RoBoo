@@ -6,26 +6,26 @@ public class ScrollingBackground : MonoBehaviour
 {
     // Start is called before the first frame update
     public float scrollSpeed = 0.5f;
-    GameObject player;
+    Transform cam;
     Rigidbody2D rb;
     [SerializeField]
     private float moveX;
     [SerializeField]
-    private float plyaerLastPos;
+    private float LastPos;
     private float direction;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        cam = Camera.main.transform;
         rb = GetComponent<Rigidbody2D>();
-        plyaerLastPos = player.transform.position.x;
+        LastPos = cam.position.x;
     }
 
     // Update is called once per frame
     void Update()
     {
         //moveX = player.GetComponent<ArrowKeyMovement>().playerDirection.x;
-        moveX = player.transform.position.x - plyaerLastPos;
+        moveX = cam.transform.position.x - LastPos;
 
         if(moveX >= 0.055)
         {
@@ -42,7 +42,7 @@ public class ScrollingBackground : MonoBehaviour
         }
         
         StartScroll(-direction * scrollSpeed);
-        plyaerLastPos = player.transform.position.x;
+        LastPos = cam.position.x;
     }
 
     void StartScroll(float speed)

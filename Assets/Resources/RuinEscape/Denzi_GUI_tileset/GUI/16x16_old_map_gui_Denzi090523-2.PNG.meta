@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -10170,26 +10170,26 @@ TextureImporter:
       16x16_old_map_gui_Denzi090523-2_452: -74458974
       16x16_old_map_gui_Denzi090523-2_384: 1153229889
       16x16_old_map_gui_Denzi090523-2_245: -796517260
-      16x16_old_map_gui_Denzi090523-2_156: -267314111
+      16x16_old_map_gui_Denzi090523-2_296: -1184517875
       16x16_old_map_gui_Denzi090523-2_199: -1646847009
       16x16_old_map_gui_Denzi090523-2_291: 1078314516
-      16x16_old_map_gui_Denzi090523-2_267: 1196787899
-      16x16_old_map_gui_Denzi090523-2_296: -1184517875
+      16x16_old_map_gui_Denzi090523-2_346: 745916478
+      16x16_old_map_gui_Denzi090523-2_156: -267314111
       16x16_old_map_gui_Denzi090523-2_47: -4786198
       16x16_old_map_gui_Denzi090523-2_62: -1665723416
       16x16_old_map_gui_Denzi090523-2_133: 753518221
       16x16_old_map_gui_Denzi090523-2_77: 1373030150
       16x16_old_map_gui_Denzi090523-2_287: -878893861
-      16x16_old_map_gui_Denzi090523-2_346: 745916478
-      16x16_old_map_gui_Denzi090523-2_350: 586159956
-      16x16_old_map_gui_Denzi090523-2_341: 1304414677
+      16x16_old_map_gui_Denzi090523-2_267: 1196787899
       16x16_old_map_gui_Denzi090523-2_468: -1744679209
+      16x16_old_map_gui_Denzi090523-2_341: 1304414677
       16x16_old_map_gui_Denzi090523-2_74: 935870512
       16x16_old_map_gui_Denzi090523-2_178: -1173659787
       16x16_old_map_gui_Denzi090523-2_196: 1640537472
       16x16_old_map_gui_Denzi090523-2_345: -887797663
       16x16_old_map_gui_Denzi090523-2_432: -1866029625
       16x16_old_map_gui_Denzi090523-2_19: 649832287
+      16x16_old_map_gui_Denzi090523-2_350: 586159956
       16x16_old_map_gui_Denzi090523-2_39: 54719646
       16x16_old_map_gui_Denzi090523-2_20: -588149888
       16x16_old_map_gui_Denzi090523-2_228: 1464479855
@@ -10244,16 +10244,16 @@ TextureImporter:
       16x16_old_map_gui_Denzi090523-2_54: 1944979089
       16x16_old_map_gui_Denzi090523-2_149: 1423107591
       16x16_old_map_gui_Denzi090523-2_41: 1899565821
-      16x16_old_map_gui_Denzi090523-2_219: 1484510495
-      16x16_old_map_gui_Denzi090523-2_362: -1613158265
       16x16_old_map_gui_Denzi090523-2_253: 621954754
+      16x16_old_map_gui_Denzi090523-2_362: -1613158265
       16x16_old_map_gui_Denzi090523-2_394: 47743935
+      16x16_old_map_gui_Denzi090523-2_219: 1484510495
       16x16_old_map_gui_Denzi090523-2_216: -1479621630
       16x16_old_map_gui_Denzi090523-2_177: -639837254
       16x16_old_map_gui_Denzi090523-2_206: -703449432
       16x16_old_map_gui_Denzi090523-2_29: -25374235
       16x16_old_map_gui_Denzi090523-2_79: 1991359902
-      16x16_old_map_gui_Denzi090523-2_134: 2053940330
+      16x16_old_map_gui_Denzi090523-2_321: -792854353
       16x16_old_map_gui_Denzi090523-2_239: 1607262228
       16x16_old_map_gui_Denzi090523-2_143: 233556879
       16x16_old_map_gui_Denzi090523-2_398: -794410681
@@ -10261,10 +10261,10 @@ TextureImporter:
       16x16_old_map_gui_Denzi090523-2_63: 784127118
       16x16_old_map_gui_Denzi090523-2_288: -639338499
       16x16_old_map_gui_Denzi090523-2_404: 1674203320
-      16x16_old_map_gui_Denzi090523-2_104: 2120934966
+      16x16_old_map_gui_Denzi090523-2_134: 2053940330
       16x16_old_map_gui_Denzi090523-2_333: 310279106
-      16x16_old_map_gui_Denzi090523-2_321: -792854353
       16x16_old_map_gui_Denzi090523-2_409: 1562020535
+      16x16_old_map_gui_Denzi090523-2_104: 2120934966
       16x16_old_map_gui_Denzi090523-2_330: -1948978858
       16x16_old_map_gui_Denzi090523-2_163: 274631687
       16x16_old_map_gui_Denzi090523-2_282: -1349147042
@@ -10417,9 +10417,9 @@ TextureImporter:
       16x16_old_map_gui_Denzi090523-2_270: -1935081031
       16x16_old_map_gui_Denzi090523-2_115: -383635785
       16x16_old_map_gui_Denzi090523-2_118: -1811192959
-      16x16_old_map_gui_Denzi090523-2_324: -1545731612
       16x16_old_map_gui_Denzi090523-2_331: 687997999
       16x16_old_map_gui_Denzi090523-2_332: -1933215725
+      16x16_old_map_gui_Denzi090523-2_324: -1545731612
       16x16_old_map_gui_Denzi090523-2_459: -1425502683
       16x16_old_map_gui_Denzi090523-2_364: 2042365927
       16x16_old_map_gui_Denzi090523-2_327: 43766896
@@ -10445,8 +10445,8 @@ TextureImporter:
       16x16_old_map_gui_Denzi090523-2_444: 886068463
       16x16_old_map_gui_Denzi090523-2_250: -1281082328
       16x16_old_map_gui_Denzi090523-2_23: 1344619537
-      16x16_old_map_gui_Denzi090523-2_68: 1180781544
       16x16_old_map_gui_Denzi090523-2_313: 70960776
+      16x16_old_map_gui_Denzi090523-2_68: 1180781544
       16x16_old_map_gui_Denzi090523-2_247: 712247403
       16x16_old_map_gui_Denzi090523-2_318: 1522571805
       16x16_old_map_gui_Denzi090523-2_407: -758599167
