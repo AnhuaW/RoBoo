@@ -64,7 +64,7 @@ public class LaserController : MonoBehaviour
         {
             if (hit.collider.gameObject.name == "Player")
             {
-                EventBus.Publish<GameOver>(new GameOver());
+                EventBus.Publish<GameOver>(new GameOver(false));
             }
             else
             {

@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class BackToMenu : MonoBehaviour
 {
-    PauseButton PauseButton = null;
+    //PauseButton PauseButton = null;
 
     void Start()
     {
-        PauseButton = GameObject.Find("PauseButton").GetComponent<PauseButton>();
+        //PauseButton = GameObject.Find("PauseButton").GetComponent<PauseButton>();
     }
 
     void Update()
@@ -17,12 +17,20 @@ public class BackToMenu : MonoBehaviour
         // press R to load latest checkpoint
         if (Input.GetKeyDown(KeyCode.R))
         {
-            PauseButton.LoadCheckpoint();
+            //PauseButton.LoadCheckpoint();
+            EventBus.Publish<GameOver>(new GameOver(true));
+        }
+        // press T to restart from beginning
+        else if (Input.GetKeyDown(KeyCode.T))
+        {
+            GetComponent<GameStatus>().has_checked = false;
+            EventBus.Publish<GameOver>(new GameOver(true));
         }
         // press Esc to go back to menu
-        if (Input.GetKeyDown(KeyCode.Escape))
+        else if (Input.GetKeyDown(KeyCode.Escape))
         {
-            PauseButton.Menu();
+            //PauseButton.Menu();
+            SceneManager.LoadScene(0);
         }
     }
         /*

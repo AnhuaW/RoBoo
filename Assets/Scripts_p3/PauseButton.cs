@@ -56,14 +56,14 @@ public class PauseButton : MonoBehaviour
         PauseMenu.SetActive(false);
         Time.timeScale = 1;
         player.GetComponent<GameStatus>().has_checked = false;
-        EventBus.Publish<GameOver>(new GameOver());
+        EventBus.Publish<GameOver>(new GameOver(true));
     }
 
     public void LoadCheckpoint()
     {
         PauseMenu.SetActive(false);
 
-        EventBus.Publish<GameOver>(new GameOver());
+        EventBus.Publish<GameOver>(new GameOver(true));
 
         Time.timeScale = 1;
         // ensable player input

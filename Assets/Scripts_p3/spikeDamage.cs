@@ -21,7 +21,7 @@ public class spikeDamage : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("touch spike");
-            EventBus.Publish<GameOver>(new GameOver());
+            EventBus.Publish<GameOver>(new GameOver(false));
         }
     }
 }

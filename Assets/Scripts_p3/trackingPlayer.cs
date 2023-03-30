@@ -40,7 +40,7 @@ public class trackingPlayer : MonoBehaviour
         //check if player fell out of the scene
         if(player.transform.position.y  <  transform.position.y - Camera.main.orthographicSize - 1)
         {
-            EventBus.Publish<GameOver>(new GameOver());
+            EventBus.Publish<GameOver>(new GameOver(false));
         }
     }
 }

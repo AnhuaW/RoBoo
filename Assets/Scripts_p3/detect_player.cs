@@ -37,7 +37,7 @@ public class detect_player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            EventBus.Publish<GameOver>(new GameOver());
+            EventBus.Publish<GameOver>(new GameOver(false));
         }
     }
 }

@@ -30,7 +30,7 @@ public class Smash : MonoBehaviour
             if (floatable.is_falling && hit.collider.gameObject.GetComponent<ArrowKeyMovement>().isGrounded)
             {
                 Debug.Log("smash");
-                EventBus.Publish<GameOver>(new GameOver());
+                EventBus.Publish<GameOver>(new GameOver(false));
             }
         }
 
@@ -42,7 +42,7 @@ public class Smash : MonoBehaviour
             if (floatable.is_falling && hit.collider.gameObject.GetComponent<ArrowKeyMovement>().isGrounded)
             {
                 Debug.Log("smash");
-                EventBus.Publish<GameOver>(new GameOver());
+                EventBus.Publish<GameOver>(new GameOver(false));
             }
         }
 
@@ -53,7 +53,7 @@ public class Smash : MonoBehaviour
             if (floatable.is_falling && hit.collider.gameObject.GetComponent<ArrowKeyMovement>().isGrounded)
             {
                 Debug.Log("smash");
-                EventBus.Publish<GameOver>(new GameOver());
+                EventBus.Publish<GameOver>(new GameOver(false));
             }
         }
 
