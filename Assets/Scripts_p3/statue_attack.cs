@@ -30,7 +30,7 @@ public class statue_attack : MonoBehaviour
     void Update()
     {
         
-        if(player_sp.flipX == sp.flipX)
+        if(player_sp.flipX != sp.flipX)
         {
 
             GetComponent<BoxCollider2D>().isTrigger = true;
@@ -61,11 +61,11 @@ public class statue_attack : MonoBehaviour
     {
         if (player.transform.position.x > transform.position.x)
         {
-            sp.flipX = false;
+            sp.flipX = true;
         }
         else if (player.transform.position.x < transform.position.x)
         {
-            sp.flipX = true;
+            sp.flipX = false;
         }
     }
 
