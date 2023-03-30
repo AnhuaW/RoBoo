@@ -36,7 +36,7 @@ public class Floatable : MonoBehaviour
 
 
         //extra condition for falling block damage
-        if(rb.gravityScale == 1 && rb.velocity.y < 0)
+        if (rb.gravityScale == 1 && rb.velocity.y < 0)
         {
             is_falling = true;
         }
@@ -66,9 +66,17 @@ public class Floatable : MonoBehaviour
             {
                 is_falling = false;
             }
-            
+
         }
-        
+
+        // if colliding with tilemap or gameobjects
+        // while being affected by waterflow
+        if (rb.velocity.x != 0 && rb.velocity.y == 0)
+        {
+            ApplyGravity();
+
+        }
+
     }
 
 
@@ -110,7 +118,7 @@ public class Floatable : MonoBehaviour
         is_falling = true;
         Debug.Log("isfalling:" + is_falling);
         //rb.bodyType = RigidbodyType2D.Dynamic;
-        if(this.gameObject.CompareTag("ball"))
+        if (this.gameObject.CompareTag("ball"))
         {
             rb.gravityScale = 1.8f;
         }
@@ -118,7 +126,7 @@ public class Floatable : MonoBehaviour
         {
             rb.gravityScale = 1;
         }
-        
+
         //rb.velocity = Vector2.zero;
         // remove bubble
         for (int i = 0; i < transform.childCount; i++)
@@ -137,12 +145,11 @@ public class Floatable : MonoBehaviour
     // bubble bursts when touching a collider
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        
+
         if (is_floating && !is_falling)
         {
             ApplyGravity();
         }
     }
-
 
 }
