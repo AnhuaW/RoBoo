@@ -1440,7 +1440,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixel_keys_x16_white_63
+      name: keyW
       rect:
         serializedVersion: 2
         x: 48
@@ -1482,7 +1482,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixel_keys_x16_white_65
+      name: keyR
       rect:
         serializedVersion: 2
         x: 80
@@ -1503,7 +1503,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixel_keys_x16_white_66
+      name: keyT
       rect:
         serializedVersion: 2
         x: 96
@@ -3008,7 +3008,7 @@ TextureImporter:
       pixel_keys_x16_white_100: 708721605
       pixel_keys_x16_white_128: 1600856438
       pixel_keys_x16_white_40: 1165829264
-      up: -1355883371
+      keyT: -412740314
       pixel_keys_x16_white_14: 1236163712
       pixel_keys_x16_white_53: 824112600
       pixel_keys_x16_white_124: -1971674678
@@ -3017,7 +3017,6 @@ TextureImporter:
       pixel_keys_x16_white_62: -1394349467
       pixel_keys_x16_white_105: -401680351
       pixel_keys_x16_white_102: -1600945415
-      pixel_keys_x16_white_65: 605937694
       pixel_keys_x16_white_115: -413138786
       pixel_keys_x16_white_129: -243714497
       pixel_keys_x16_white_56: 609560709
@@ -3027,6 +3026,7 @@ TextureImporter:
       pixel_keys_x16_white_110: -718238189
       pixel_keys_x16_white_121: -110176128
       pixel_keys_x16_white_24: 479967962
+      keyW: -1609069989
       pixel_keys_x16_white_108: -302669185
       pixel_keys_x16_white_29: -202652882
       pixel_keys_x16_white_33: -1230254751
@@ -3037,7 +3037,6 @@ TextureImporter:
       pixel_keys_x16_white_71: 213386661
       pixel_keys_x16_white_127: 1160154715
       pixel_keys_x16_white_47: -2060382057
-      pixel_keys_x16_white_66: -412740314
       pixel_keys_x16_white_97: -1840985329
       pixel_keys_x16_white_67: 522670280
       pixel_keys_x16_white_75: -1969372224
@@ -3071,8 +3070,8 @@ TextureImporter:
       pixel_keys_x16_white_46: 1602237640
       pixel_keys_x16_white_4: -1283587137
       pixel_keys_x16_white_48: -1711191860
-      pixel_keys_x16_white_35: 680607059
       down: -1468715519
+      pixel_keys_x16_white_35: 680607059
       pixel_keys_x16_white_10: 1849740735
       pixel_keys_x16_white_30: 2060814470
       pixel_keys_x16_white_31: 618974878
@@ -3099,13 +3098,12 @@ TextureImporter:
       pixel_keys_x16_white_37: 740365040
       pixel_keys_x16_white_59: 1801053169
       pixel_keys_x16_white_89: 1245949968
-      pixel_keys_x16_white_63: -1609069989
       pixel_keys_x16_white_113: 2021504931
+      pixel_keys_x16_white_117: 1976565496
       pixel_keys_x16_white_25: 1656033219
       pixel_keys_x16_white_52: 1743714470
       pixel_keys_x16_white_51: -2111238285
       pixel_keys_x16_white_78: -125894294
-      pixel_keys_x16_white_117: 1976565496
       pixel_keys_x16_white_7: 1907599511
       pixel_keys_x16_white_34: -132140934
       pixel_keys_x16_white_74: 3456812
@@ -3124,6 +3122,7 @@ TextureImporter:
       pixel_keys_x16_white_111: -1530562779
       pixel_keys_x16_white_96: -791405582
       keyD: 799801506
+      up: -1355883371
       pixel_keys_x16_white_73: -489688127
       pixel_keys_x16_white_9: -1114429603
       pixel_keys_x16_white_99: 373595441
@@ -3136,6 +3135,7 @@ TextureImporter:
       pixel_keys_x16_white_1: 265976979
       pixel_keys_x16_white_23: -908212790
       pixel_keys_x16_white_103: 1639323707
+      keyR: 605937694
       pixel_keys_x16_white_13: -684335248
       pixel_keys_x16_white_130: 629106562
       right: -1530490326
