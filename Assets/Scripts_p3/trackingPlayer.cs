@@ -14,7 +14,7 @@ public class trackingPlayer : MonoBehaviour
     public float maxX = 19f;
     public float minY = -1.0f;
     public float maxY = 9.0f;
-    [SerializeField]
+    [SerializeField] string death_message = "You fell into the abyss!";
     Vector3 camera_target_pos;
 
     void Start()
@@ -40,7 +40,7 @@ public class trackingPlayer : MonoBehaviour
         //check if player fell out of the scene
         if(player.transform.position.y  <  transform.position.y - Camera.main.orthographicSize - 1)
         {
-            EventBus.Publish<GameOver>(new GameOver(false));
+            EventBus.Publish<GameOver>(new GameOver(false, death_message));
         }
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 // receives gameover signals and reload the last checkpoint
 // receives checkpoint signals and record game state
@@ -38,6 +39,7 @@ public class GameStatus : MonoBehaviour
     }
 
     // Update is called once per frame
+    
     void Update()
     {
 
@@ -82,9 +84,10 @@ public class GameStatus : MonoBehaviour
                 
             }
         }
-
         
     }
+    
+
 
     // restart the level or load checkpoint
     void RestartGame()
@@ -165,17 +168,48 @@ public class GameStatus : MonoBehaviour
         GameObject player = GameObject.Find("Player");
         if (player != null)
         {
-            player.GetComponent<ArrowKeyMovement>().player_control = enable;
+            GetComponent<ArrowKeyMovement>().player_control = enable;
         }
     }
 
 
+
     // manual_restart directly reloads game without opening death panel
+    /*
     void _OnGameOver(GameOver g)
     {
         gameover = true;
         manual_restart = g.manual_restart;
+        for (int i = 0; i < death_panel.transform.childCount; ++i)
+        {
+            if (death_panel.transform.GetChild(i).name.Contains("DeathInfo"))
+            {
+                GameObject death_info= death_panel.transform.GetChild(i).gameObject;
+                death_info.GetComponent<Text>().text = g.death_info.ToString();
+            }
+        }
+    }*/
+
+    void _OnGameOver(GameOver g)
+    {
+        if (!gameover)
+        {
+            gameover = true;
+            manual_restart = g.manual_restart;
+            for (int i = 0; i < death_panel.transform.childCount; ++i)
+            {
+                if (death_panel.transform.GetChild(i).name.Contains("DeathInfo"))
+                {
+                    GameObject death_info = death_panel.transform.GetChild(i).gameObject;
+                    death_info.GetComponent<Text>().text = g.death_info.ToString();
+                }
+            }
+
+        }
+
     }
+
+
 
     void _OnCheckPoint(Checked c)
     {
@@ -203,7 +237,24 @@ public class GameStatus : MonoBehaviour
 public class GameOver
 {
     public bool manual_restart = false;
-    public GameOver(bool _manual_restart) { manual_restart = _manual_restart; }
+    public string death_info = "";
+    public GameOver(bool _manual_restart, string _death_info)
+    {
+        manual_restart = _manual_restart;
+        death_info = _death_info;
+    }
+
+    public GameOver(bool _manual_restart)
+    {
+        manual_restart = _manual_restart;
+        death_info = "YOU DIED!";
+    }
+
+    public GameOver()
+    {
+        manual_restart = false;
+        death_info = "YOU DIED!";
+    }
 }
 
 public class Checked

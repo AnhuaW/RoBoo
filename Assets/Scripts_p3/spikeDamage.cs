@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class spikeDamage : MonoBehaviour
 {
+    [SerializeField] string death_message = "Killed by spikes!";
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,7 @@ public class spikeDamage : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("touch spike");
-            EventBus.Publish<GameOver>(new GameOver(false));
+            EventBus.Publish<GameOver>(new GameOver(false, death_message));
         }
     }
 }

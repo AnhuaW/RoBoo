@@ -14,6 +14,7 @@ public class statue_attack : MonoBehaviour
     public float moving_speed = 0.5f;
     public bool isGrounded = true;
     private Animator animator;
+    [SerializeField] string death_message = "Your time was stolen by angel!";
     // Start is called before the first frame update
     void Start()
     {
@@ -73,7 +74,7 @@ public class statue_attack : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            EventBus.Publish<GameOver>(new GameOver(false));
+            EventBus.Publish<GameOver>(new GameOver(false, death_message));
         }
     }
 

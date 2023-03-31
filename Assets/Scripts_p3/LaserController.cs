@@ -6,8 +6,9 @@ using UnityEngine;
 public class LaserController : MonoBehaviour
 {
     [SerializeField] Color color = new Color(191 / 255, 36 / 255, 0);
+    Transform parent, start_pt, end_pt;
+    [SerializeField] string death_message = "Killed by laser!";
 
-    [SerializeField] Transform parent, start_pt, end_pt;
     // raycast will detect objects in these layers to destroy
     LayerMask player_layer, shield_layer;
     LineRenderer line;
@@ -64,7 +65,7 @@ public class LaserController : MonoBehaviour
         {
             if (hit.collider.gameObject.name == "Player")
             {
-                EventBus.Publish<GameOver>(new GameOver(false));
+                EventBus.Publish<GameOver>(new GameOver(false, death_message));
             }
             else
             {

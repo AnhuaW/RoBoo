@@ -10,6 +10,7 @@ public class detect_player : MonoBehaviour
     private int player_layer;
     RaycastHit2D hit;
     Vector2 ballDir;
+    [SerializeField] string death_message = "Smashed by ball!";
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +38,7 @@ public class detect_player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            EventBus.Publish<GameOver>(new GameOver(false));
+            EventBus.Publish<GameOver>(new GameOver(false, death_message));
         }
     }
 }
