@@ -47,14 +47,14 @@ public class Checkpoint : MonoBehaviour
             // record inventory
             Inventory_tmp.instance.RecordInitialState();
 
-            // record hint sprite renderer
+           /* // record hint sprite renderer
             GameObject[] hints = GameObject.FindGameObjectsWithTag("hint");
-            List<SpriteRenderer> hint_renderers = RecordControlHint(hints);
+            List<SpriteRenderer> hint_renderers = RecordControlHint(hints);*/
 
             // inform GameStatus
             EventBus.Publish<Checked>(new Checked(bricks.ToList(), bricks_pos,
                 player_pos, ammos_pos, balls.ToList(), balls_pos,
-                breakables_pos, breakables_scale, breakbles_rotation,hint_renderers));
+                breakables_pos, breakables_scale, breakbles_rotation));
         }
     }
 
@@ -90,15 +90,5 @@ public class Checkpoint : MonoBehaviour
             obj_rot.Add(obj.transform.localRotation);
         }
         return obj_rot;
-    }
-
-    List<SpriteRenderer> RecordControlHint(GameObject[] objects)
-    {
-        List<SpriteRenderer> renderers = new List<SpriteRenderer>();
-        foreach (GameObject obj in objects)
-        {
-            renderers.Add(obj.GetComponent<SpriteRenderer>());
-        }
-        return renderers;
     }
 }

@@ -36,6 +36,8 @@ public class GameStatus : MonoBehaviour
     {
         gameover_subscription = EventBus.Subscribe<GameOver>(_OnGameOver);
         checkpoint_subscription= EventBus.Subscribe<Checked>(_OnCheckPoint);
+        GameObject ui = GameObject.Find("UI");
+        death_panel = ui.transform.Find("DeathPanel").gameObject;
     }
 
     // Update is called once per frame
@@ -147,9 +149,6 @@ public class GameStatus : MonoBehaviour
 
             // retrieve inventory
             Inventory_tmp.instance.RetrieveInitialState();
-
-            // display control hint
-            // TODO
         }
         else
         {
@@ -165,13 +164,23 @@ public class GameStatus : MonoBehaviour
     }
 
 
-    // enable/disable player control
+    // enable/disable player control and animator
+    // change sprite color
     void SetPlayerControl(bool enable)
     {
         GameObject player = GameObject.Find("Player");
         if (player != null)
         {
             GetComponent<ArrowKeyMovement>().player_control = enable;
+            GetComponent<Animator>().enabled = enable;
+            if (death_panel.activeSelf && !enable)
+            {
+                GetComponent<SpriteRenderer>().color = Color.red;
+            }
+            else
+            {
+                GetComponent<SpriteRenderer>().color = Color.white;
+            }
         }
     }
 
@@ -272,13 +281,13 @@ public class Checked
     public List<Vector3> breakables_pos = new List<Vector3>();
     public List<Vector3> breakables_scale = new List<Vector3>();
     public List<Quaternion> breakables_rotation = new List<Quaternion>();
-    public List<SpriteRenderer> hint_renderers = new List<SpriteRenderer>();
+
 
     public Checked(List<GameObject> _bricks, List<Vector3> _bricks_pos,
         Vector3 _checkpoint_pos, List<Vector3> _ammos_pos,
         List<GameObject> _balls, List<Vector3> _balls_pos, 
         List<Vector3> _breakables_pos, List<Vector3> _breakables_scale, 
-        List<Quaternion> _breakables_rotation, List<SpriteRenderer>_hint_renderers)
+        List<Quaternion> _breakables_rotation)
     {
         bricks = _bricks;
         bricks_pos = _bricks_pos;
@@ -289,6 +298,5 @@ public class Checked
         breakables_pos = _breakables_pos;
         breakables_scale = _breakables_scale;
         breakables_rotation = _breakables_rotation;
-        hint_renderers = _hint_renderers;
     }
 }
