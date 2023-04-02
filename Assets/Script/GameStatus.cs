@@ -36,6 +36,8 @@ public class GameStatus : MonoBehaviour
     {
         gameover_subscription = EventBus.Subscribe<GameOver>(_OnGameOver);
         checkpoint_subscription= EventBus.Subscribe<Checked>(_OnCheckPoint);
+        GameObject ui = GameObject.Find("UI");
+        death_panel = ui.transform.Find("DeathPanel").gameObject;
     }
 
     // Update is called once per frame
@@ -162,13 +164,23 @@ public class GameStatus : MonoBehaviour
     }
 
 
-    // enable/disable player control
+    // enable/disable player control and animator
+    // change sprite color
     void SetPlayerControl(bool enable)
     {
         GameObject player = GameObject.Find("Player");
         if (player != null)
         {
             GetComponent<ArrowKeyMovement>().player_control = enable;
+            GetComponent<Animator>().enabled = enable;
+            if (death_panel.activeSelf && !enable)
+            {
+                GetComponent<SpriteRenderer>().color = Color.red;
+            }
+            else
+            {
+                GetComponent<SpriteRenderer>().color = Color.white;
+            }
         }
     }
 
