@@ -45,10 +45,8 @@ public class DamagingRay : MonoBehaviour
         line.SetPosition(1, end_point);
         if (hit.collider != null)
         {
-
-            // TODO: add game over scripts
             Debug.Log("damaged by ray, gameover");
-            GameOver game_status = new GameOver();
+            GameOver game_status = new GameOver(false);
             EventBus.Publish<GameOver>(game_status);
         }
     }
@@ -63,7 +61,7 @@ public class DamagingRay : MonoBehaviour
         if (hit.collider != null)
         {
             Debug.Log("damaged by ray, gameover");
-            GameOver game_status = new GameOver();
+            GameOver game_status = new GameOver(false);
             EventBus.Publish<GameOver>(game_status);
         }
     }

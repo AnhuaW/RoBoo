@@ -10,6 +10,7 @@ public class Smash : MonoBehaviour
     Floatable floatable;
 
     public float detect_range = 0.1f;
+    [SerializeField] string death_message = "Crushed by brick!";
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,7 @@ public class Smash : MonoBehaviour
             if (floatable.is_falling && hit.collider.gameObject.GetComponent<ArrowKeyMovement>().isGrounded)
             {
                 Debug.Log("smash");
-                EventBus.Publish<GameOver>(new GameOver());
+                EventBus.Publish<GameOver>(new GameOver(false, death_message));
             }
         }
 
@@ -42,7 +43,7 @@ public class Smash : MonoBehaviour
             if (floatable.is_falling && hit.collider.gameObject.GetComponent<ArrowKeyMovement>().isGrounded)
             {
                 Debug.Log("smash");
-                EventBus.Publish<GameOver>(new GameOver());
+                EventBus.Publish<GameOver>(new GameOver(false, death_message));
             }
         }
 
@@ -53,7 +54,7 @@ public class Smash : MonoBehaviour
             if (floatable.is_falling && hit.collider.gameObject.GetComponent<ArrowKeyMovement>().isGrounded)
             {
                 Debug.Log("smash");
-                EventBus.Publish<GameOver>(new GameOver());
+                EventBus.Publish<GameOver>(new GameOver(false, death_message));
             }
         }
 
