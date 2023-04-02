@@ -2665,7 +2665,7 @@ MonoBehaviour:
   maxX: 19
   minY: -1
   maxY: 9
-  camera_target_pos: {x: 0, y: 0, z: 0}
+  death_message: You fell into the abyss!
 --- !u!114 &996693021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7129,7 +7129,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0f5d016ee85dd4a3781f8f6ee85c9c53, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
