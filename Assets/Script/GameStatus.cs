@@ -223,6 +223,7 @@ public class GameStatus : MonoBehaviour
         breakables_pos_record = c.breakables_pos;
         breakables_scale_record = c.breakables_scale;
         breakables_rotation_record = c.breakables_rotation;
+
     }
 
     private void OnDestroy()
@@ -268,6 +269,7 @@ public class Checked
     public List<Vector3> breakables_pos = new List<Vector3>();
     public List<Vector3> breakables_scale = new List<Vector3>();
     public List<Quaternion> breakables_rotation = new List<Quaternion>();
+
 
     public Checked(List<GameObject> _bricks, List<Vector3> _bricks_pos,
         Vector3 _checkpoint_pos, List<Vector3> _ammos_pos,
