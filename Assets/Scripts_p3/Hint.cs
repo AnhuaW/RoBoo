@@ -16,9 +16,13 @@ public class Hint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!blinking)
+        if (Time.time % (2 * interval) < interval)
         {
-            StartCoroutine(hintBlink());
+            GetComponent<Text>().enabled = true;
+        }
+        else
+        {
+            GetComponent<Text>().enabled = false;
         }
     }
 
