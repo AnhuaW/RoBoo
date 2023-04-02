@@ -687,11 +687,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783305, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.5
+      value: 10.46
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783305, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.42
+      value: -3.46
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783305, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_LocalPosition.z
@@ -844,6 +844,7 @@ Transform:
   m_Children:
   - {fileID: 1166988515}
   - {fileID: 799961867}
+  - {fileID: 1287909054}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2899,6 +2900,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   this_name: red
   launch_when_button_pressed: 0
+--- !u!1001 &1287909053
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 340742516}
+    m_Modifications:
+    - target: {fileID: 7243891751970857332, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243891751970857332, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243891751970857332, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243891751970857332, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.08766436
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243891751970857332, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243891751970857332, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243891751970857332, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243891751970857332, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243891751970857332, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243891751970857332, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243891751970857332, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243891751970857338, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
+      propertyPath: m_Name
+      value: key (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
+--- !u!4 &1287909054 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7243891751970857332, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
+  m_PrefabInstance: {fileID: 1287909053}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1345426706
 GameObject:
   m_ObjectHideFlags: 0
@@ -8869,7 +8932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3902282958088793133, guid: 58dc16837344d914a92ba238812347f6, type: 3}
       propertyPath: required_key
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3902282958088793133, guid: 58dc16837344d914a92ba238812347f6, type: 3}
       propertyPath: total_scenes_count
