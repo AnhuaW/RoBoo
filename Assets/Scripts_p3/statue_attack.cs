@@ -33,8 +33,9 @@ public class statue_attack : MonoBehaviour
         
         if(player_sp.flipX != sp.flipX)
         {
-
-            GetComponent<BoxCollider2D>().isTrigger = true;
+            GetComponent<BoxCollider2D>().enabled = false;
+            GetComponent<PolygonCollider2D>().enabled = true;
+            //GetComponent<BoxCollider2D>().isTrigger = true;
             rb.gravityScale = 0;
             sp.sprite = moving_angle;
             rb.constraints = RigidbodyConstraints2D.None;
@@ -46,10 +47,12 @@ public class statue_attack : MonoBehaviour
         }
         else
         {
-                
+
             //Debug.Log("stop");
-            GetComponent<BoxCollider2D>().isTrigger = false;
+            GetComponent<BoxCollider2D>().enabled = true;
+            GetComponent<PolygonCollider2D>().enabled = false;
             sp.sprite = stop_angle;
+            GetComponent<BoxCollider2D>().size = new Vector2(3f, 6f);
             rb.constraints = RigidbodyConstraints2D.FreezePositionX;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             rb.velocity = Vector2.zero;
