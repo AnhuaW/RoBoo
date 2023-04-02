@@ -486,7 +486,7 @@ MonoBehaviour:
   maxX: 16.3
   minY: -1
   maxY: 7
-  death_message: You fell into the abyss!
+  camera_target_pos: {x: 0, y: 0, z: 0}
 --- !u!114 &405329068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2029,7 +2029,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f491a292394429baf878705e086c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  death_message: Killed by spikes!
 --- !u!4 &961277083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5669959344316783305, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
@@ -2938,7 +2937,7 @@ CompositeCollider2D:
   m_GameObject: {fileID: 1246486850}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 548cb8408061b4822a59e6d4346d527a, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -7448,10 +7447,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6432476269971491615, guid: 1c4ec734fdbc041bb9e8508d85143728, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c4ec734fdbc041bb9e8508d85143728, type: 3}
 --- !u!4 &1822947651 stripped
@@ -7541,11 +7536,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7243891751970857332, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
   m_PrefabInstance: {fileID: 1857601010}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1876675528 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6432476269971491615, guid: 1c4ec734fdbc041bb9e8508d85143728, type: 3}
-  m_PrefabInstance: {fileID: 1810241536}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1883658213 stripped
 GameObject:
@@ -8381,10 +8371,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -1102121440641552092, guid: 70d507a00c207b8439e664071f611849, type: 3}
-      propertyPath: death_panel
-      value: 
-      objectReference: {fileID: 1876675528}
     - target: {fileID: 5517974921478761772, guid: 70d507a00c207b8439e664071f611849, type: 3}
       propertyPath: key
       value: 
@@ -8415,11 +8401,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5517974921808589465, guid: 70d507a00c207b8439e664071f611849, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.28
+      value: -8.6
       objectReference: {fileID: 0}
     - target: {fileID: 5517974921808589465, guid: 70d507a00c207b8439e664071f611849, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.3
+      value: -4.7
       objectReference: {fileID: 0}
     - target: {fileID: 5517974921808589465, guid: 70d507a00c207b8439e664071f611849, type: 3}
       propertyPath: m_LocalPosition.z
