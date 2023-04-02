@@ -47,10 +47,6 @@ public class Checkpoint : MonoBehaviour
             // record inventory
             Inventory_tmp.instance.RecordInitialState();
 
-           /* // record hint sprite renderer
-            GameObject[] hints = GameObject.FindGameObjectsWithTag("hint");
-            List<SpriteRenderer> hint_renderers = RecordControlHint(hints);*/
-
             // inform GameStatus
             EventBus.Publish<Checked>(new Checked(bricks.ToList(), bricks_pos,
                 player_pos, ammos_pos, balls.ToList(), balls_pos,
