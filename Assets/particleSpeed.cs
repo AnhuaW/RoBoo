@@ -10,7 +10,7 @@ public class particleSpeed : MonoBehaviour
     void Start()
     {
         waterParticle = GetComponent<ParticleSystem>();
-        particle_speed = GetComponent<WaterFlow>().added_speed;
+        particle_speed = Mathf.Abs(GetComponent<WaterFlow>().added_speed);
     }
 
     // Update is called once per frame
