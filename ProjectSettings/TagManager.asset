@@ -21,6 +21,7 @@ TagManager:
   - brick
   - statue
   - button
+  - hint
   layers:
   - Default
   - TransparentFX
