@@ -14,10 +14,8 @@ public class ArrowKeyMovement : MonoBehaviour
     Rigidbody2D rb;
 
     public bool isGrounded = false;
-    string sceneName;
     [SerializeField] GameObject Prompt;
 
-    bool displayed = false;
 
 
     // Start is called before the first frame update

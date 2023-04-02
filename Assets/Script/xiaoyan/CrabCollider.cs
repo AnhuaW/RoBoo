@@ -19,7 +19,7 @@ public class CrabCollider : MonoBehaviour
         Debug.Log("damaged by fish, gameover");
         if(other.gameObject.CompareTag("Player")){
             Debug.Log("damaged by ray, gameover");
-            GameOver game_status = new GameOver();
+            GameOver game_status = new GameOver(false);
             EventBus.Publish<GameOver>(game_status);
         }
     }

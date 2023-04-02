@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2596121842207662540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 1.5, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -74,12 +74,12 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2085382901
+  m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: -834645918, guid: 63242495bbe2a47b6abecef9958275d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00ed68bed9a974cab9f690870dc3c34f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.83137256}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 15.36, y: 8.52}
@@ -101,18 +101,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0048638135, y: 0.0079743415}
+  m_Offset: {x: -0.24383095, y: -0.30127728}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.31, y: 0.57}
+    oldSize: {x: 1.8, y: 1.84}
     newSize: {x: 15.36, y: 8.52}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.36732706, y: 0.6118839}
+  m_Size: {x: 0.7702914, y: 1.230387}
   m_EdgeRadius: 0
 --- !u!50 &2972658553911312632
 Rigidbody2D:
@@ -147,8 +147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f674fcbb1b0440c856c7966e0131a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stop_angle: {fileID: 21300000, guid: 6e34cfe97fc9f4cdd97574b47092b63d, type: 3}
-  moving_angle: {fileID: -834645918, guid: 63242495bbe2a47b6abecef9958275d1, type: 3}
+  stop_angle: {fileID: 21300000, guid: 95a2da0eece5a4e3a8c994c9d67cd93c, type: 3}
+  moving_angle: {fileID: 21300000, guid: 00ed68bed9a974cab9f690870dc3c34f, type: 3}
   moving_speed: 0.5
   isGrounded: 0
 --- !u!95 &80772686
@@ -159,7 +159,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2596121842207662540}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 3e48c4603f7784cfdb7775e233037e0f, type: 2}
   m_CullingMode: 0

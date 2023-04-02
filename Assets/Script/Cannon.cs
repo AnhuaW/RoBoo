@@ -41,7 +41,7 @@ public class Cannon : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-            EventBus.Publish<GameOver>(new GameOver());
+            EventBus.Publish<GameOver>(new GameOver(false));
         }
     }
 }

@@ -14,6 +14,7 @@ public class statue_attack : MonoBehaviour
     public float moving_speed = 0.5f;
     public bool isGrounded = true;
     private Animator animator;
+    [SerializeField] string death_message = "Your time was stolen by angel!";
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +31,7 @@ public class statue_attack : MonoBehaviour
     void Update()
     {
         
-        if(player_sp.flipX == sp.flipX)
+        if(player_sp.flipX != sp.flipX)
         {
 
             GetComponent<BoxCollider2D>().isTrigger = true;
@@ -61,11 +62,11 @@ public class statue_attack : MonoBehaviour
     {
         if (player.transform.position.x > transform.position.x)
         {
-            sp.flipX = false;
+            sp.flipX = true;
         }
         else if (player.transform.position.x < transform.position.x)
         {
-            sp.flipX = true;
+            sp.flipX = false;
         }
     }
 
@@ -73,7 +74,7 @@ public class statue_attack : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            EventBus.Publish<GameOver>(new GameOver());
+            EventBus.Publish<GameOver>(new GameOver(false, death_message));
         }
     }
 
