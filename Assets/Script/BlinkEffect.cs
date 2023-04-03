@@ -19,7 +19,7 @@ public class BlinkEffect : MonoBehaviour
     {
         if (!running)
         {
-            blink();
+            StartCoroutine(blink());
         }
     }
 

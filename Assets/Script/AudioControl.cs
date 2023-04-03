@@ -7,10 +7,6 @@ public class AudioControl : MonoBehaviour
     // Start is called before the first frame update
     public AudioClip gravity_on;
     public AudioClip gravity_off;
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

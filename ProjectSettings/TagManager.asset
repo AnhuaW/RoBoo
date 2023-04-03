@@ -16,6 +16,12 @@ TagManager:
   - bullet
   - ground
   - enemy
+  - ball
+  - key
+  - brick
+  - statue
+  - button
+  - hint
   layers:
   - Default
   - TransparentFX
@@ -25,8 +31,8 @@ TagManager:
   - UI
   - Player
   - enemy
-  - 
-  - 
+  - backgrounD
+  - Shield
   - 
   - 
   - 

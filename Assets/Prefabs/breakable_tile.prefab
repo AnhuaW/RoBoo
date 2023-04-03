@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8941553186368729422}
   m_Layer: 0
   m_Name: breakable_tile
-  m_TagString: Untagged
+  m_TagString: bar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2085382901
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -1669296481, guid: a56d14d177add63418afb5fbe2baed44, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

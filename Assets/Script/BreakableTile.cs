@@ -20,15 +20,22 @@ public class BreakableTile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
         Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
-        if (rb != null)
+        if (collision.gameObject.CompareTag("statue"))
         {
+            StartCoroutine(breakTiles());
+        }
+        else if (rb != null)
+        {
+            Vector2 collision_velocity = collision.relativeVelocity;
+            Debug.Log("breakable tile collision velocity: " + collision_velocity);
             float instant_speed = collision.relativeVelocity.magnitude;
-            Debug.Log("Instant speed: " + instant_speed);
-            if(instant_speed> break_speed_lower_bound)
+            //Debug.Log("Instant speed: " + instant_speed);
+            //if (collision_velocity.y <0 && instant_speed > break_speed_lower_bound)
+            if (Mathf.Abs(collision_velocity.y) > break_speed_lower_bound)
             {
-                StartCoroutine (breakTiles());
+                Debug.Log("break");
+            StartCoroutine(breakTiles());
             }
         }
 

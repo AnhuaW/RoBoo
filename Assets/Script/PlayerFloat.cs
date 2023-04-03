@@ -5,7 +5,8 @@ using static UnityEngine.GraphicsBuffer;
 
 public class PlayerFloat : Floatable
 {
-
+    public float bubble_duration_sec = 4f;
+    GameObject bubble = null;
 
     // Start is called before the first frame update
     void Start()
@@ -18,28 +19,40 @@ public class PlayerFloat : Floatable
     void Update()
     {
 
-
+        if (GetComponent<ArrowKeyMovement>().isGrounded)
+        {
+            is_falling = false;
+        }
 
     }
 
     public override void RemoveGravity()
     {
+        Debug.Log("start: RemovePlayerGravity()");
         is_floating = true;
+        is_falling = false;
         rb.gravityScale = 0;
+        //rb.AddForce(Vector2.up, ForceMode2D.Impulse);
         StartCoroutine(Float());
 
         // initiate a bubble
-        GameObject new_bubble = Instantiate(bubble_prefab, transform.position, Quaternion.identity);
-        new_bubble.transform.SetParent(transform);
+        bubble = Instantiate(bubble_prefab, transform.position, Quaternion.identity);
+        bubble.transform.SetParent(transform);
         // consume ammo
         inventory.ChangeBubbleAmmo(-1);
+        // start a timer
+        StartCoroutine(TimeLimit());
     }
 
     IEnumerator Float()
     {
-
+        //rb.AddForce(Vector2.up, ForceMode2D.Impulse);
+        rb.velocity = Vector2.up;
+        yield return new WaitForSeconds(1f);
+        rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y - 1f);
+        /*
         GetComponent<ArrowKeyMovement>().player_control = false;
-
+        
         float duration_sec = 1f;
         Vector3 initial_pos = transform.position;
         Vector3 dest_pos = transform.position + new Vector3(0, 1f, 0);
@@ -61,8 +74,45 @@ public class PlayerFloat : Floatable
         }
 
         transform.position = dest_pos;
+        
 
         GetComponent<ArrowKeyMovement>().player_control = true;
-        Debug.Log(GetComponent<ArrowKeyMovement>().player_control);
+        Debug.Log("Player control: " + GetComponent<ArrowKeyMovement>().player_control);
+        */
     }
+
+
+    IEnumerator TimeLimit()
+    {
+        // no blinking:
+        /*
+        yield return new WaitForSeconds(bubble_duration_sec);
+        if (is_floating)
+        {
+            ApplyGravity();
+        }
+        */
+
+        // with blinking effects:
+        float blink_sec = 1f;
+        yield return new WaitForSeconds(bubble_duration_sec - blink_sec);
+
+        float initial_time = Time.time;
+        // bubble blinks to remind player of time limit
+        while (is_floating && bubble != null && (Time.time - initial_time < blink_sec))
+        {
+            bubble.GetComponent<SpriteRenderer>().enabled = false;
+            yield return new WaitForSeconds(0.2f);
+            if (bubble != null)
+            {
+                bubble.GetComponent<SpriteRenderer>().enabled = true;
+            }
+            yield return new WaitForSeconds(0.2f);
+        }
+        if (is_floating)
+        {
+            ApplyGravity();
+        }
+    }
+
 }
