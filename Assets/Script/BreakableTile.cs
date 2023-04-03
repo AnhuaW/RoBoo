@@ -27,11 +27,14 @@ public class BreakableTile : MonoBehaviour
         }
         else if (rb != null)
         {
+            Vector2 collision_velocity = collision.relativeVelocity;
+            Debug.Log("breakable tile collision velocity: " + collision_velocity);
             float instant_speed = collision.relativeVelocity.magnitude;
-            Debug.Log("Instant speed: " + instant_speed);
-            if (instant_speed > break_speed_lower_bound)
+            //Debug.Log("Instant speed: " + instant_speed);
+            //if (collision_velocity.y <0 && instant_speed > break_speed_lower_bound)
+            if (Mathf.Abs(collision_velocity.y) > break_speed_lower_bound)
             {
-            Debug.Log("break");
+                Debug.Log("break");
             StartCoroutine(breakTiles());
             }
         }

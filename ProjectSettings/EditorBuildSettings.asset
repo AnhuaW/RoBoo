@@ -27,6 +27,6 @@ EditorBuildSettings:
     path: Assets/Scenes/P3/p3_spikes_merge_hard.unity
     guid: 1bbd1ea79ed1221479b857f39acab94a
   - enabled: 1
-    path: Assets/Scenes/P3/MainStory.unity
-    guid: 8e4db46a7ad6142a89f9de0c4557c2e5
+    path: Assets/Scenes/P3/startingAni.unity
+    guid: 7737bc10e83894288acc40b354fd5a38
   m_configObjects: {}
