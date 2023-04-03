@@ -2190,7 +2190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offsetX: 0
   offsetY: 0
-  cameraSpeed: 5
+  cameraSpeed: 100
   minX: 0
   maxX: 35
   minY: -1

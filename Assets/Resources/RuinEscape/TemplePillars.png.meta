@@ -20,7 +20,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -40818,13 +40818,13 @@ TextureImporter:
       TemplePillars_369: -1801324090
       TemplePillars_848: -370424790
       TemplePillars_548: -1955629428
-      TemplePillars_91: -1953065475
       TemplePillars_1806: -896243184
+      TemplePillars_378: 85054089
       TemplePillars_786: 1186149024
       TemplePillars_187: -1617617836
       TemplePillars_1649: 915067735
+      TemplePillars_91: -1953065475
       TemplePillars_1598: -96281230
-      TemplePillars_378: 85054089
       TemplePillars_1106: 242390108
       TemplePillars_445: -1045633986
       TemplePillars_1387: -1865505412
