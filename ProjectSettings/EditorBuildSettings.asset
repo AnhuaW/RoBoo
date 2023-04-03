@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/P3/p3_puzzle_guide.unity
     guid: 023812c69a35a9647ac369f4f08fdd56
   - enabled: 1
-    path: Assets/Scenes/P3/p3_spikes_merge.unity
-    guid: 4966530a6e78de74cbfe6431bb7e5556
+    path: Assets/Scenes/P3/p3_spikes_merge_v2.unity
+    guid: 385859cc53ce2ed4bb735e39a5e6d56e
   - enabled: 1
     path: Assets/Scenes/P3/p3_level_6.unity
     guid: e5ad076ab3eaa8a41af179650c29eec3

@@ -2420,7 +2420,7 @@ MonoBehaviour:
   offsetY: 3
   cameraSpeed: 5
   minX: 0
-  maxX: 19
+  maxX: 15.5
   minY: -1
   maxY: 9
   death_message: You fell into the abyss!
@@ -8680,7 +8680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3902282958088793133, guid: 58dc16837344d914a92ba238812347f6, type: 3}
       propertyPath: current_level_index
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3902282958088793133, guid: 58dc16837344d914a92ba238812347f6, type: 3}
       propertyPath: has_key_constraints

@@ -2662,7 +2662,7 @@ MonoBehaviour:
   offsetY: 0.2
   cameraSpeed: 5
   minX: 0
-  maxX: 19
+  maxX: 15.5
   minY: -1
   maxY: 9
   death_message: You fell into the abyss!
