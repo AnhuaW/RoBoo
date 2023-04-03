@@ -102,10 +102,21 @@ public class PauseButton : MonoBehaviour
     // disable/enable collectible movement (e.g. ammos)
     void CollectibleMovement(bool enable)
     {
+        // ammos
         GameObject[] ammos = GameObject.FindGameObjectsWithTag("battery");
         foreach (GameObject ammo in ammos)
         {
             CollectibleMovement cm = ammo.GetComponent<CollectibleMovement>();
+            if (cm)
+            {
+                cm.enabled = enable;
+            }
+        }
+        // keys
+        GameObject[] keys = GameObject.FindGameObjectsWithTag("key");
+        foreach (GameObject key in keys)
+        {
+            CollectibleMovement cm = key.GetComponent<CollectibleMovement>();
             if (cm)
             {
                 cm.enabled = enable;
