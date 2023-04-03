@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2972658553911312632}
   - component: {fileID: 1300055839481942051}
   - component: {fileID: 80772686}
-  - component: {fileID: 530968779}
+  - component: {fileID: 1842077246}
   m_Layer: 0
   m_Name: weeping_statue
   m_TagString: statue
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 00ed68bed9a974cab9f690870dc3c34f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.83137256}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -96,16 +96,16 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2596121842207662540}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.027041674, y: -0.051240206}
+  m_Offset: {x: 0.1603584, y: 0.05536222}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.24050212, y: 0.3925991}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 11.25, y: 11.5}
     newSize: {x: 15.36, y: 8.52}
     adaptiveTilingThreshold: 0.5
@@ -113,7 +113,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7287664, y: 2.1471877}
+  m_Size: {x: 2.1493, y: 6.033134}
   m_EdgeRadius: 0
 --- !u!50 &2972658553911312632
 Rigidbody2D:
@@ -152,6 +152,7 @@ MonoBehaviour:
   moving_angle: {fileID: 21300000, guid: 00ed68bed9a974cab9f690870dc3c34f, type: 3}
   moving_speed: 0.5
   isGrounded: 0
+  death_message: Your time was stolen by angel!
 --- !u!95 &80772686
 Animator:
   serializedVersion: 5
@@ -172,7 +173,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!60 &530968779
+--- !u!60 &1842077246
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,7 +189,7 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.24050212, y: 0.3925991}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 11.25, y: 11.5}
     newSize: {x: 15.36, y: 8.52}
     adaptiveTilingThreshold: 0.5
@@ -197,8 +198,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.23818496, y: -1.0209122}
-      - {x: 1.0903258, y: -0.5196638}
-      - {x: 0.14981554, y: 1.2871072}
-      - {x: -1.161952, y: 0.5940988}
+    - - {x: -3.1357193, y: -2.419735}
+      - {x: -1.7947311, y: -1.7471821}
+      - {x: -2.650671, y: 0.059792638}
+      - {x: -4.0772324, y: -0.5108324}
     - []
