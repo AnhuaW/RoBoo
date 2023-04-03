@@ -322,6 +322,14 @@ PrefabInstance:
       value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 3902282958088793133, guid: 58dc16837344d914a92ba238812347f6, type: 3}
+      propertyPath: total_scenes_count
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902282958088793133, guid: 58dc16837344d914a92ba238812347f6, type: 3}
+      propertyPath: current_level_index
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902282958088793133, guid: 58dc16837344d914a92ba238812347f6, type: 3}
       propertyPath: has_key_constraints
       value: 1
       objectReference: {fileID: 0}
@@ -686,11 +694,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c4ec734fdbc041bb9e8508d85143728, type: 3}
---- !u!1 &119928907 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8377452812076998230, guid: 1c4ec734fdbc041bb9e8508d85143728, type: 3}
-  m_PrefabInstance: {fileID: 119928906}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &216037482 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7243891751970857332, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
@@ -29504,7 +29507,7 @@ PrefabInstance:
     - target: {fileID: -1102121440641552092, guid: 70d507a00c207b8439e664071f611849, type: 3}
       propertyPath: death_panel
       value: 
-      objectReference: {fileID: 119928907}
+      objectReference: {fileID: 0}
     - target: {fileID: 886679271120409308, guid: 70d507a00c207b8439e664071f611849, type: 3}
       propertyPath: current_key_num
       value: 0
