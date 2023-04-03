@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 // generate turbulent flow to give bubbles additional horizontal velocity
 public class WaterFlow : MonoBehaviour
 {
-    [SerializeField] float added_speed = 0f;
+    public float added_speed = 0f;
     [SerializeField] Vector3 flow_boxSize = Vector3.one;
 
     void Start()

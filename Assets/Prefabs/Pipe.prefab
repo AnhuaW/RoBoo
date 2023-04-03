@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5599505780702888881}
   - component: {fileID: 5599505780702888880}
   - component: {fileID: 6169951052601318869}
+  - component: {fileID: -941263516278333682}
   m_Layer: 0
   m_Name: Pipe
   m_TagString: Untagged
@@ -100,6 +101,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   this_name: pipes
   launch_if_button_pressed: 0
+--- !u!114 &-941263516278333682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5599505780702888846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c20876b50b7504e831a38dabba3313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particle_speed: 0
 --- !u!1 &5599505781723597589
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,6 +127,7 @@ GameObject:
   - component: {fileID: 5599505781723597591}
   - component: {fileID: 6633793958824875274}
   - component: {fileID: 4127518260024065113}
+  - component: {fileID: 8386016338332361719}
   m_Layer: 0
   m_Name: Fluid
   m_TagString: Untagged
@@ -4989,3 +5004,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &8386016338332361719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5599505781723597589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c20876b50b7504e831a38dabba3313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particle_speed: 0
