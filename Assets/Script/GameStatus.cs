@@ -115,16 +115,20 @@ public class GameStatus : MonoBehaviour
 
             // angels
             // TODO: edit this to improve compatibility
-            // destory angel if restart or start at check point
-            Vector3 angle_pos = GetComponent<recrod_angle_position>().getPosition();
-            if(angle_pos != Vector3.zero)
-            {
-                GameObject[] angles = GameObject.FindGameObjectsWithTag("statue");
-                foreach (GameObject angle in angles)
+            // destory angel if restart or start at check
+            if(GetComponent<recrod_angle_position>() != null) {
+                Vector3 angle_pos = GetComponent<recrod_angle_position>().getPosition();
+                if (angle_pos != Vector3.zero)
                 {
-                    angle.transform.position = angle_pos;
+                    GameObject[] angles = GameObject.FindGameObjectsWithTag("statue");
+                    foreach (GameObject angle in angles)
+                    {
+                        angle.transform.position = angle_pos;
+                    }
                 }
             }
+
+            
 
             // balls states
             for (int i = 0; i < balls.Count; ++i)
