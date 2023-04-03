@@ -16,7 +16,10 @@ public class particleSpeed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var main = waterParticle.main;
-        main.simulationSpeed = particle_speed;
+        if (waterParticle.gameObject.activeSelf)
+        {
+            var main = waterParticle.main;
+            main.simulationSpeed = particle_speed;
+        }
     }
 }

@@ -1169,7 +1169,8 @@ PrefabInstance:
       propertyPath: launch_if_button_pressed
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -941263516278333682, guid: 440148c6e1530de488cd205b297fa770, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 440148c6e1530de488cd205b297fa770, type: 3}
 --- !u!1 &565775162
 GameObject:
@@ -3021,7 +3022,8 @@ PrefabInstance:
       propertyPath: launch_if_button_pressed
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -941263516278333682, guid: 440148c6e1530de488cd205b297fa770, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 440148c6e1530de488cd205b297fa770, type: 3}
 --- !u!1001 &1533129805
 PrefabInstance:
