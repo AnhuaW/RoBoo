@@ -120,7 +120,7 @@ public class Floatable : MonoBehaviour
         //rb.bodyType = RigidbodyType2D.Dynamic;
         if (this.gameObject.CompareTag("ball"))
         {
-            rb.gravityScale = 1.8f;
+            rb.gravityScale = 3f;
         }
         else
         {

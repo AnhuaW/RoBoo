@@ -14,7 +14,6 @@ public class GameStatus : MonoBehaviour
     public bool manual_restart = false;
 
     public GameObject ammo_prefab = null;
-    public GameObject angle_prefab = null;
     public GameObject breakable_tile_prefab = null;
     public GameObject death_panel = null;
 
@@ -116,12 +115,15 @@ public class GameStatus : MonoBehaviour
 
             // angels
             // TODO: edit this to improve compatibility
-            // destory angel if restart or start at check point 
-            GameObject[] angel = GameObject.FindGameObjectsWithTag("statue");
-            foreach (GameObject ang in angel)
+            // destory angel if restart or start at check point
+            Vector3 angle_pos = GetComponent<recrod_angle_position>().getPosition();
+            if(angle_pos != Vector3.zero)
             {
-                Destroy(ang);
-                GameObject.Instantiate(angle_prefab, new Vector3(25.5f, 9.247638f, 0f), Quaternion.identity);
+                GameObject[] angles = GameObject.FindGameObjectsWithTag("statue");
+                foreach (GameObject angle in angles)
+                {
+                    angle.transform.position = angle_pos;
+                }
             }
 
             // balls states

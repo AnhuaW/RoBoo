@@ -36,7 +36,9 @@ public class ArrowKeyMovement : MonoBehaviour
         Debug.DrawRay(right_edge, Vector2.down * 0.1f, Color.red);
         Debug.DrawRay(center, Vector2.down * 0.1f, Color.red);
         RaycastHit2D hit_left = Physics2D.Raycast(left_edge, Vector2.down, 0.1f);
+        RaycastHit2D hit_left_1 = Physics2D.Raycast(left_edge, Vector2.up, 0.1f);
         RaycastHit2D hit_right = Physics2D.Raycast(right_edge, Vector2.down, 0.1f);
+        RaycastHit2D hit_right_1 = Physics2D.Raycast(right_edge, Vector2.up, 0.1f);
         RaycastHit2D hit_center = Physics2D.Raycast(center, Vector2.down, 0.1f);
         /*
         if (hit_left)
@@ -44,6 +46,7 @@ public class ArrowKeyMovement : MonoBehaviour
             Debug.Log("player left ray: " + hit_left.collider.gameObject.name);
         }
         if (hit_right)
+
         {
             Debug.Log("player right ray: " + hit_right.collider.gameObject.name);
 
@@ -52,6 +55,8 @@ public class ArrowKeyMovement : MonoBehaviour
 
         if ((hit_left && !hit_left.collider.isTrigger) ||
             (hit_right && !hit_right.collider.isTrigger) ||
+            (hit_left_1 && !hit_left_1.collider.isTrigger) ||
+            (hit_right_1 && !hit_right_1.collider.isTrigger) ||
             (hit_center && !hit_center.collider.isTrigger && hit_center.collider != gameObject.GetComponent<Collider2D>()))
         {
 
