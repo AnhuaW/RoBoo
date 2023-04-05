@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e23f84569593db6489eeca1686d08afd
+guid: fa793bef92cb32249977fad44a9c1b23
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - VT323
+  - Retro Deco
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/P3/Menu.unity
     guid: 8e55d08a5d127764284cfc6463649723
   - enabled: 1
-    path: Assets/Scenes/P3/2_p3_guide_merge.unity
+    path: Assets/Scenes/P3/p3_guide_merge.unity
     guid: 25b59a51dcd5c4fc7a6e71dfb20ef21a
   - enabled: 1
     path: Assets/Scenes/P3/p3_spikes_merge.unity
