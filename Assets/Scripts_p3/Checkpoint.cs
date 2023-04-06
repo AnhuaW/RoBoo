@@ -47,10 +47,6 @@ public class Checkpoint : MonoBehaviour
             // record inventory
             Inventory_tmp.instance.RecordInitialState();
 
-            // record angels positions
-            GameObject[] angels = GameObject.FindGameObjectsWithTag("statue");
-            List<Vector3> angels_pos = RecordPositions(angels);
-
             /* // record hint sprite renderer
              GameObject[] hints = GameObject.FindGameObjectsWithTag("hint");
              List<SpriteRenderer> hint_renderers = RecordControlHint(hints);*/
@@ -58,12 +54,11 @@ public class Checkpoint : MonoBehaviour
             // inform GameStatus
             EventBus.Publish<Checked>(new Checked(bricks.ToList(), bricks_pos,
                 player_pos, ammos_pos, balls.ToList(), balls_pos,
-                breakables_pos, breakables_scale, breakbles_rotation, 
-                angels_pos));
+                breakables_pos, breakables_scale, breakbles_rotation));
         }
     }
 
-    
+
     // record positions of given gameobjects
     List<Vector3> RecordPositions(GameObject[] objects)
     {

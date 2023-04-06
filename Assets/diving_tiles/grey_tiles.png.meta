@@ -20,7 +20,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -12356,12 +12356,12 @@ TextureImporter:
       grey_tiles_250: 2120097361
       grey_tiles_525: -1785005919
       grey_tiles_102: 707579217
+      grey_tiles_379: 821347108
       grey_tiles_52: -1109629638
       grey_tiles_412: 1471037343
       grey_tiles_545: -1219606942
       grey_tiles_523: 136139996
       grey_tiles_111: 1433502458
-      grey_tiles_379: 821347108
       grey_tiles_133: -41877223
       grey_tiles_134: -1829171617
       grey_tiles_302: -553338193
@@ -12651,15 +12651,15 @@ TextureImporter:
       grey_tiles_500: -1970231335
       grey_tiles_248: 2015362521
       grey_tiles_443: 2124390674
-      grey_tiles_480: 575784139
       grey_tiles_198: 203047611
+      grey_tiles_562: -1001679904
+      grey_tiles_480: 575784139
       grey_tiles_83: 583099781
       grey_tiles_534: 544695524
       grey_tiles_496: 1170887491
       grey_tiles_356: -989874153
       grey_tiles_64: 179906991
       grey_tiles_384: -1884480662
-      grey_tiles_562: -1001679904
       grey_tiles_416: -50866607
       grey_tiles_207: 652505451
       grey_tiles_406: -520084325

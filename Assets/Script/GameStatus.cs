@@ -14,7 +14,6 @@ public class GameStatus : MonoBehaviour
     public bool manual_restart = false;
 
     public GameObject ammo_prefab = null;
-    public GameObject angel_prefab = null;
     public GameObject breakable_tile_prefab = null;
     public GameObject death_panel = null;
 
@@ -27,7 +26,6 @@ public class GameStatus : MonoBehaviour
     List<Vector3> breakables_pos_record = new List<Vector3>();
     List<Vector3> breakables_scale_record = new List<Vector3>();
     List<Quaternion> breakables_rotation_record = new List<Quaternion>();
-    List<Vector3> angels_pos_record = new List<Vector3>();
 
     Subscription<GameOver> gameover_subscription;
     Subscription<Checked> checkpoint_subscription;
@@ -100,18 +98,6 @@ public class GameStatus : MonoBehaviour
             // retrieve last checkpoint state
             for (int i = 0; i < bricks.Count; ++i)
             {
-                // remove bubbles from bricks
-                if (bricks[i].transform.childCount > 0)
-                {
-                    for (int j = 0; j < bricks[i].transform.childCount; ++j)
-                    {
-                        if (bricks[i].transform.GetChild(j).gameObject.name.Contains("Bubble"))
-                        {
-                            bricks[i].GetComponent<Floatable>().ApplyGravity();
-                        }
-                    }
-                }
-                bricks[i].GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                 bricks[i].transform.position = bricks_pos_record[i];
             }
             GameObject.Find("Player").transform.position = checkpoint_pos_record;
@@ -127,17 +113,22 @@ public class GameStatus : MonoBehaviour
                 Instantiate(ammo_prefab, ammo_pos, Quaternion.identity);
             }
 
-            // replace all angels
-            GameObject[] angels_left = GameObject.FindGameObjectsWithTag("statue");
-            foreach (GameObject angel in angels_left)
-            {
-                Destroy(angel);
-                //Instantiate(angle_prefab, new Vector3(25.5f, 9.247638f, 0f), Quaternion.identity);
+            // angels
+            // TODO: edit this to improve compatibility
+            // destory angel if restart or start at check
+            if(GetComponent<recrod_angle_position>() != null) {
+                Vector3 angle_pos = GetComponent<recrod_angle_position>().getPosition();
+                if (angle_pos != Vector3.zero)
+                {
+                    GameObject[] angles = GameObject.FindGameObjectsWithTag("statue");
+                    foreach (GameObject angle in angles)
+                    {
+                        angle.transform.position = angle_pos;
+                    }
+                }
             }
-            foreach (Vector3 angel_pos in angels_pos_record)
-            {
-                Instantiate(angel_prefab, angel_pos, Quaternion.identity);
-            }
+
+            
 
             // balls states
             for (int i = 0; i < balls.Count; ++i)
@@ -250,7 +241,6 @@ public class GameStatus : MonoBehaviour
         breakables_pos_record = c.breakables_pos;
         breakables_scale_record = c.breakables_scale;
         breakables_rotation_record = c.breakables_rotation;
-        angels_pos_record = c.angels_pos;
 
     }
 
@@ -297,14 +287,13 @@ public class Checked
     public List<Vector3> breakables_pos = new List<Vector3>();
     public List<Vector3> breakables_scale = new List<Vector3>();
     public List<Quaternion> breakables_rotation = new List<Quaternion>();
-    public List<Vector3> angels_pos = new List<Vector3>();
 
 
     public Checked(List<GameObject> _bricks, List<Vector3> _bricks_pos,
         Vector3 _checkpoint_pos, List<Vector3> _ammos_pos,
         List<GameObject> _balls, List<Vector3> _balls_pos, 
         List<Vector3> _breakables_pos, List<Vector3> _breakables_scale, 
-        List<Quaternion> _breakables_rotation, List<Vector3> _angels_pos)
+        List<Quaternion> _breakables_rotation)
     {
         bricks = _bricks;
         bricks_pos = _bricks_pos;
@@ -315,6 +304,5 @@ public class Checked
         breakables_pos = _breakables_pos;
         breakables_scale = _breakables_scale;
         breakables_rotation = _breakables_rotation;
-        angels_pos = _angels_pos;
     }
 }

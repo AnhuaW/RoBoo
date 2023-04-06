@@ -317,8 +317,12 @@ PrefabInstance:
       value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 3902282958088793133, guid: 58dc16837344d914a92ba238812347f6, type: 3}
+      propertyPath: total_scenes_count
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902282958088793133, guid: 58dc16837344d914a92ba238812347f6, type: 3}
       propertyPath: current_level_index
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3902282958088793133, guid: 58dc16837344d914a92ba238812347f6, type: 3}
       propertyPath: has_key_constraints
@@ -1165,7 +1169,8 @@ PrefabInstance:
       propertyPath: launch_if_button_pressed
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -941263516278333682, guid: 440148c6e1530de488cd205b297fa770, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 440148c6e1530de488cd205b297fa770, type: 3}
 --- !u!1 &565775162
 GameObject:
@@ -2186,7 +2191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offsetX: 0
   offsetY: 0
-  cameraSpeed: 5
+  cameraSpeed: 100
   minX: 0
   maxX: 35
   minY: -1
@@ -3017,7 +3022,8 @@ PrefabInstance:
       propertyPath: launch_if_button_pressed
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -941263516278333682, guid: 440148c6e1530de488cd205b297fa770, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 440148c6e1530de488cd205b297fa770, type: 3}
 --- !u!1001 &1533129805
 PrefabInstance:
@@ -3572,25 +3578,25 @@ Tilemap:
   m_TileMatrixArray:
   - m_RefCount: 0
     m_Data:
-      e00: 0
+      e00: 1
       e01: 0
-      e02: 2.4696095e+10
-      e03: 2.4696095e+10
-      e10: 7.8e-44
-      e11: 0
-      e12: 7.95e-43
-      e13: 7.95e-43
-      e20: 9.885365e-30
-      e21: 1e-45
-      e22: -8.632023e-29
-      e23: 1.1176596e-19
-      e30: 4.5904e-41
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
       e31: 0
-      e32: 7.95e-43
-      e33: 7.99e-43
+      e32: 0
+      e33: 1
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: 7.8148e-41, g: 7.8148e-41, b: 7.8148e-41, a: 7.8148e-41}
+    m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
