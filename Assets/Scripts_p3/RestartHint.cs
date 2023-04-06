@@ -8,6 +8,7 @@ public class RestartHint : MonoBehaviour
 {
     Inventory_tmp inventory;
     RectTransform hint_panel;
+    GameStatus game_status;
     bool toasting = false;
 
     [SerializeField] Vector3 hidden_pos, visible_pos;
@@ -23,6 +24,8 @@ public class RestartHint : MonoBehaviour
     {
         inventory = Inventory_tmp.instance;
         hint_panel = GetComponent<RectTransform>();
+        game_status = GameObject.Find("Player").GetComponent<GameStatus>();
+
         hidden_pos = new Vector3(-330, -150, 0);
         visible_pos = new Vector3(-330, 250 - 150, 0);
     }
@@ -34,6 +37,14 @@ public class RestartHint : MonoBehaviour
         {
             toasting = true;
             StartCoroutine(WaitAndGiveHint());
+        }
+
+        // reset this component when game is over (and restarted)
+        if (game_status.gameover)
+        {
+            toasting = false;
+            hint_panel.anchoredPosition = hidden_pos;
+            StopAllCoroutines();
         }
     }
 
