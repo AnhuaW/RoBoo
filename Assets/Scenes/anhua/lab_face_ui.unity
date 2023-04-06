@@ -697,6 +697,7 @@ GameObject:
   - component: {fileID: 143081761}
   - component: {fileID: 143081762}
   - component: {fileID: 143081763}
+  - component: {fileID: 143081764}
   m_Layer: 0
   m_Name: facial expression
   m_TagString: Untagged
@@ -791,6 +792,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &143081764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143081760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0de8db6777e6246a67957946eaccea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &216037482 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7243891751970857332, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
