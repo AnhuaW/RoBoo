@@ -317,12 +317,8 @@ PrefabInstance:
       value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 3902282958088793133, guid: 58dc16837344d914a92ba238812347f6, type: 3}
-      propertyPath: total_scenes_count
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3902282958088793133, guid: 58dc16837344d914a92ba238812347f6, type: 3}
       propertyPath: current_level_index
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3902282958088793133, guid: 58dc16837344d914a92ba238812347f6, type: 3}
       propertyPath: has_key_constraints
@@ -1169,8 +1165,7 @@ PrefabInstance:
       propertyPath: launch_if_button_pressed
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -941263516278333682, guid: 440148c6e1530de488cd205b297fa770, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 440148c6e1530de488cd205b297fa770, type: 3}
 --- !u!1 &565775162
 GameObject:
@@ -2191,7 +2186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offsetX: 0
   offsetY: 0
-  cameraSpeed: 100
+  cameraSpeed: 5
   minX: 0
   maxX: 35
   minY: -1
@@ -3022,8 +3017,7 @@ PrefabInstance:
       propertyPath: launch_if_button_pressed
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -941263516278333682, guid: 440148c6e1530de488cd205b297fa770, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 440148c6e1530de488cd205b297fa770, type: 3}
 --- !u!1001 &1533129805
 PrefabInstance:
@@ -3596,11 +3590,7 @@ Tilemap:
       e33: 7.99e-43
   m_TileColorArray:
   - m_RefCount: 0
-<<<<<<<< HEAD:Assets/Scenes/P3/2_p3_puzzle_guide.unity
     m_Data: {r: 7.8148e-41, g: 7.8148e-41, b: 7.8148e-41, a: 7.8148e-41}
-========
-    m_Data: {r: 1, g: 1, b: 1, a: 1}
->>>>>>>> origin/milestone2:Assets/Scenes/P3/p3_puzzle_guide.unity
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
