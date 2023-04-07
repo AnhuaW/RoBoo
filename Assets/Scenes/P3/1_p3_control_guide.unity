@@ -2436,6 +2436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hint: {fileID: 69645139}
+  tagName: Player
 --- !u!1 &1205228839
 GameObject:
   m_ObjectHideFlags: 0
