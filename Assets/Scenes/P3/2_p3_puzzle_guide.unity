@@ -2787,7 +2787,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hint: {fileID: 1863827777}
-  target_clicks: 2
+  target_clicks: 0
+  float_hint: 0
   curr_clikcs: 0
 --- !u!114 &1025309891 stripped
 MonoBehaviour:
@@ -3493,6 +3494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hint: {fileID: 283642778}
   target_clicks: 1
+  float_hint: 1
   curr_clikcs: 0
 --- !u!1001 &1438927461
 PrefabInstance:

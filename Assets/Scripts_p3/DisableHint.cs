@@ -5,20 +5,18 @@ using UnityEngine;
 public class DisableHint : MonoBehaviour
 {
     public GameObject hint;
-    public int target_clicks = 1;
-    [SerializeField]
-    private int curr_clikcs = 0;
-    // Start is called before the first frame update
+    public bool float_hint = true;
+    // Start is called before the first frame updat\ 
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0) && GetComponent<Floatable>().is_floating)
+        if(Input.GetMouseButtonDown(0) && GetComponent<Floatable>().is_floating && float_hint)
         {
-            curr_clikcs += 1;
+            TurnOffHint();
         }
 
-        if(curr_clikcs == target_clicks)
+        else if(Input.GetMouseButtonDown(0) && GetComponent<Floatable>().is_falling && !float_hint)
         {
             TurnOffHint();
         }
