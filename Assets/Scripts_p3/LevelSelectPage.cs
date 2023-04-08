@@ -7,6 +7,8 @@ public class LevelSelectPage : MonoBehaviour
     [SerializeField] GameObject LevelSelector;
     [SerializeField] GameObject PlayButton;
     [SerializeField] GameObject QuitButton;
+    [SerializeField] GameObject SettingsButton;
+
     levelLoder level_loader = null;
     private void Awake()
     {
@@ -34,6 +36,7 @@ public class LevelSelectPage : MonoBehaviour
         gameObject.SetActive(!open);
         PlayButton.SetActive(!open);
         QuitButton.SetActive(!open);
+        SettingsButton.SetActive(!open);
     }
 
 

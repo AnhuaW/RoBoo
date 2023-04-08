@@ -64,12 +64,14 @@ public class SettingsMenu : MonoBehaviour
     void ChangeBGMVolume()
     {
         audioMixer.SetFloat("BGMVolume", bgm_volume);
-        Debug.Log(bgm_volume);
     }
 
     void ChangeSFXVolume()
     {
-        player_sfx.clipVolume = sfx_volume;
+        if (player_sfx != null)
+        {
+            player_sfx.clipVolume = sfx_volume;
+        }
         foreach (BreakableTile tile in breakable_sfx)
         {
             if (tile != null)
@@ -97,6 +99,13 @@ public class SettingsMenu : MonoBehaviour
             }
         }
     }
+
+
+    public void SetFullScreen(bool full)
+    {
+        Screen.fullScreen = full;
+    }
+
 
 
     // when game restarts or reloads, obtain new references

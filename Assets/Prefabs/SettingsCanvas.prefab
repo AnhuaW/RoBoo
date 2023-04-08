@@ -60,7 +60,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_TargetDisplay: 0
 --- !u!114 &7200612237248496477
 MonoBehaviour:
@@ -126,6 +126,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6359510239076257499}
     m_Modifications:
+    - target: {fileID: 295403326488457197, guid: a7273c0b6c680bf46b6c9513c0176ac1, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 295403326488457197, guid: a7273c0b6c680bf46b6c9513c0176ac1, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 295403326488457197, guid: a7273c0b6c680bf46b6c9513c0176ac1, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7467743100401724156}
+    - target: {fileID: 295403326488457197, guid: a7273c0b6c680bf46b6c9513c0176ac1, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 295403326488457197, guid: a7273c0b6c680bf46b6c9513c0176ac1, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetFullScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 295403326488457197, guid: a7273c0b6c680bf46b6c9513c0176ac1, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SettingsMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 295403326488457197, guid: a7273c0b6c680bf46b6c9513c0176ac1, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 339202180776301212, guid: a7273c0b6c680bf46b6c9513c0176ac1, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -155,7 +183,15 @@ PrefabInstance:
       value: SettingsPanel
       objectReference: {fileID: 0}
     - target: {fileID: 2147439366881368164, guid: a7273c0b6c680bf46b6c9513c0176ac1, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147439366881368164, guid: a7273c0b6c680bf46b6c9513c0176ac1, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147439366881368164, guid: a7273c0b6c680bf46b6c9513c0176ac1, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4155206078135663663, guid: a7273c0b6c680bf46b6c9513c0176ac1, type: 3}
@@ -168,6 +204,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7475492505204693797, guid: a7273c0b6c680bf46b6c9513c0176ac1, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7499070436502519060, guid: a7273c0b6c680bf46b6c9513c0176ac1, type: 3}
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7499070436502519060, guid: a7273c0b6c680bf46b6c9513c0176ac1, type: 3}
