@@ -1502,9 +1502,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2097610859314516770}
     m_Modifications:
+    - target: {fileID: 1031322270215014792, guid: 84ba130b469ed7441b0af37a99a52a8c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5718661834170986277, guid: 84ba130b469ed7441b0af37a99a52a8c, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 71.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937881007427640763, guid: 84ba130b469ed7441b0af37a99a52a8c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9050661285341351574, guid: 84ba130b469ed7441b0af37a99a52a8c, type: 3}
       propertyPath: m_Name
@@ -1597,6 +1605,12 @@ PrefabInstance:
     - target: {fileID: 9050661285341351575, guid: 84ba130b469ed7441b0af37a99a52a8c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050661285554961816, guid: 84ba130b469ed7441b0af37a99a52a8c, type: 3}
+      propertyPath: m_Text
+      value: 'Press [R] to load checkpoint
+
+        Press [T] to restart'
       objectReference: {fileID: 0}
     - target: {fileID: 9050661285554961819, guid: 84ba130b469ed7441b0af37a99a52a8c, type: 3}
       propertyPath: m_AnchoredPosition.x

@@ -170,9 +170,12 @@ public class GameStatus : MonoBehaviour
 
         // ensable player control
         SetPlayerControl(true);
+        /*
         gameover = false;
         manual_restart = false;
         restarting = false;
+        */
+        StartCoroutine(Invincible(0.5f)); // invincible after death
 
         // notify SFX settings
         EventBus.Publish<SFXRefChange>(new SFXRefChange());
@@ -183,12 +186,17 @@ public class GameStatus : MonoBehaviour
     // change sprite color
     void SetPlayerControl(bool enable)
     {
+        // freeze time-based processes
+        Time.timeScale = enable ? 1f : 0f;
+        CollectibleMovement(enable);
+
         GameObject player = GameObject.Find("Player");
         if (player != null)
         {
             GetComponent<ArrowKeyMovement>().player_control = enable;
-            GetComponent<Animator>().enabled = enable;
-            
+            GetComponent<BackToMenu>().enabled = enable;
+
+            // sprite color
             if (death_panel.activeSelf && !enable)
             {
                 GetComponent<SpriteRenderer>().color = Color.red;
@@ -197,11 +205,47 @@ public class GameStatus : MonoBehaviour
             {
                 GetComponent<SpriteRenderer>().color = Color.white;
             }
-
-            GetComponent<Rigidbody2D>().constraints = enable ? RigidbodyConstraints2D.FreezeRotation : RigidbodyConstraints2D.FreezeAll;
         }
     }
 
+
+    // disable/enable collectible movement
+    void CollectibleMovement(bool enable)
+    {
+        // ammos
+        GameObject[] ammos = GameObject.FindGameObjectsWithTag("battery");
+        foreach (GameObject ammo in ammos)
+        {
+            CollectibleMovement cm = ammo.GetComponent<CollectibleMovement>();
+            if (cm)
+            {
+                cm.enabled = enable;
+            }
+        }
+        // keys
+        GameObject[] keys = GameObject.FindGameObjectsWithTag("key");
+        foreach (GameObject key in keys)
+        {
+            CollectibleMovement cm = key.GetComponent<CollectibleMovement>();
+            if (cm)
+            {
+                cm.enabled = enable;
+            }
+        }
+    }
+
+
+    // delay setting gameover to true to avoid
+    // opening death panel (aka executing _OnGameOver)
+    // again just as player restarts
+    // (e.g. when player died near laser, or respawn out of camera view)
+    IEnumerator Invincible(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        gameover = false;
+        manual_restart = false;
+        restarting = false;
+    }
 
 
 
