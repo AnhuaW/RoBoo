@@ -173,6 +173,9 @@ public class GameStatus : MonoBehaviour
         gameover = false;
         manual_restart = false;
         restarting = false;
+
+        // notify SFX settings
+        EventBus.Publish<SFXRefChange>(new SFXRefChange());
     }
 
 
