@@ -4195,7 +4195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e9fedb0a395945923ddc2d39dab78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  total_level_count: 6
+  total_level_count: 7
   level_completed: 
 --- !u!4 &1455917777
 Transform:

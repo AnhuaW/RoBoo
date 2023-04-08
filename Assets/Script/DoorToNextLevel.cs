@@ -36,10 +36,9 @@ public class DoorToNextLevel : MonoBehaviour
             //Debug.Log("pass");
             //EventBus.Publish<StageStatus>(new StageStatus((current_level_index + 1) % total_scenes_count));
             StartCoroutine(load.GetComponent<levelLoder>().LoadLevel(current_level_index));
-            GameObject completed_levels = GameObject.Find("CompletedLevels");
-            if (completed_levels != null)
+            if (CompletedLevels.instance != null)
             {
-                completed_levels.GetComponent<CompletedLevels>().level_completed[current_level_index] = true;
+                CompletedLevels.instance.level_completed[current_level_index] = true;
             }
         }
     }

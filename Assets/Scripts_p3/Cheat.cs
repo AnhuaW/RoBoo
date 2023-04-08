@@ -15,6 +15,7 @@ public class Cheat : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
+            /*
             GameObject completed_levels = GameObject.Find("CompletedLevels");
             if (completed_levels != null)
             {
@@ -22,6 +23,14 @@ public class Cheat : MonoBehaviour
                 for (int i = 0; i < c.level_completed.Count; ++i)
                 {
                     c.level_completed[i] = true;
+                }
+            }
+            */
+            if (CompletedLevels.instance != null)
+            {
+                for (int i = 0; i < CompletedLevels.instance.level_completed.Count; ++i)
+                {
+                    CompletedLevels.instance.level_completed[i] = true;
                 }
             }
         }
