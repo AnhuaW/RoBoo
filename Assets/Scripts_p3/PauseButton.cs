@@ -7,6 +7,7 @@ public class PauseButton : MonoBehaviour
 {
     [SerializeField] GameObject PauseMenu;
     [SerializeField] GameObject PlayerControlsPanel;
+    [SerializeField] GameObject SettingsBackButton;
     levelLoder level_loader = null;
     GameObject player;
 
@@ -20,23 +21,32 @@ public class PauseButton : MonoBehaviour
         }
 
         player = GameObject.Find("Player");
-
+        
     }
+
 
 
     public void Pause()
     {
-        PlayerControlsPanel.SetActive(false);
-        PauseMenu.SetActive(true);
+        if (player.GetComponent<GameStatus>() != null && !player.GetComponent<GameStatus>().gameover)
+        {
+            PlayerControlsPanel.SetActive(false);
+            SettingsMenu.instance.gameObject.SetActive(false);
+            SettingsBackButton.SetActive(false);
+            PauseMenu.SetActive(true);
 
-        // freeze time-based processes
-        Time.timeScale = 0; // game time is 0 * realtime
+            // freeze time-based processes
+            Time.timeScale = 0; // game time is 0 * realtime
 
-        // disable player input
-        player.GetComponent<ArrowKeyMovement>().player_control = false;
+            // disable player input
+            player.GetComponent<ArrowKeyMovement>().player_control = false;
 
-        // disable collectible movement
-        CollectibleMovement(false);
+            // disable collectible movement
+            CollectibleMovement(false);
+
+            // disable BackToMenu (R, T, Esc)
+            player.GetComponent<BackToMenu>().enabled = false;
+        }
     }
 
     public void Resume()
@@ -49,6 +59,9 @@ public class PauseButton : MonoBehaviour
 
         // enable collectible movement
         CollectibleMovement(true);
+
+        // ensable BackToMenu (R, T, Esc)
+        player.GetComponent<BackToMenu>().enabled = true;
     }
 
     public void Restart()
@@ -96,6 +109,15 @@ public class PauseButton : MonoBehaviour
         }
 
         Time.timeScale = 1;
+    }
+
+
+    public void Settings()
+    {
+        SettingsMenu.instance.gameObject.SetActive(true);
+        SettingsBackButton.SetActive(true);
+        PauseMenu.SetActive(false);
+        Time.timeScale = 0;
     }
 
 

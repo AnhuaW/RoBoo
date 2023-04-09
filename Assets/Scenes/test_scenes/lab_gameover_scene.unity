@@ -635,7 +635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2195125569989019061, guid: 1c4ec734fdbc041bb9e8508d85143728, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c4ec734fdbc041bb9e8508d85143728, type: 3}
@@ -2061,11 +2061,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa295b0cab380f544bee976657bf966e, type: 3}
---- !u!1 &815978388 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8377452812076998230, guid: 1c4ec734fdbc041bb9e8508d85143728, type: 3}
-  m_PrefabInstance: {fileID: 119928906}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &828098843
 GameObject:
   m_ObjectHideFlags: 0
@@ -9402,7 +9397,7 @@ PrefabInstance:
     - target: {fileID: -1102121440641552092, guid: 70d507a00c207b8439e664071f611849, type: 3}
       propertyPath: death_panel
       value: 
-      objectReference: {fileID: 815978388}
+      objectReference: {fileID: 0}
     - target: {fileID: 5517974921478761772, guid: 70d507a00c207b8439e664071f611849, type: 3}
       propertyPath: key
       value: 

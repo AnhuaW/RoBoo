@@ -100,5 +100,5 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: ba1e8347dbf6ba743a9bd00162bb831b, type: 3}
   - {fileID: 21300000, guid: c4984a95158cb9e48bec674566638ab7, type: 3}
-  interval: 0.2
+  interval: 0.3
   loop: 1

@@ -5,9 +5,10 @@ using UnityEngine;
 public class hintControl : MonoBehaviour
 {
     public SpriteRenderer hint;
+    public string tagName = "Player";
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag(tagName))
         {
             hint.enabled = true;
         }
@@ -15,7 +16,7 @@ public class hintControl : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag(tagName))
         {
             hint.enabled = false;
         }

@@ -5,18 +5,27 @@ using UnityEngine;
 public class DisableHint : MonoBehaviour
 {
     public GameObject hint;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool float_hint = true;
+    // Start is called before the first frame updat\ 
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0) && GetComponent<Floatable>().is_floating)
+        if(Input.GetMouseButtonDown(0) && GetComponent<Floatable>().is_floating && float_hint)
         {
-            GameObject.Destroy(hint);
+            TurnOffHint();
+        }
+
+        else if(Input.GetMouseButtonDown(0) && GetComponent<Floatable>().is_falling && !float_hint)
+        {
+            TurnOffHint();
+        }
+    }
+
+
+    void TurnOffHint()
+    {
+         GameObject.Destroy(hint);
             // disable the blinking script of brick
             if (GetComponent<Blinking>() != null)
             {
@@ -25,9 +34,7 @@ public class DisableHint : MonoBehaviour
                 //Debug.Log(GetComponent<SpriteRenderer>().color);
             }
             this.enabled = false;
-        }
     }
-
 
 
     IEnumerator SpriteTurnWhite(float duration)
@@ -40,4 +47,5 @@ public class DisableHint : MonoBehaviour
             yield return null;
         }
     }
+
 }

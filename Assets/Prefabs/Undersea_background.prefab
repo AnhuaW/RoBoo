@@ -935,7 +935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollSpeed: 0.05
   moveX: 0
-  plyaerLastPos: 0
+  LastPos: 0
 --- !u!50 &7884127066853506181
 Rigidbody2D:
   serializedVersion: 4
@@ -953,9 +953,9 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &7884127067011750349
 GameObject:
@@ -3014,7 +3014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollSpeed: 0.1
   moveX: 0
-  plyaerLastPos: 0
+  LastPos: 0
 --- !u!50 &7884127068212155231
 Rigidbody2D:
   serializedVersion: 4
@@ -3032,9 +3032,9 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &7884127068233608201
 GameObject:
