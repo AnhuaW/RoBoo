@@ -6,6 +6,7 @@ public class BreakableTile : MonoBehaviour
 {
     public float break_speed_lower_bound = 4f;
     public AudioClip destroy;
+    public float destroy_sfx_volume;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +44,7 @@ public class BreakableTile : MonoBehaviour
 
     IEnumerator breakTiles()
     {
-        AudioSource.PlayClipAtPoint(destroy, Camera.main.transform.position);
+        AudioSource.PlayClipAtPoint(destroy, Camera.main.transform.position, destroy_sfx_volume);
         yield return 0.5f;
         Destroy(gameObject);
     }

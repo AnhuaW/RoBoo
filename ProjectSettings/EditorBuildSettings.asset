@@ -6,30 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Beta/Menu.unity
+    path: Assets/Scenes/P3/Menu.unity
     guid: 8e55d08a5d127764284cfc6463649723
   - enabled: 1
-    path: Assets/Scenes/Beta/1_p3_control_guide.unity
+    path: Assets/Scenes/P3/1_p3_control_guide.unity
     guid: 8b1994416ad6fb740aeafa630b40f06e
-  - enabled: 1
-    path: Assets/Scenes/Beta/2_p3_puzzle_guide.unity
+  - enabled: 0
+    path: Assets/Scenes/P3/2_p3_puzzle_guide.unity
     guid: 023812c69a35a9647ac369f4f08fdd56
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/remake/p3_spikes_merge_v2.unity
     guid: 385859cc53ce2ed4bb735e39a5e6d56e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/P3/p3_level_6.unity
     guid: e5ad076ab3eaa8a41af179650c29eec3
-  - enabled: 1
-    path: Assets/Scenes/Beta/4_p3_angel.unity
+  - enabled: 0
+    path: Assets/Scenes/P3/p3_angel.unity
     guid: 6c9b1caa631d640b8b02ac0281c7e9b5
-  - enabled: 1
-    path: Assets/Scenes/Beta/5_p3_angel_1.unity
+  - enabled: 0
+    path: Assets/Scenes/P3/p3_angel_1.unity
     guid: ce2e6a8bdb8ce4627af60ab6489e323b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/remake/p3_spikes_merge_hard_v1.unity
     guid: 1bbd1ea79ed1221479b857f39acab94a
-  - enabled: 1
-    path: Assets/Scenes/Beta/startingAni.unity
+  - enabled: 0
+    path: Assets/Scenes/P3/startingAni.unity
     guid: 7737bc10e83894288acc40b354fd5a38
   m_configObjects: {}

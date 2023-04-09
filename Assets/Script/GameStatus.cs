@@ -13,6 +13,8 @@ public class GameStatus : MonoBehaviour
     public bool has_checked = false;
     public bool manual_restart = false;
 
+    bool restarting = false;
+
     public GameObject ammo_prefab = null;
     public GameObject breakable_tile_prefab = null;
     public GameObject death_panel = null;
@@ -44,9 +46,11 @@ public class GameStatus : MonoBehaviour
     void Update()
     {
 
-        if (gameover)
+        if (gameover && !restarting)
         {
-            // player dies
+            restarting = true;
+
+            // player dies, show death panel
             if (!manual_restart)
             {
                 Debug.Log("open death panel!");
@@ -55,37 +59,38 @@ public class GameStatus : MonoBehaviour
                 SetPlayerControl(false);
             }
             // player wants to manually restart the game
+            // don't show death panel
             else
             {
                 RestartGame();
             }
-
-            // if already showing death panel
-            // wait for player's operation
-            if (death_panel.activeSelf)
-            {
-                Debug.Log("death panel already open");
-                if (Input.GetKeyDown(KeyCode.R))
-                {
-                    RestartGame();
-                    death_panel.SetActive(false);
-                }
-                // press T to restart from beginning
-                else if (Input.GetKeyDown(KeyCode.T))
-                {
-                    has_checked = false;
-                    RestartGame();
-                    death_panel.SetActive(false);
-                }
-                // press Esc to go back to menu
-                else if (Input.GetKeyDown(KeyCode.Escape))
-                {
-                    SceneManager.LoadScene(0);
-                }
-                
-            }
         }
-        
+
+        // if already showing death panel
+        // wait for player's operation
+        if (death_panel.activeSelf)
+        {
+            Debug.Log("death panel already open");
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                RestartGame();
+                death_panel.SetActive(false);
+            }
+            // press T to restart from beginning
+            else if (Input.GetKeyDown(KeyCode.T))
+            {
+                has_checked = false;
+                RestartGame();
+                death_panel.SetActive(false);
+            }
+            // press Esc to go back to menu
+            else if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                SceneManager.LoadScene(0);
+            }
+
+        }
+
     }
     
 
@@ -100,7 +105,7 @@ public class GameStatus : MonoBehaviour
             {
                 bricks[i].transform.position = bricks_pos_record[i];
             }
-            GameObject.Find("Player").transform.position = checkpoint_pos_record;
+            transform.position = checkpoint_pos_record;
 
             // replace all ammos
             GameObject[] ammos_left = GameObject.FindGameObjectsWithTag("battery");
@@ -165,20 +170,33 @@ public class GameStatus : MonoBehaviour
 
         // ensable player control
         SetPlayerControl(true);
+        /*
         gameover = false;
         manual_restart = false;
+        restarting = false;
+        */
+        StartCoroutine(Invincible(0.5f)); // invincible after death
+
+        // notify SFX settings
+        EventBus.Publish<SFXRefChange>(new SFXRefChange());
     }
 
 
-    // enable/disable player control and animator
+    // enable/disable player control, animator, and movement
     // change sprite color
     void SetPlayerControl(bool enable)
     {
+        // freeze time-based processes
+        Time.timeScale = enable ? 1f : 0f;
+        CollectibleMovement(enable);
+
         GameObject player = GameObject.Find("Player");
         if (player != null)
         {
             GetComponent<ArrowKeyMovement>().player_control = enable;
-            GetComponent<Animator>().enabled = enable;
+            GetComponent<BackToMenu>().enabled = enable;
+
+            // sprite color
             if (death_panel.activeSelf && !enable)
             {
                 GetComponent<SpriteRenderer>().color = Color.red;
@@ -191,22 +209,45 @@ public class GameStatus : MonoBehaviour
     }
 
 
-
-    // manual_restart directly reloads game without opening death panel
-    /*
-    void _OnGameOver(GameOver g)
+    // disable/enable collectible movement
+    void CollectibleMovement(bool enable)
     {
-        gameover = true;
-        manual_restart = g.manual_restart;
-        for (int i = 0; i < death_panel.transform.childCount; ++i)
+        // ammos
+        GameObject[] ammos = GameObject.FindGameObjectsWithTag("battery");
+        foreach (GameObject ammo in ammos)
         {
-            if (death_panel.transform.GetChild(i).name.Contains("DeathInfo"))
+            CollectibleMovement cm = ammo.GetComponent<CollectibleMovement>();
+            if (cm)
             {
-                GameObject death_info= death_panel.transform.GetChild(i).gameObject;
-                death_info.GetComponent<Text>().text = g.death_info.ToString();
+                cm.enabled = enable;
             }
         }
-    }*/
+        // keys
+        GameObject[] keys = GameObject.FindGameObjectsWithTag("key");
+        foreach (GameObject key in keys)
+        {
+            CollectibleMovement cm = key.GetComponent<CollectibleMovement>();
+            if (cm)
+            {
+                cm.enabled = enable;
+            }
+        }
+    }
+
+
+    // delay setting gameover to true to avoid
+    // opening death panel (aka executing _OnGameOver)
+    // again just as player restarts
+    // (e.g. when player died near laser, or respawn out of camera view)
+    IEnumerator Invincible(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        gameover = false;
+        manual_restart = false;
+        restarting = false;
+    }
+
+
 
     void _OnGameOver(GameOver g)
     {
