@@ -27,6 +27,7 @@ public class PlayerMapAnimationControl : MonoBehaviour
         {
             playerAnim.SetFloat("inputX", -1);
         }
+
         transform.position = Vector3.Lerp(transform.position, target_pos.position, move_speed * Time.deltaTime);
     }
 }
