@@ -61,9 +61,10 @@ public class Floatable : MonoBehaviour
 
             Vector2 center = transform.position + new Vector3(0, -0.6f, 0);
             RaycastHit2D hit = Physics2D.Raycast(center, new Vector2(0, -1), 0.1f);
-
+            //Debug.DrawRay(transform.position+new Vector3(0, -0.3f, 0), Vector2.down * 0.1f, Color.red);
             if (hit.collider != null && hit.collider.gameObject.name != "Player" && !hit.collider.isTrigger)
             {
+                Debug.Log("11");
                 is_falling = false;
             }
 
@@ -71,7 +72,7 @@ public class Floatable : MonoBehaviour
 
         // if colliding with tilemap or gameobjects
         // while being affected by waterflow
-        if (rb.velocity.x != 0 && rb.velocity.y == 0)
+        if (rb.velocity.x != 0 && rb.velocity.y == 0 && !this.CompareTag("ball") && !is_falling)
         {
             ApplyGravity();
 
@@ -150,6 +151,10 @@ public class Floatable : MonoBehaviour
         {
             ApplyGravity();
         }
+        if(this.CompareTag("ball") && !is_floating && is_falling) {
+            is_falling = false;
+        }
+
     }
 
 }

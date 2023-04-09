@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class DisplayHint : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Canvas hint;
+    public GameObject hint;
     public bool collided;
     GameObject player;
     void Start()
     {
         player = GameObject.Find("Player");
-        hint.enabled = false;
+        hint.active = false;
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class DisplayHint : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("displaying hint");
-            hint.enabled = true;
+            hint.active = true;
         }
     }
 
@@ -37,7 +37,7 @@ public class DisplayHint : MonoBehaviour
         collided = false;
         if (other.gameObject.CompareTag("Player"))
         {
-            hint.enabled = false;
+            hint.active = false;
         }
     }
 }
