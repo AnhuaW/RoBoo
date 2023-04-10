@@ -13883,7 +13883,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3902282958088793132, guid: 58dc16837344d914a92ba238812347f6, type: 3}
       propertyPath: m_Name
-      value: Door_p3
+      value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902282958088793133, guid: 58dc16837344d914a92ba238812347f6, type: 3}
+      propertyPath: required_key
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902282958088793133, guid: 58dc16837344d914a92ba238812347f6, type: 3}
+      propertyPath: current_level_index
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58dc16837344d914a92ba238812347f6, type: 3}
