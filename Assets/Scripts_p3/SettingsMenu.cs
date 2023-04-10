@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
@@ -48,6 +49,18 @@ public class SettingsMenu : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+
+    private void Update()
+    {
+        int current_index = SceneManager.GetActiveScene().buildIndex;
+        if (player_sfx == null && current_index > 0 && current_index < 8)
+        {
+            Debug.Log("re-fetching");
+            GetSFXRef();
+            ChangeSFXVolume();
+            ChangeBGMVolume();
+        }
+    }
 
     public void SetBGMVolume(float volume)
     {

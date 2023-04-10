@@ -20,8 +20,7 @@ public class levelLoder : MonoBehaviour
         transition.SetTrigger("Start");
 
         yield return new WaitForSeconds(transitionTime);
-        if (SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().name == "MainStory"
-            || SceneManager.GetActiveScene().name == "startingAni")
+        if (SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().name == "MainStory")
         {
             SceneManager.LoadScene(levelIndex);
         }
