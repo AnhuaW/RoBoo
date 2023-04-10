@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -12355,8 +12355,8 @@ TextureImporter:
       grey_tiles_81: -1574644805
       grey_tiles_250: 2120097361
       grey_tiles_525: -1785005919
-      grey_tiles_102: 707579217
       grey_tiles_379: 821347108
+      grey_tiles_102: 707579217
       grey_tiles_52: -1109629638
       grey_tiles_412: 1471037343
       grey_tiles_545: -1219606942

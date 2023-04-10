@@ -128,7 +128,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
@@ -260,7 +260,6 @@ MonoBehaviour:
   has_checked: 0
   manual_restart: 0
   ammo_prefab: {fileID: 5669959344316783301, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
-  angel_prefab: {fileID: 2596121842207662540, guid: fb48ffd9fcc7f4ec3ab7ad1ef43286ab, type: 3}
   breakable_tile_prefab: {fileID: 2960130245159203824, guid: 04cfbc0b128ecb74d895552b3c498fe7, type: 3}
   death_panel: {fileID: 0}
 --- !u!114 &886679271120409308
