@@ -2833,6 +2833,7 @@ GameObject:
   - component: {fileID: 782462153}
   - component: {fileID: 782462152}
   - component: {fileID: 782462151}
+  - component: {fileID: 782462154}
   m_Layer: 0
   m_Name: BGM
   m_TagString: Untagged
@@ -2963,6 +2964,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &782462154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782462150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e3b706b7f572846a72ef1b7fe306a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  current_level_index: 0
 --- !u!1 &803617571
 GameObject:
   m_ObjectHideFlags: 0
@@ -16479,7 +16493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3902282958088793133, guid: 58dc16837344d914a92ba238812347f6, type: 3}
       propertyPath: current_level_index
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3902282958088793133, guid: 58dc16837344d914a92ba238812347f6, type: 3}
       propertyPath: has_key_constraints

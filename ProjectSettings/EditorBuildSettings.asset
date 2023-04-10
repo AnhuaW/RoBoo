@@ -15,17 +15,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Beta/2_p3_puzzle_guide.unity
     guid: 023812c69a35a9647ac369f4f08fdd56
   - enabled: 1
-    path: Assets/Scenes/Beta/3_map_1.unity
-    guid: 2cf9b061d24ad1b4ba0cc8d9cbc4cf1c
-  - enabled: 1
-    path: Assets/Scenes/Beta/4_p3_angel_1.unity
-    guid: ce2e6a8bdb8ce4627af60ab6489e323b
-  - enabled: 1
     path: Assets/Scenes/Beta/5_p3_angel.unity
     guid: 6c9b1caa631d640b8b02ac0281c7e9b5
   - enabled: 1
-    path: Assets/Scenes/Beta/6_map_2.unity
-    guid: 682cfeed4bc3ee74d85b65cdd36b67c8
+    path: Assets/Scenes/Beta/4_p3_angel_1.unity
+    guid: ce2e6a8bdb8ce4627af60ab6489e323b
   - enabled: 1
     path: Assets/Scenes/Beta/7_p3_spikes_merge_v2.unity
     guid: ddb0665fa819c4d4f83b84ac2ae69210
@@ -35,6 +29,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Beta/9_p3_spikes_merge_hard_v3.unity
     guid: e583762750c713a4189a936dcc87a4f5
+  - enabled: 1
+    path: Assets/Scenes/Beta/3_map_1.unity
+    guid: 2cf9b061d24ad1b4ba0cc8d9cbc4cf1c
+  - enabled: 1
+    path: Assets/Scenes/Beta/6_map_2.unity
+    guid: 682cfeed4bc3ee74d85b65cdd36b67c8
   - enabled: 1
     path: Assets/Scenes/Beta/startingAni.unity
     guid: 7737bc10e83894288acc40b354fd5a38
