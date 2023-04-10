@@ -121,7 +121,8 @@ public class GameStatus : MonoBehaviour
             // angels
             // TODO: edit this to improve compatibility
             // destory angel if restart or start at check
-            if(GetComponent<recrod_angle_position>() != null) {
+            if (GetComponent<recrod_angle_position>() != null)
+            {
                 Vector3 angle_pos = GetComponent<recrod_angle_position>().getPosition();
                 if (angle_pos != Vector3.zero)
                 {
@@ -133,7 +134,7 @@ public class GameStatus : MonoBehaviour
                 }
             }
 
-            
+
 
             // balls states
             for (int i = 0; i < balls.Count; ++i)
@@ -163,9 +164,19 @@ public class GameStatus : MonoBehaviour
         }
         else
         {
+
             // reload scene
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
+            // re-fetch sfx references
+            GameObject BGM = GameObject.Find("BGM");
+            if (BGM)
+            {
+                LoadSettings l = BGM.GetComponent<LoadSettings>();
+                if (l)
+                {
+                    l.current_level_index--;
+                }
+            }
         }
 
         // ensable player control

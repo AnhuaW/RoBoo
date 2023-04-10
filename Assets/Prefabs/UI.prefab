@@ -2058,6 +2058,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6056233420275054115, guid: eb07112817b31694b9e380f5e58769b0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 19200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056233420275054115, guid: eb07112817b31694b9e380f5e58769b0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 10800
+      objectReference: {fileID: 0}
     - target: {fileID: 6056233420384265067, guid: eb07112817b31694b9e380f5e58769b0, type: 3}
       propertyPath: m_Text
       value: Settings
