@@ -20,7 +20,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -29610,8 +29610,8 @@ TextureImporter:
       pillars_46: 1488862357
       pillars_1137: -145702484
       pillars_678: -2009757593
-      pillars_113: -1273295861
       pillars_169: 1226078152
+      pillars_113: -1273295861
       pillars_1050: -2125558098
       pillars_1167: 766541881
       pillars_531: -1618905891
@@ -29664,8 +29664,8 @@ TextureImporter:
       pillars_645: -1119458166
       pillars_520: -2035454367
       pillars_130: -1726552506
-      pillars_583: -98899220
       pillars_775: 990158934
+      pillars_583: -98899220
       pillars_315: -1023863381
       pillars_637: 1183441656
       pillars_1007: -209934051
@@ -29761,13 +29761,13 @@ TextureImporter:
       pillars_1377: -1855678809
       pillars_72: -1494704746
       pillars_452: 1689836185
-      pillars_599: 417442862
       pillars_860: -590587437
+      pillars_1282: 124962506
       pillars_70: 2130802726
       pillars_528: -1432500578
-      pillars_748: 1166970056
-      pillars_1282: 124962506
+      pillars_599: 417442862
       pillars_1265: 1975441939
+      pillars_748: 1166970056
       pillars_951: -1721207333
       pillars_676: 592621516
       pillars_1285: 391720541
@@ -30084,8 +30084,8 @@ TextureImporter:
       pillars_613: 1737894519
       pillars_801: 1107266076
       pillars_270: 525716706
-      pillars_815: 1883438692
       pillars_868: 1895545226
+      pillars_815: 1883438692
       pillars_183: 1848445424
       pillars_989: -1655744265
       pillars_812: -778736220
@@ -30315,9 +30315,9 @@ TextureImporter:
       pillars_1055: -1979029509
       pillars_788: 1537863487
       pillars_100: 648283041
-      pillars_821: 1933517350
       pillars_1384: 594453944
       pillars_1110: 615471558
+      pillars_821: 1933517350
       pillars_1148: 1236695338
       pillars_1391: 451487479
       pillars_389: 216526576
@@ -30356,8 +30356,8 @@ TextureImporter:
       pillars_727: 1426571075
       pillars_1180: -2109145704
       pillars_486: -1364728310
-      pillars_198: -467599071
       pillars_500: -464414881
+      pillars_198: -467599071
       pillars_686: 968031250
       pillars_1144: -1143551538
       pillars_210: 1603982183
@@ -30396,8 +30396,8 @@ TextureImporter:
       pillars_778: 513303400
       pillars_372: 2073086115
       pillars_841: -2138959010
-      pillars_1270: -632893934
       pillars_1333: -1084147257
+      pillars_1270: -632893934
       pillars_371: 1886853720
       pillars_1261: 1006534479
       pillars_568: -645949612
@@ -30496,8 +30496,8 @@ TextureImporter:
       pillars_1288: -654489709
       pillars_168: 1930841471
       pillars_217: 1526186759
-      pillars_884: 15903451
       pillars_1311: 1487132732
+      pillars_884: 15903451
       pillars_265: 1477317089
       pillars_1325: 715980919
       pillars_118: -2098390998
@@ -30770,8 +30770,8 @@ TextureImporter:
       pillars_179: -889663384
       pillars_269: 930669762
       pillars_517: 1597478981
-      pillars_657: 40944527
       pillars_1291: 848909048
+      pillars_657: 40944527
       pillars_92: 1988058546
       pillars_1042: 1810310289
       pillars_995: 485388910
@@ -30861,8 +30861,8 @@ TextureImporter:
       pillars_601: -819399426
       pillars_1394: 1887278759
       pillars_228: 370997163
-      pillars_1116: 1287789715
       pillars_561: -913837544
+      pillars_1116: 1287789715
       pillars_891: -1583061224
       pillars_635: 81536943
       pillars_816: -1670154700
