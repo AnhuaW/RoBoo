@@ -28,7 +28,7 @@ EditorBuildSettings:
     guid: 18cf8fd8bcb78f244a234d54592cc945
   - enabled: 1
     path: Assets/Scenes/Beta/9_p3_spikes_merge_hard_v3.unity
-    guid: e583762750c713a4189a936dcc87a4f5
+    guid: aa67eba20f5fd14459d4090080a8d80d
   - enabled: 1
     path: Assets/Scenes/Beta/3_map_1.unity
     guid: 2cf9b061d24ad1b4ba0cc8d9cbc4cf1c
