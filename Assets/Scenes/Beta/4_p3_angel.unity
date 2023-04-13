@@ -1985,7 +1985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offsetX: 0
-  offsetY: -0.5
+  offsetY: 3
   cameraSpeed: 5
   minX: 0
   maxX: 14.5
