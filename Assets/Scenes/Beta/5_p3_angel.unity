@@ -13919,6 +13919,46 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3164721783548278511, guid: 1c4ec734fdbc041bb9e8508d85143728, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3164721783548278511, guid: 1c4ec734fdbc041bb9e8508d85143728, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644383646766808087, guid: 1c4ec734fdbc041bb9e8508d85143728, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644383646766808087, guid: 1c4ec734fdbc041bb9e8508d85143728, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644383646766808087, guid: 1c4ec734fdbc041bb9e8508d85143728, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5137555987023911271, guid: 1c4ec734fdbc041bb9e8508d85143728, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5137555987023911271, guid: 1c4ec734fdbc041bb9e8508d85143728, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6076621815105050686, guid: 1c4ec734fdbc041bb9e8508d85143728, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6076621815105050686, guid: 1c4ec734fdbc041bb9e8508d85143728, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6076621815105050686, guid: 1c4ec734fdbc041bb9e8508d85143728, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6432476269971491615, guid: 1c4ec734fdbc041bb9e8508d85143728, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -15245,18 +15285,6 @@ PrefabInstance:
       propertyPath: bubble_prefab
       value: 
       objectReference: {fileID: 3406941852388994698, guid: e314fbe9e47850943b51fc8847f25ddf, type: 3}
-    - target: {fileID: 1508958695914124149, guid: 5c49d85ee89b54ebaa930cc020b8e590, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1508958695914124149, guid: 5c49d85ee89b54ebaa930cc020b8e590, type: 3}
-      propertyPath: m_GravityScale
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1508958695914124149, guid: 5c49d85ee89b54ebaa930cc020b8e590, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1508958695914124150, guid: 5c49d85ee89b54ebaa930cc020b8e590, type: 3}
       propertyPath: m_RenderingLayerMask
       value: 4294967295
