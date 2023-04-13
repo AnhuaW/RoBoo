@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5890834686385795010}
   - component: {fileID: 2972658553911312632}
   - component: {fileID: 1300055839481942051}
-  - component: {fileID: 80772686}
   - component: {fileID: 1842077246}
   m_Layer: 0
   m_Name: weeping_statue
@@ -105,7 +104,7 @@ BoxCollider2D:
   m_Offset: {x: 0.1603584, y: 0.05536222}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.24050212, y: 0.3925991}
     oldSize: {x: 11.25, y: 11.5}
     newSize: {x: 15.36, y: 8.52}
     adaptiveTilingThreshold: 0.5
@@ -153,26 +152,6 @@ MonoBehaviour:
   moving_speed: 0.5
   isGrounded: 0
   death_message: Your time was stolen by angel!
---- !u!95 &80772686
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2596121842207662540}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e48c4603f7784cfdb7775e233037e0f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!60 &1842077246
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -189,7 +168,7 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.24050212, y: 0.3925991}
     oldSize: {x: 11.25, y: 11.5}
     newSize: {x: 15.36, y: 8.52}
     adaptiveTilingThreshold: 0.5
@@ -198,8 +177,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -3.1357193, y: -2.419735}
-      - {x: -1.7947311, y: -1.7471821}
-      - {x: -2.650671, y: 0.059792638}
-      - {x: -4.0772324, y: -0.5108324}
-
+    - - {x: 0.10725784, y: -0.86874676}
+      - {x: 0.7784958, y: -0.44294238}
+      - {x: -0.04219055, y: 0.9057861}
+      - {x: -0.65800667, y: 0.617159}

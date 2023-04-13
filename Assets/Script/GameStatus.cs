@@ -18,13 +18,17 @@ public class GameStatus : MonoBehaviour
     public GameObject ammo_prefab = null;
     public GameObject breakable_tile_prefab = null;
     public GameObject death_panel = null;
+    public GameObject bubble_prefab;
 
     List<GameObject> bricks = new List<GameObject>();
     List<Vector3> bricks_pos_record= new List<Vector3>();
+    List<bool> bricks_floating_record = new List<bool>();
     Vector3 checkpoint_pos_record = Vector3.zero;
+    public bool player_floating_record = false;
     List<Vector3> ammos_pos_record = new List<Vector3>();
     List<GameObject> balls = new List<GameObject>();
     List<Vector3> balls_pos_record = new List<Vector3>();
+    List<bool> balls_floating_record = new List<bool>();
     List<Vector3> breakables_pos_record = new List<Vector3>();
     List<Vector3> breakables_scale_record = new List<Vector3>();
     List<Quaternion> breakables_rotation_record = new List<Quaternion>();
@@ -104,8 +108,25 @@ public class GameStatus : MonoBehaviour
             for (int i = 0; i < bricks.Count; ++i)
             {
                 bricks[i].transform.position = bricks_pos_record[i];
+                bricks[i].GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                RetrieveBubbles(bricks[i], bricks_floating_record[i]);
             }
+            
+            // player
             transform.position = checkpoint_pos_record;
+            // destroy bubble and re-instantiate one if necessary
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                Transform temp_child = transform.GetChild(i);
+                if (temp_child.gameObject.name.Contains("Bubble"))
+                {
+                    GetComponent<PlayerFloat>().ApplyGravity();
+                }
+            }
+            if (player_floating_record)
+            {
+                GetComponent<PlayerFloat>().RemoveGravity();
+            }
 
             // replace all ammos
             GameObject[] ammos_left = GameObject.FindGameObjectsWithTag("battery");
@@ -119,9 +140,9 @@ public class GameStatus : MonoBehaviour
             }
 
             // angels
-            // TODO: edit this to improve compatibility
             // destory angel if restart or start at check
-            if(GetComponent<recrod_angle_position>() != null) {
+            if (GetComponent<recrod_angle_position>() != null)
+            {
                 Vector3 angle_pos = GetComponent<recrod_angle_position>().getPosition();
                 if (angle_pos != Vector3.zero)
                 {
@@ -133,7 +154,7 @@ public class GameStatus : MonoBehaviour
                 }
             }
 
-            
+
 
             // balls states
             for (int i = 0; i < balls.Count; ++i)
@@ -141,6 +162,7 @@ public class GameStatus : MonoBehaviour
                 balls[i].transform.position = balls_pos_record[i];
                 balls[i].GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 balls[i].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+                RetrieveBubbles(balls[i], balls_floating_record[i]);
             }
 
             // replace all breakables
@@ -163,9 +185,19 @@ public class GameStatus : MonoBehaviour
         }
         else
         {
+
             // reload scene
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
+            // re-fetch sfx references
+            GameObject BGM = GameObject.Find("BGM");
+            if (BGM)
+            {
+                LoadSettings l = BGM.GetComponent<LoadSettings>();
+                if (l)
+                {
+                    l.current_level_index--;
+                }
+            }
         }
 
         // ensable player control
@@ -248,6 +280,25 @@ public class GameStatus : MonoBehaviour
     }
 
 
+    // re-generate bubbles if the object was floating when player checked
+    void RetrieveBubbles(GameObject floatable, bool was_floating)
+    {
+        // destroy any bubble on the object
+        for (int i = 0; i < floatable.transform.childCount; i++)
+        {
+            Transform temp_child = floatable.transform.GetChild(i);
+            if (temp_child.gameObject.name.Contains("Bubble"))
+            {
+                floatable.GetComponent<Floatable>().ApplyGravity();
+            }
+        }
+        // re-generate one
+        if (was_floating)
+        {
+            floatable.GetComponent<Floatable>().RemoveGravity();
+        }
+    }
+
 
     void _OnGameOver(GameOver g)
     {
@@ -275,10 +326,13 @@ public class GameStatus : MonoBehaviour
         has_checked = true;
         bricks = c.bricks;
         bricks_pos_record = c.bricks_pos;
+        bricks_floating_record = c.bricks_floating;
         checkpoint_pos_record = c.checkpoint_pos;
+        player_floating_record = c.player_floaing;
         ammos_pos_record = c.ammos_pos;
         balls = c.balls;
         balls_pos_record = c.balls_pos;
+        balls_floating_record = c.balls_floating;
         breakables_pos_record = c.breakables_pos;
         breakables_scale_record = c.breakables_scale;
         breakables_rotation_record = c.breakables_rotation;
@@ -321,27 +375,33 @@ public class Checked
 {
     public List<GameObject> bricks = new List<GameObject>();
     public List<Vector3> bricks_pos = new List<Vector3>();
+    public List<bool> bricks_floating = new List<bool>();
     public Vector3 checkpoint_pos = new Vector3();
+    public bool player_floaing = false;
     public List<Vector3> ammos_pos = new List<Vector3>();
     public List<GameObject> balls = new List<GameObject>();
     public List<Vector3> balls_pos = new List<Vector3>();
+    public List<bool> balls_floating = new List<bool>();
     public List<Vector3> breakables_pos = new List<Vector3>();
     public List<Vector3> breakables_scale = new List<Vector3>();
     public List<Quaternion> breakables_rotation = new List<Quaternion>();
 
 
-    public Checked(List<GameObject> _bricks, List<Vector3> _bricks_pos,
-        Vector3 _checkpoint_pos, List<Vector3> _ammos_pos,
-        List<GameObject> _balls, List<Vector3> _balls_pos, 
+    public Checked(List<GameObject> _bricks, List<Vector3> _bricks_pos, List<bool> _bricks_floating,
+        Vector3 _checkpoint_pos, bool _player_floating, List<Vector3> _ammos_pos,
+        List<GameObject> _balls, List<Vector3> _balls_pos, List<bool> _balls_floating,
         List<Vector3> _breakables_pos, List<Vector3> _breakables_scale, 
         List<Quaternion> _breakables_rotation)
     {
         bricks = _bricks;
         bricks_pos = _bricks_pos;
+        bricks_floating = _bricks_floating;
         checkpoint_pos = _checkpoint_pos;
+        player_floaing = _player_floating;
         ammos_pos = _ammos_pos;
         balls = _balls;
         balls_pos = _balls_pos;
+        balls_floating = _balls_floating;
         breakables_pos = _breakables_pos;
         breakables_scale = _breakables_scale;
         breakables_rotation = _breakables_rotation;

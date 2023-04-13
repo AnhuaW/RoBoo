@@ -16,17 +16,17 @@ public class Checkpoint : MonoBehaviour
             // record position of all bricks
             // require bricks to have tag "brick"
             GameObject[] bricks = GameObject.FindGameObjectsWithTag("brick");
-            /*
-            List<Vector3> bricks_pos = new List<Vector3>();
-            foreach (GameObject brick in bricks)
-            {
-                bricks_pos.Add(brick.transform.position);
-            } 
-            */
             List<Vector3> bricks_pos = RecordPositions(bricks);
+            List<bool> bricks_floating = RecordFloatingStatus(bricks);
 
             // if game reloads, player should respawn at checkpoint
             Vector3 player_pos = transform.position;
+            bool player_floating = false;
+            GameObject player = GameObject.Find("Player");
+            if(player != null)
+            {
+                player_floating = player.GetComponent<PlayerFloat>().is_floating;
+            }
 
             // record ammo status
             // require ammos to have tag "battery"
@@ -36,6 +36,7 @@ public class Checkpoint : MonoBehaviour
             // record ball positions
             GameObject[] balls = GameObject.FindGameObjectsWithTag("ball");
             List<Vector3> balls_pos = RecordPositions(balls);
+            List<bool> balls_floating = RecordFloatingStatus(balls);
 
             // record breakable tiles status
             // require ammos to have tag "bar"
@@ -47,13 +48,10 @@ public class Checkpoint : MonoBehaviour
             // record inventory
             Inventory_tmp.instance.RecordInitialState();
 
-            /* // record hint sprite renderer
-             GameObject[] hints = GameObject.FindGameObjectsWithTag("hint");
-             List<SpriteRenderer> hint_renderers = RecordControlHint(hints);*/
-
+            
             // inform GameStatus
-            EventBus.Publish<Checked>(new Checked(bricks.ToList(), bricks_pos,
-                player_pos, ammos_pos, balls.ToList(), balls_pos,
+            EventBus.Publish<Checked>(new Checked(bricks.ToList(), bricks_pos, bricks_floating,
+                player_pos, player_floating, ammos_pos, balls.ToList(), balls_pos, balls_floating,
                 breakables_pos, breakables_scale, breakbles_rotation));
         }
     }
@@ -90,5 +88,20 @@ public class Checkpoint : MonoBehaviour
             obj_rot.Add(obj.transform.localRotation);
         }
         return obj_rot;
+    }
+
+
+    // record floating status of bricks and balls
+    List<bool> RecordFloatingStatus(GameObject[] floatables)
+    {
+        List<bool> floating = new List<bool>();
+        foreach (GameObject f in floatables)
+        {
+            if (f.GetComponent<Floatable>())
+            {
+                floating.Add(f.GetComponent<Floatable>().is_floating);
+            }
+        }
+        return floating;
     }
 }

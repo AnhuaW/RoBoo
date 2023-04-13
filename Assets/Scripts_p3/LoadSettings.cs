@@ -29,8 +29,9 @@ public class LoadSettings : MonoBehaviour
         SettingsMenu.instance.gameObject.SetActive(true);
         SettingsMenu.instance.gameObject.GetComponent<Canvas>().enabled = false;
         yield return new WaitForSeconds(1f);
-        //SettingsMenu.instance.gameObject.GetComponent<Canvas>().enabled = true;
+        SettingsMenu.instance.gameObject.GetComponent<Canvas>().enabled = true;
         SettingsMenu.instance.gameObject.SetActive(false);
+        Debug.Log("fet"+SettingsMenu.instance.gameObject.active.ToString());
     }
 
 }

@@ -7,17 +7,6 @@ public class BreakableTile : MonoBehaviour
     public float break_speed_lower_bound = 4f;
     public AudioClip destroy;
     public float destroy_sfx_volume;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -30,13 +19,24 @@ public class BreakableTile : MonoBehaviour
         {
             Vector2 collision_velocity = collision.relativeVelocity;
             Debug.Log("breakable tile collision velocity: " + collision_velocity);
+            /*
             float instant_speed = collision.relativeVelocity.magnitude;
-            //Debug.Log("Instant speed: " + instant_speed);
+            Debug.Log("Instant speed: " + instant_speed);
+            */
             //if (collision_velocity.y <0 && instant_speed > break_speed_lower_bound)
-            if (Mathf.Abs(collision_velocity.y) > break_speed_lower_bound)
+            float compared_v;
+            if(transform.rotation.eulerAngles != Vector3.zero)
+            {
+                compared_v = collision_velocity.x;
+            }
+            else
+            {
+                compared_v = collision_velocity.y;
+            }
+            if (Mathf.Abs(compared_v) > break_speed_lower_bound)
             {
                 Debug.Log("break");
-            StartCoroutine(breakTiles());
+                StartCoroutine(breakTiles());
             }
         }
 

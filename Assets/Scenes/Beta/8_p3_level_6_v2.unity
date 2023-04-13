@@ -179,11 +179,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783305, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.48
+      value: -2.48
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783305, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5
+      value: -2.49
       objectReference: {fileID: 0}
     - target: {fileID: 5669959344316783305, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
       propertyPath: m_LocalPosition.z
@@ -652,7 +652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7243891751970857332, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.05
+      value: -9.1
       objectReference: {fileID: 0}
     - target: {fileID: 7243891751970857332, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1447,6 +1447,7 @@ GameObject:
   - component: {fileID: 571126245}
   - component: {fileID: 571126244}
   - component: {fileID: 571126247}
+  - component: {fileID: 571126248}
   m_Layer: 0
   m_Name: BGM
   m_TagString: Untagged
@@ -1673,6 +1674,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &571126248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571126243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e3b706b7f572846a72ef1b7fe306a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  current_level_index: 0
 --- !u!1001 &594866315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7246,7 +7260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3902282958088793133, guid: 58dc16837344d914a92ba238812347f6, type: 3}
       propertyPath: current_level_index
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3902282958088793133, guid: 58dc16837344d914a92ba238812347f6, type: 3}
       propertyPath: has_key_constraints
@@ -8686,11 +8700,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7243891751970857332, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.11
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 7243891751970857332, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.17
+      value: -4.06
       objectReference: {fileID: 0}
     - target: {fileID: 7243891751970857332, guid: d4f155e4c308c478097d2ca3741c78e2, type: 3}
       propertyPath: m_LocalPosition.z

@@ -15,7 +15,7 @@ public class InstantiateAngle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameObject.FindGameObjectWithTag("statue") && cam.transform.position.x > 16f && cam.transform.position.y > 10f)
+        if (!GameObject.FindGameObjectWithTag("statue") && cam.transform.position.x > 11f && cam.transform.position.y > 10f)
         {
             prefab.SetActive(true);
         }

@@ -64,7 +64,23 @@ public class Floatable : MonoBehaviour
             //Debug.DrawRay(transform.position+new Vector3(0, -0.3f, 0), Vector2.down * 0.1f, Color.red);
             if (hit.collider != null && hit.collider.gameObject.name != "Player" && !hit.collider.isTrigger)
             {
-                Debug.Log("11");
+                
+                is_falling = false;
+            }
+
+            Vector2 left_edge = transform.position - new Vector3(0.48f, 0.5f, 0);
+            hit = Physics2D.Raycast(left_edge, new Vector2(0, -1), 0.1f);
+            if (hit.collider != null && hit.collider.gameObject.name != "Player" && !hit.collider.isTrigger)
+            {
+
+                is_falling = false;
+            }
+
+            Vector2 right_edge = transform.position + new Vector3(0.48f, -0.5f, 0);
+            hit = Physics2D.Raycast(right_edge, new Vector2(0, -1), 0.1f);
+            if (hit.collider != null && hit.collider.gameObject.name != "Player" && !hit.collider.isTrigger)
+            {
+
                 is_falling = false;
             }
 
