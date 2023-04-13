@@ -18,6 +18,7 @@ public class InstantiateAngle : MonoBehaviour
         if (!GameObject.FindGameObjectWithTag("statue") && cam.transform.position.x > 11f && cam.transform.position.y > 10f)
         {
             prefab.SetActive(true);
+            cam.GetComponent<trackingPlayer>().offsetY = 2;
         }
     }
 }
