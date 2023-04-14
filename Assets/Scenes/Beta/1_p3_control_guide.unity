@@ -1235,6 +1235,7 @@ GameObject:
   - component: {fileID: 560023030}
   - component: {fileID: 560023029}
   - component: {fileID: 560023028}
+  - component: {fileID: 560023031}
   m_Layer: 5
   m_Name: HintPanel
   m_TagString: Untagged
@@ -1270,7 +1271,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560023026}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db61e2600d19ad84bb42aa399d564e11, type: 3}
   m_Name: 
@@ -1385,6 +1386,90 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560023026}
   m_CullTransparentMesh: 1
+--- !u!114 &560023031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560023026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c06727663449c64caa3757fba601970, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  remaining_ammo_count: 0
+  toasting: 0
+  hidden_pos: {x: 0, y: 0, z: 0}
+  visible_pos: {x: 0, y: 0, z: 0}
+  ease_duration: 0.5
+  show_duration: 2
+  ease:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.70609826
+      value: 1.0740986
+      inSlope: 0.47115326
+      outSlope: 0.47115326
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.88843006
+      value: 0.96060437
+      inSlope: -0.45033556
+      outSlope: -0.45033556
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  ease_out:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &565775162
 GameObject:
   m_ObjectHideFlags: 0
