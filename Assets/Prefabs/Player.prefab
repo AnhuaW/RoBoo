@@ -144,8 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116a0e341ac3de94c96e49b6daa4edb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ground_movement_speed: 3
-  float_movement_speed: 2
+  ground_movement_speed: 3.3
+  float_movement_speed: 2.1
   jump_force: 5
   collisionRadius: 0.2
   playerDirection: {x: 0, y: 0}
@@ -262,6 +262,8 @@ MonoBehaviour:
   ammo_prefab: {fileID: 5669959344316783301, guid: a9a29861f4485d0429dbb3c49138b936, type: 3}
   breakable_tile_prefab: {fileID: 2960130245159203824, guid: 04cfbc0b128ecb74d895552b3c498fe7, type: 3}
   death_panel: {fileID: 0}
+  bubble_prefab: {fileID: 0}
+  player_floating_record: 0
 --- !u!114 &886679271120409308
 MonoBehaviour:
   m_ObjectHideFlags: 0
