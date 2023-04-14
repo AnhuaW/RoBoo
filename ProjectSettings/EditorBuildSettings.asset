@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Beta/5_p3_angel_1.unity
     guid: ce2e6a8bdb8ce4627af60ab6489e323b
   - enabled: 1
-    path: Assets/Scenes/Beta/7_p3_spikes_merge_v2.unity
+    path: Assets/Scenes/Beta/10_finalRoom.unity
     guid: ddb0665fa819c4d4f83b84ac2ae69210
   - enabled: 1
     path: Assets/Scenes/Beta/8_p3_level_6_v2.unity
