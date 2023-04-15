@@ -114,7 +114,9 @@ public class GameStatus : MonoBehaviour
             
             // player
             transform.position = checkpoint_pos_record;
-            // destroy bubble and re-instantiate one if necessary
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            // destroy bubble
+            // and re-instantiate one if necessary (now disabled)
             for (int i = 0; i < transform.childCount; i++)
             {
                 Transform temp_child = transform.GetChild(i);
@@ -123,10 +125,12 @@ public class GameStatus : MonoBehaviour
                     GetComponent<PlayerFloat>().ApplyGravity();
                 }
             }
+            /*
             if (player_floating_record)
             {
                 GetComponent<PlayerFloat>().RemoveGravity();
             }
+            */
 
             // replace all ammos
             GameObject[] ammos_left = GameObject.FindGameObjectsWithTag("battery");
