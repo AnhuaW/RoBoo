@@ -19,6 +19,9 @@ public class RestartHintGuide2 : MonoBehaviour
     [SerializeField] AnimationCurve ease;
     [SerializeField] AnimationCurve ease_out;
 
+    [SerializeField] GameObject third_key;
+    public bool check_checkpoint_started = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +48,7 @@ public class RestartHintGuide2 : MonoBehaviour
             Debug.Log("toast!");
             if (remaining_ammo_count == total_ammo_count - 2)
             {
-                if (player.transform.position.x <= 15f)
+                if (player.transform.position.x <= 12f)
                 {
                     toasting = true;
                     StartCoroutine(GiveRestartHint(ease_duration, show_duration));
@@ -53,7 +56,19 @@ public class RestartHintGuide2 : MonoBehaviour
             }
             else if (remaining_ammo_count == total_ammo_count - 3)
             {
-                if (player.transform.position.x < 27.6f)
+                if (player.transform.position.x < 27.64f || (player.transform.position.x > 27.65f && player.transform.position.y > -1.9f))
+                {
+                    if (!check_checkpoint_started)
+                    {
+                        check_checkpoint_started = true;
+                        StartCoroutine(CheckCheckpoint());
+                    }
+                }
+
+            }
+            else if (remaining_ammo_count == total_ammo_count - 6)
+            {
+                if (player.transform.position.x < 53.5f)
                 {
                     toasting = true;
                     StartCoroutine(GiveRestartHint(ease_duration, show_duration));
@@ -62,14 +77,15 @@ public class RestartHintGuide2 : MonoBehaviour
             }
 
             // reset this component when game is over (and restarted)
-            /*
+            
             if (game_status.gameover)
             {
                 toasting = false;
+                check_checkpoint_started = false;
                 hint_panel.anchoredPosition = hidden_pos;
                 StopAllCoroutines();
             }
-            */
+            
         }
     }
 
@@ -134,4 +150,19 @@ public class RestartHintGuide2 : MonoBehaviour
         // done toasting
         toasting = false;
     }
+
+
+    // check after 1 second whether the second key has been collected
+    // if not, activate restart hint
+    IEnumerator CheckCheckpoint()
+    {
+        yield return new WaitForSeconds(1f);
+        if (third_key) {
+            toasting = true;
+            Debug.Log("neow");
+            yield return StartCoroutine(GiveRestartHint(ease_duration, show_duration));
+        }
+        check_checkpoint_started = false;
+    }
+
 }
