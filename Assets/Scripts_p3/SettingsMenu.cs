@@ -21,7 +21,7 @@ public class SettingsMenu : MonoBehaviour
 
     private void Awake()
     {
-        gameObject.transform.parent = null;
+        gameObject.transform.SetParent(null);
 
         if (instance != null && instance != this)
         {
