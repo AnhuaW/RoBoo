@@ -9,6 +9,7 @@ public class SFXcontrol : MonoBehaviour
     public AudioClip portal;
     public AudioClip recharge;
     public AudioClip key;
+    public AudioClip chest;
     public float clipVolume = 0.3f;
     void Start()
     {
@@ -41,6 +42,11 @@ public class SFXcontrol : MonoBehaviour
         if (other.CompareTag("key"))
         {
             AudioSource.PlayClipAtPoint(key, Camera.main.transform.position);
+        }
+
+        if (other.CompareTag("chest"))
+        {
+            AudioSource.PlayClipAtPoint(chest, Camera.main.transform.position);
         }
     }
 }

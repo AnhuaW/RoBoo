@@ -29925,22 +29925,6 @@ PrefabInstance:
       propertyPath: current_key_num
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5517974921478761772, guid: 70d507a00c207b8439e664071f611849, type: 3}
-      propertyPath: key
-      value: 
-      objectReference: {fileID: 8300000, guid: 05a451c7608224051aec7331b54690d6, type: 3}
-    - target: {fileID: 5517974921478761772, guid: 70d507a00c207b8439e664071f611849, type: 3}
-      propertyPath: recharge
-      value: 
-      objectReference: {fileID: 8300000, guid: b2bc4e03ebe144f5da40034f75615259, type: 3}
-    - target: {fileID: 5517974921478761772, guid: 70d507a00c207b8439e664071f611849, type: 3}
-      propertyPath: clipVolume
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5517974921478761772, guid: 70d507a00c207b8439e664071f611849, type: 3}
-      propertyPath: collectAmmo
-      value: 
-      objectReference: {fileID: 8300000, guid: 724b10c0e0bb44c8a85df826badd5e39, type: 3}
     - target: {fileID: 5517974921808589465, guid: 70d507a00c207b8439e664071f611849, type: 3}
       propertyPath: m_RootOrder
       value: 9

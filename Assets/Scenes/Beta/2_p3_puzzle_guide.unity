@@ -31209,6 +31209,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 05a451c7608224051aec7331b54690d6, type: 3}
     - target: {fileID: 5517974921478761772, guid: 70d507a00c207b8439e664071f611849, type: 3}
+      propertyPath: chest
+      value: 
+      objectReference: {fileID: 8300000, guid: d23acc96aeb95ec44830830aed7f7ba4, type: 3}
+    - target: {fileID: 5517974921478761772, guid: 70d507a00c207b8439e664071f611849, type: 3}
+      propertyPath: portal
+      value: 
+      objectReference: {fileID: 8300000, guid: 213d9a9ce6562b648b04656ffe29b1da, type: 3}
+    - target: {fileID: 5517974921478761772, guid: 70d507a00c207b8439e664071f611849, type: 3}
       propertyPath: recharge
       value: 
       objectReference: {fileID: 8300000, guid: b2bc4e03ebe144f5da40034f75615259, type: 3}
