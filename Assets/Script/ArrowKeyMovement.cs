@@ -71,10 +71,7 @@ public class ArrowKeyMovement : MonoBehaviour
 
         if (player_control)
         {
-            Vector3 current_input = GetInput();
-            float speed = (GetComponent<PlayerFloat>().is_floating ? float_movement_speed : ground_movement_speed);
-
-            transform.position += current_input * speed * Time.fixedDeltaTime;
+            
             if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !GetComponent<PlayerFloat>().is_floating && isGrounded)
             {
                 Jump();
@@ -82,16 +79,19 @@ public class ArrowKeyMovement : MonoBehaviour
         }
 
     }
-    /*
+    
     private void FixedUpdate()
     {
         if (player_control)
         {
-            
 
+            Vector3 current_input = GetInput();
+            float speed = (GetComponent<PlayerFloat>().is_floating ? float_movement_speed : ground_movement_speed);
+
+            transform.position += current_input * speed * Time.fixedDeltaTime;
         }
 
-    }*/
+    }
 
     Vector3 GetInput()
     {
