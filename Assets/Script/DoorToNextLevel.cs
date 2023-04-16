@@ -46,6 +46,12 @@ public class DoorToNextLevel : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         if (!player.GetComponent<GameStatus>().gameover)
         {
+            // diable angel attack
+            GameObject[] angels = GameObject.FindGameObjectsWithTag("statue");
+            foreach (GameObject angel in angels)
+            {
+                angel.GetComponent<statue_attack>().enabled = false;
+            }
             StartCoroutine(load.GetComponent<levelLoder>().LoadLevel(current_level_index));
             if (CompletedLevels.instance != null)
             {
