@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: Escaper
   productName: Roboo
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -273,7 +273,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 32a1755f75a3a47cd937cfe38cba426f, type: 3}
+      m_Icon: {fileID: 2800000, guid: 8a772342addd4d24ba983607a9ea19eb, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
