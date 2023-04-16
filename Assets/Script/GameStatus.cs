@@ -90,6 +90,7 @@ public class GameStatus : MonoBehaviour
             // press Esc to go back to menu
             else if (Input.GetKeyDown(KeyCode.Escape))
             {
+                SetPlayerControl(true);
                 SceneManager.LoadScene(0);
             }
 
