@@ -228,10 +228,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectAmmo: {fileID: 8300000, guid: 724b10c0e0bb44c8a85df826badd5e39, type: 3}
-  portal: {fileID: 8300000, guid: 707b2d52a22da70408a1c08f7f93c794, type: 3}
+  portal: {fileID: 8300000, guid: 213d9a9ce6562b648b04656ffe29b1da, type: 3}
   recharge: {fileID: 8300000, guid: b2bc4e03ebe144f5da40034f75615259, type: 3}
   key: {fileID: 8300000, guid: 05a451c7608224051aec7331b54690d6, type: 3}
-  clipVolume: 0.3
+  chest: {fileID: 8300000, guid: d23acc96aeb95ec44830830aed7f7ba4, type: 3}
+  clipVolume: 0.2
 --- !u!114 &-4007032245595016244
 MonoBehaviour:
   m_ObjectHideFlags: 0
