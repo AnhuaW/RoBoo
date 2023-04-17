@@ -88,11 +88,13 @@ public class GameStatus : MonoBehaviour
                 death_panel.SetActive(false);
             }
             // press Esc to go back to menu
+            /*
             else if (Input.GetKeyDown(KeyCode.Escape))
             {
                 SetPlayerControl(true);
                 SceneManager.LoadScene(0);
             }
+            */
 
         }
 
@@ -241,6 +243,21 @@ public class GameStatus : MonoBehaviour
             else
             {
                 GetComponent<SpriteRenderer>().color = Color.white;
+            }
+
+            // close restart hint
+            GameObject hint_panel = GameObject.Find("HintPanel");
+            if (hint_panel != null)
+            {
+                if(hint_panel.GetComponent<RestartHintGuide2>() != null)
+                {
+                    hint_panel.GetComponent<RestartHintGuide2>().ResetPanel();
+                }
+
+                if (hint_panel.GetComponent<RestartHintGuide1>() != null)
+                {
+                    hint_panel.GetComponent<RestartHintGuide1>().ResetPanel();
+                }
             }
         }
     }
