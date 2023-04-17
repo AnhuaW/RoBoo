@@ -27,6 +27,11 @@ public class merge_key : MonoBehaviour
         if (current_key_num == required_key_num)
         {
             door_key = Instantiate(prefab);
+            GameObject door = GameObject.Find("Door");
+            if (door)
+            {
+                door.GetComponent<Blinking>().enabled = true;
+            }
             //door_key.transform.SetParent(this.transform, false);
             door_key.transform.position = target_position;
             current_key_num = 0;

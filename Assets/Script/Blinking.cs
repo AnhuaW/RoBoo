@@ -13,7 +13,7 @@ public class Blinking : MonoBehaviour
     void Start()
     {
         spriteRend = GetComponent<SpriteRenderer>();
-        orig_color = spriteRend.color;
+        orig_color = Color.white;
     }
 
     // Update is called once per frame
