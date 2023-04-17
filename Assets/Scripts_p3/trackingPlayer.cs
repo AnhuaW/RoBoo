@@ -26,7 +26,7 @@ public class trackingPlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // Move the camera to track player currX and currY
         camera_target_pos = new Vector3(player.transform.position.x + offsetX, player.transform.position.y + offsetY, transform.position.z);

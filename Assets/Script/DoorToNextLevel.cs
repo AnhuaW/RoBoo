@@ -35,6 +35,23 @@ public class DoorToNextLevel : MonoBehaviour
         {
             //Debug.Log("pass");
             //EventBus.Publish<StageStatus>(new StageStatus((current_level_index + 1) % total_scenes_count));
+            StartCoroutine(LevelTransition(collision.gameObject));
+            
+        }
+    }
+
+
+    IEnumerator LevelTransition(GameObject player)
+    {
+        yield return new WaitForSeconds(0.5f);
+        if (!player.GetComponent<GameStatus>().gameover)
+        {
+            // diable angel attack
+            GameObject[] angels = GameObject.FindGameObjectsWithTag("statue");
+            foreach (GameObject angel in angels)
+            {
+                angel.GetComponent<statue_attack>().enabled = false;
+            }
             StartCoroutine(load.GetComponent<levelLoder>().LoadLevel(current_level_index));
             if (CompletedLevels.instance != null)
             {
@@ -42,4 +59,5 @@ public class DoorToNextLevel : MonoBehaviour
             }
         }
     }
+
 }
