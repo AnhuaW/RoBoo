@@ -88,11 +88,13 @@ public class GameStatus : MonoBehaviour
                 death_panel.SetActive(false);
             }
             // press Esc to go back to menu
+            /*
             else if (Input.GetKeyDown(KeyCode.Escape))
             {
                 SetPlayerControl(true);
                 SceneManager.LoadScene(0);
             }
+            */
 
         }
 

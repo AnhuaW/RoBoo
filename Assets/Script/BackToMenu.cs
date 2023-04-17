@@ -30,7 +30,9 @@ public class BackToMenu : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
             //PauseButton.Menu();
-            SceneManager.LoadScene(0);
+            //SceneManager.LoadScene(0);
+            PauseButton button = GameObject.Find("PauseButton").GetComponent<PauseButton>();
+            button.Pause();
         }
     }
         /*
