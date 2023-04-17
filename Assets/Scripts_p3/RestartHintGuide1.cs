@@ -127,4 +127,13 @@ public class RestartHintGuide1 : MonoBehaviour
         // done toasting
         toasting = false;
     }
+
+
+    public void ResetPanel()
+    {
+        toasting = false;
+        hint_panel.anchoredPosition = hidden_pos;
+        StopAllCoroutines();
+    }
+
 }

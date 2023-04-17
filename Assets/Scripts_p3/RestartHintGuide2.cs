@@ -77,13 +77,9 @@ public class RestartHintGuide2 : MonoBehaviour
             }
 
             // reset this component when game is over (and restarted)
-            
             if (game_status.gameover)
             {
-                toasting = false;
-                check_checkpoint_started = false;
-                hint_panel.anchoredPosition = hidden_pos;
-                StopAllCoroutines();
+                //ResetPanel();
             }
             
         }
@@ -163,6 +159,15 @@ public class RestartHintGuide2 : MonoBehaviour
             yield return StartCoroutine(GiveRestartHint(ease_duration, show_duration));
         }
         check_checkpoint_started = false;
+    }
+
+
+    public void ResetPanel()
+    {
+        toasting = false;
+        check_checkpoint_started = false;
+        hint_panel.anchoredPosition = hidden_pos;
+        StopAllCoroutines();
     }
 
 }

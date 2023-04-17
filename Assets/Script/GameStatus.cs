@@ -242,6 +242,21 @@ public class GameStatus : MonoBehaviour
             {
                 GetComponent<SpriteRenderer>().color = Color.white;
             }
+
+            // close restart hint
+            GameObject hint_panel = GameObject.Find("HintPanel");
+            if (hint_panel != null)
+            {
+                if(hint_panel.GetComponent<RestartHintGuide2>() != null)
+                {
+                    hint_panel.GetComponent<RestartHintGuide2>().ResetPanel();
+                }
+
+                if (hint_panel.GetComponent<RestartHintGuide1>() != null)
+                {
+                    hint_panel.GetComponent<RestartHintGuide1>().ResetPanel();
+                }
+            }
         }
     }
 
