@@ -47,7 +47,13 @@ public class WaterFlow : MonoBehaviour
         if (!name.CompareTag("ball"))
             floatable_rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         floatable_rb.velocity = new Vector2(added_speed, floatable_rb.velocity.y);
-        yield return new WaitForSeconds(1);
+        //yield return new WaitForSeconds(1);
+        float timer = 0f;
+        while (timer < 1f)
+        {
+            timer += Time.fixedDeltaTime;
+            yield return null;
+        }
         if (!name.CompareTag("ball") && !name.CompareTag("Player"))
         {
             floatable_rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
