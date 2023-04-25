@@ -7,6 +7,7 @@ public class Hint : MonoBehaviour
 {
     // Start is called before the first frame update
     bool blinking = false;
+    public float interval = 0.5f;
     void Start()
     {
         
@@ -15,9 +16,13 @@ public class Hint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!blinking)
+        if (Time.time % (2 * interval) < interval)
         {
-            StartCoroutine(hintBlink());
+            GetComponent<Text>().enabled = true;
+        }
+        else
+        {
+            GetComponent<Text>().enabled = false;
         }
     }
 
@@ -25,9 +30,9 @@ public class Hint : MonoBehaviour
     {
         blinking = true;
         GetComponent<Text>().enabled = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(interval);
         GetComponent<Text>().enabled = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(interval);
         blinking = false;
     }
 }

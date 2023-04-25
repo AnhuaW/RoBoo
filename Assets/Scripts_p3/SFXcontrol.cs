@@ -8,6 +8,9 @@ public class SFXcontrol : MonoBehaviour
     public AudioClip collectAmmo;
     public AudioClip portal;
     public AudioClip recharge;
+    public AudioClip key;
+    public AudioClip chest;
+    public float clipVolume = 0.3f;
     void Start()
     {
         
@@ -23,17 +26,27 @@ public class SFXcontrol : MonoBehaviour
     {
         if (other.CompareTag("battery"))
         {
-            AudioSource.PlayClipAtPoint(collectAmmo, Camera.main.transform.position);
+            AudioSource.PlayClipAtPoint(collectAmmo, Camera.main.transform.position,clipVolume);
         }
 
         if (other.CompareTag("Portal"))
         {
-            AudioSource.PlayClipAtPoint(portal, Camera.main.transform.position);
+            AudioSource.PlayClipAtPoint(portal, Camera.main.transform.position,clipVolume);
         }
 
         if (other.CompareTag("firstAmmo"))
         {
-            AudioSource.PlayClipAtPoint(recharge, Camera.main.transform.position);
+            AudioSource.PlayClipAtPoint(recharge, Camera.main.transform.position,clipVolume);
+        }
+
+        if (other.CompareTag("key"))
+        {
+            AudioSource.PlayClipAtPoint(key, Camera.main.transform.position);
+        }
+
+        if (other.CompareTag("chest"))
+        {
+            AudioSource.PlayClipAtPoint(chest, Camera.main.transform.position);
         }
     }
 }

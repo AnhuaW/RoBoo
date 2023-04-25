@@ -16,14 +16,14 @@ public class LevelSelectButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        completed_levels_list = GameObject.Find("CompletedLevels").GetComponent<CompletedLevels>();
+        completed_levels_list = CompletedLevels.instance;
         load = GameObject.Find("levelLoader");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(completed_levels_list.level_completed[level_index - 1] != true)
+        if(completed_levels_list && completed_levels_list.level_completed[level_index - 1] != true)
         {
             gameObject.GetComponent<Image>().color = Color.gray;
         }

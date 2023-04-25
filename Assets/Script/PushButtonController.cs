@@ -8,6 +8,7 @@ public class PushButtonController : MonoBehaviour
     public Sprite eased_sprite;
     public bool pressed = false;
     public string controlled_obj_name; // name of object(s) being controlled by this button
+    private GameObject saved_collider;
 
     SpriteRenderer sprite_renderer;
     BoxCollider2D this_collider;
@@ -17,6 +18,8 @@ public class PushButtonController : MonoBehaviour
     {
         sprite_renderer = GetComponent<SpriteRenderer>();
         this_collider = GetComponent<BoxCollider2D>();
+
+        EventBus.Publish<PushButtonEvent>(new PushButtonEvent(pressed, controlled_obj_name));
     }
 
     // Update is called once per frame
@@ -38,17 +41,21 @@ public class PushButtonController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!collision.gameObject.name.Contains("Floor") && !pressed
-            && Mathf.Abs(transform.position.x - collision.gameObject.transform.position.x)<0.38)
+        if (!collision.gameObject.name.Contains("Floor") && !pressed)
         {
             pressed = true;
+            saved_collider = collision.gameObject;
             EventBus.Publish<PushButtonEvent>(new PushButtonEvent(pressed, controlled_obj_name));
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        pressed = false;
-        EventBus.Publish<PushButtonEvent>(new PushButtonEvent(pressed, controlled_obj_name));
+        if(collision.gameObject == saved_collider)
+        {
+            pressed = false;
+            EventBus.Publish<PushButtonEvent>(new PushButtonEvent(pressed, controlled_obj_name));
+        }
+        
     }
 }
 

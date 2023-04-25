@@ -9,10 +9,11 @@ public class Blinking : MonoBehaviour
     SpriteRenderer spriteRend;
     public float interval = 0.8f;
     Color orig_color;
+    public Color changing_color = Color.grey;
     void Start()
     {
         spriteRend = GetComponent<SpriteRenderer>();
-        orig_color = spriteRend.color;
+        orig_color = Color.white;
     }
 
     // Update is called once per frame
@@ -29,7 +30,7 @@ public class Blinking : MonoBehaviour
         running = true;
         spriteRend.color = orig_color;
         yield return new WaitForSeconds(interval);
-        spriteRend.color = Color.gray;
+        spriteRend.color = changing_color;
         yield return new WaitForSeconds(interval);
         running = false;
     }
